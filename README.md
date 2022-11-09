@@ -1,20 +1,14 @@
-# Wabbajack
+# Wabbajack - Wiki
 
-[![Discord](https://img.shields.io/discord/605449136870916175)](https://discord.gg/wabbajack)
-[![CI Tests](https://github.com/wabbajack-tools/wabbajack/actions/workflows/tests.yaml/badge.svg)](https://github.com/wabbajack-tools/wabbajack/actions/workflows/tests.yaml)
-[![GitHub all releases](https://img.shields.io/github/downloads/wabbajack-tools/wabbajack/total)](https://github.com/wabbajack-tools/wabbajack/releases)
+## How to use Wabbajack ?
 
-Wabbajack is an automated Modlist Installer that can reproduce an entire modding setup on another machine without bundling any assets or re-distributing any mods.
+For instructions on how to use and how to make Wabbajack modlist look [here](https://github.com/wabbajack-tools/wiki/wiki) in the Wiki of this Github Repository.
 
 ## Social Links
 
 - [wabbajack.org](https://www.wabbajack.org) The official Wabbajack website.
 - [Discord](https://discord.gg/wabbajack) The official Wabbajack discord for instructions, Modlists, support or friendly chatting with fellow modders. Or if you find something unclear in this wiki and need some clarification.
 - [Patreon](https://www.patreon.com/user?u=11907933) contains update posts and keeps the [Code Signing Certificate](https://www.digicert.com/code-signing/) as well as our supplementary build server alive.
-
-## How to use Wabbajack ?
-
-For instructions on how to use and how to make Wabbajack modlist look [here](https://github.com/wabbajack-tools/wiki/wiki).
 
 ## FAQ
 
