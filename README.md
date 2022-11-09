@@ -58,7 +58,7 @@ All original code in Wabbajack is given freely via the [GPL3 license](LICENSE.tx
 
 ## Contributing
 
-Look at the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for detailed guidelines.
+Look at the [`CONTRIBUTING.md`](https://github.com/wabbajack-tools/wabbajack-tools.github.io/blob/redux/CONTRIBUTING.md) file for detailed guidelines.
 
 ## Thanks to
 
