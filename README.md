@@ -1,13 +1,11 @@
-# Wabbajack - Wiki
+# Wabbajack
 
-## How to use Wabbajack ?
-
-For instructions on how to use and how to make Wabbajack modlist look [here](https://github.com/wabbajack-tools/wiki/wiki) in the Wiki of this Github Repository.
+Wabbajack is an automated Modlist installer, making sharing your modded setups or installing the setups of others a more streamlined experience and giving list creators all the tools they need.
 
 ## Social Links
 
 - [wabbajack.org](https://www.wabbajack.org) The official Wabbajack website.
-- [Discord](https://discord.gg/wabbajack) The official Wabbajack discord for instructions, Modlists, support or friendly chatting with fellow modders. Or if you find something unclear in this wiki and need some clarification.
+- [Discord](https://discord.gg/wabbajack) The official Wabbajack discord for instructions, modlists, wabbajack-tool support or friendly chatting with fellow modders. Or for times you find something unclear in this wiki and need some clarification.
 - [Patreon](https://www.patreon.com/user?u=11907933) contains update posts and keeps the [Code Signing Certificate](https://www.digicert.com/code-signing/) as well as our supplementary build server alive.
 
 ## FAQ
