@@ -1,0 +1,28 @@
+name: 404 Report
+description: Report a 404 error
+title: "[404]: "
+labels: []
+assignees:
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: origin
+    attributes:
+      label: From where did you get linked to the 404 ?
+      description: If it was the Wiki, please include Chapter and section.
+      placeholder: 
+      value: 
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: Please post the link that showed you the 404 Error:
+      description: This is required so we can add automated redirects to either the main page or the intended section.
+      placeholder: 
+      value: 
+    validations:
+      required: true
