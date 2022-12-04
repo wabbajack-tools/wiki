@@ -13,3 +13,4 @@ extra-watch-dirs = ["../"]
 [output.html]
 default-theme = "rust"
 preferred-dark-theme = "navy"
+cname = "www.wabbajack.org"
