@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pre-Compilation - Wabbajack Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The Official Wabbajack Documentation.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../index.html">About Wabbajack</a></li><li class="chapter-item expanded affix "><li class="part-title">User Documentation</li><li class="chapter-item expanded "><a href="../user_documentation/Supported Games and Mod Managers.html"><strong aria-hidden="true">1.</strong> Supported Games and Mod Managers</a></li><li class="chapter-item expanded "><a href="../user_documentation/Installing a Modlist.html"><strong aria-hidden="true">2.</strong> Installing a Modlist</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Troubleshooting FAQ</div></li><li class="chapter-item expanded affix "><li class="part-title">Modlist Developer Documentation</li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Compilation.html"><strong aria-hidden="true">4.</strong> Compilation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modlist_author_documentation/Introduction.html"><strong aria-hidden="true">4.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Pre-Compilation.html" class="active"><strong aria-hidden="true">4.2.</strong> Pre-Compilation</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Meta Files.html"><strong aria-hidden="true">4.3.</strong> Meta Files</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Keeping the Game Folder clean.html"><strong aria-hidden="true">4.4.</strong> Keeping the Game Folder clean</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Native-Game-Installer - (Installers not using MO2).html"><strong aria-hidden="true">4.5.</strong> Native-Game-Installer - (Installers not using MO2)</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Compilation Settings.html"><strong aria-hidden="true">4.6.</strong> Compilation Settings</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Post-Compilation.html"><strong aria-hidden="true">4.7.</strong> Post-Compilation</a></li></ol></li><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Wabbajack CDN & Gallery Access.html"><strong aria-hidden="true">5.</strong> Wabbajack CDN &amp; Gallery Access</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Getting CDN Access.html"><strong aria-hidden="true">5.1.</strong> Getting CDN Access</a></li><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Adding a Custom Repository to Wabbajack.html"><strong aria-hidden="true">5.2.</strong> Adding a Custom Repository to Wabbajack</a></li><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Criteria for 'Featured Mod List' status.html"><strong aria-hidden="true">5.3.</strong> Criteria for 'Featured Mod List' status</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Compilation Issues FAQ</div></li><li class="chapter-item expanded affix "><li class="part-title">Technical Notes</li><li class="chapter-item expanded "><a href="../technical_talk/Auto-healing & Force-healing Overview.html"><strong aria-hidden="true">7.</strong> Auto-healing &amp; Force-healing Overview</a></li><li class="chapter-item expanded "><a href="../technical_talk/Hashing Overview.html"><strong aria-hidden="true">8.</strong> Hashing Overview</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Wabbajack Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pre-compilation"><a class="header" href="#pre-compilation">Pre-Compilation</a></h1>
+<p>Compilation itself is similar to Installation as you just configure some paths and start the process, sit back and wait for Wabbajack to finish. Wabbajack requires a rather specific MO2 setup and you might have to change your workflow when modding for a WJ Modlist.</p>
+<h2 id="everything-comes-from-somewhere"><a class="header" href="#everything-comes-from-somewhere">Everything comes from somewhere</a></h2>
+<blockquote>
+<p>Wabbajack is an automated Modlist Installer that can reproduce an entire modding setup on another machine without bundling any assets or re-distributing any mods.</p>
+</blockquote>
+<p>The focus is on <em>without bundling any assets or re-distributing any mods</em>. This means that Wabbajack needs to know where <strong>every single file</strong> came from. The most common origin is your downloads folder.</p>
+<p>If you take a quick look inside your MO2 downloads folder you will find 2 types of files:</p>
+<ol>
+<li>The actual download (some archive)</li>
+<li>A <code>.meta</code> file that has the same name the archive its for</li>
+</ol>
+<p>You might have <code>SkyUI_5_1-3863-5-1.7z</code> and <code>SkyUI_5_1-3863-5-1.7z.meta</code>.</p>
+<p>These <code>.meta</code> files are created by MO2 and typically get created when you click the <em>MOD MANAGER DOWNLOAD</em> button on Nexus Mods. If you open the <code>.meta</code> file you will find some metadata for the accompanied archive, the most important entries being <code>fileID</code>, <code>modID</code> and <code>gameName</code>.</p>
+<p>Wabbajack will use the MO2 <code>.meta</code> files to find out where the archive came from using the <a href="https://app.swaggerhub.com/apis-docs/NexusMods/nexus-mods_public_api_params_in_form_data/1.0#/">Nexus Mods API</a>. This means that you <strong>should</strong> use the <em>MOD MANAGER DOWNLOAD</em> button on Nexus Mods or you have to create those <code>.meta</code> files yourself (you can also use the <em>Query Info</em> context menu option in the MO2 Downloads tab. This will populate the metadata of the selected archive).</p>
+<p>For more information about <code>.meta</code> files, support sites and how to actually create them, see the <a href="Meta%20Files.html">Meta Files</a> section.</p>
+<h2 id="mod-organizer-2"><a class="header" href="#mod-organizer-2">Mod Organizer 2</a></h2>
+<p>You now know about <code>.meta</code> files and understand that every file has to come from somewhere, this also means that you also need to create <code>.meta</code> files for MO2 and files in your game folder. We recommend using the <a href="https://github.com/ModOrganizer2/modorganizer/releases/">MO2 GitHub Releases</a> instead of the ones you find on the Nexus.</p>
+<h2 id="patches"><a class="header" href="#patches">Patches</a></h2>
+<p>Reading all the previous section you might wonder if Wabbajack is able to detect modified files and how it deals with them. Wabbajack can't include the modified file so instead we just include the difference between the original and modified version.</p>
+<p>This basically means <code>original + patch = final</code> and we only include <code>patch</code> in the <code>.wabbajack</code> file which, by itself, is just gibberish and completely useless without the original file. This allows us to distribute arbitrary changes without violating copyrights as we do not copy copyrighted material. Instead, we copy instructions on how to modify the copyrighted material.</p>
+<p>You don't even have to tell Wabbajack that a specific file was modified, that would be way too much work. Instead Wabbajack will figure out which file got modified and create a binary patch. The modified file can be anything from some modified settings file to a patched plugin or optimized mesh/texture.</p>
+<h2 id="bsa-decomposition"><a class="header" href="#bsa-decomposition">BSA Decomposition</a></h2>
+<p>Wabbajack is able to analyse <code>.bsa</code> and <code>.ba2</code> files and can also create those. This means that any changes made to a BSA/BA2 are copied on the end-user's installation, including the creation of new BSAs or the modification of existing ones. Unpacking, modifying, and then repacking a BSA is possible and those modifications will carry over to the final install. Similarly, creation of new BSAs will be replicated. Wabbajack does not analyze the BSA as a whole - instead it will look inside the BSA, hash the files within, and compare those to their original sources. It will then construct the BSA if new or reconstruct it if modified as necessary. Note that with particularly large BSAs this building and rebuilding process can take a significant amount of time on the user's machine depending on the user's hardware specifications.</p>
+<h2 id="merges"><a class="header" href="#merges">Merges</a></h2>
+<p>Similar to BSAs, Wabbajack is able to analyze and create merged mods. Wabbajack will source the necessary files to create the merge from aforementioned sources of mods and then rebuild the merge on the user's end. Generally it is recommended to tag merges with the <code>WABBAJACK_NOMATCH_INCLUDE</code> flag to ensure that any files generated by the merging process are also carried over to the user. Wabbajack does not by default include the files and information necessary to build or rebuild the merge in the program used to build the merge originally, only the merge itself will be installed.</p>
+<h2 id="minimal-downloads-folder"><a class="header" href="#minimal-downloads-folder">Minimal Downloads Folder</a></h2>
+<p>Wabbajack will <em>match</em> files to determine where they came from. This can sometimes not work as intended and Wabbajack might end up matching files against the wrong archive. This can happen when you have multiple versions of the same mod in your downloads folder. It is highly recommended that you <strong>delete unused downloads and previous versions of mods</strong> so that Wabbajack doesn't end up mis-matching files and the end user ends up downloading more than they need.</p>
+<h2 id="configurations-superseded-by-compiler-settings-inside-of-wabbajack"><a class="header" href="#configurations-superseded-by-compiler-settings-inside-of-wabbajack">Configurations superseded by compiler settings inside of Wabbajack</a></h2>
+<p>The following options can still be used, to guarantee backwards compatibility for compiling lists made for Wabbajack 2.5 with Wabbajack 3.0 but are as the title implies superseded by compiler settings that can be changed inside of the Wabbajack app. The new way of managing this is described in <a href="Compilation%20Settings.html">Compilation-Settings</a>.</p>
+<h3 id="special-flags"><a class="header" href="#special-flags">Special Flags</a></h3>
+<p>There are some special cases where you want to change the default Wabbajack behavior for a specific mod. You can place the following flags in the notes or comments section of a mod to change how Wabbajack handles that mod.</p>
+<table><thead><tr><th>Flag</th><th>Description</th><th>Notes</th></tr></thead><tbody>
+<tr><td><code>WABBAJACK_INCLUDE</code></td><td>All mod files will be inlined into the<code>.wabbajack</code> file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
+<tr><td><code>WABBAJACK_NOMATCH_INCLUDE</code></td><td>Any unmatched files will be inlined into the<code>.wabbajack</code> file</td><td>Useful for custom patches or generated files</td></tr>
+<tr><td><code>WABBAJACK_ALWAYS_ENABLE</code></td><td>The mod will not be ignored by Wabbajack even if it's disabled</td><td>Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included</td></tr>
+<tr><td><code>WABBAJACK_ALWAYS_DISABLE</code></td><td>The mod will always be ignored by Wabbajack</td><td>Useful if you don't want some mods included in the Modlist but still want to keep it active in your own setup</td></tr>
+</tbody></table>
+<h3 id="tagfile-tags"><a class="header" href="#tagfile-tags">Tagfile Tags</a></h3>
+<p>You can create an empty <code>tagfile</code> with no extention in any folder you want to apply this tags to. This is meant to be used with folders that aren't mods.</p>
+<table><thead><tr><th>Flag/File</th><th>Description</th><th>Notes</th></tr></thead><tbody>
+<tr><td><code>WABBAJACK_INCLUDE</code></td><td>All files in this folder will be inlined into the<code>.wabbajack</code> file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
+<tr><td><code>WABBAJACK_NOMATCH_INCLUDE</code></td><td>Any unmatched files will be inlined into the<code>.wabbajack</code> file</td><td>Useful for custom patches or generated files</td></tr>
+<tr><td><code>WABBAJACK_IGNORE</code></td><td>All files in this folder will be ignored by Wabbajack and therefore not be put into into the<code>.wabbajack</code> file.</td><td>Useful for tools or other things outside a mod you don't want/need reproduced on a users machine. Handle with care since excluded stuff can potentially break a setup.*</td></tr>
+<tr><td><code>WABBAJACK_INCLUDE_SAVES</code></td><td>When this file exists Wabbajack will include your save files in the<code>.wabbajack</code> file.</td><td>This will remove previous savefiles when the list gets installed as an update.</td></tr>
+<tr><td><code>WABBAJACK_NOMATCH_INCLUDE_FILES.txt</code></td><td>All files listed in this file will be included in the<code>.wabbajack</code> file.</td><td>Every file needs to be in the same folder as the tag file. Every file need to be written into a new line. Every file needs to be added with its file extension.</td></tr>
+<tr><td><code>WABBAJACK_IGNORE_FILES.txt</code></td><td>All files listed in this file will be ignored by Wabbajack and not included in the<code>.wabbajack</code> file.</td><td>Every file needs to be in the same folder as the tag file. Every file need to be written into a new line. Every file needs to be added with its file extension.</td></tr>
+</tbody></table>
+<p>*It will finish the installation of a modlist, but the installed list might not run if you excluded a crutial part of it.</p>
+<h3 id="multiple-mo2-profiles"><a class="header" href="#multiple-mo2-profiles">Multiple MO2 Profiles</a></h3>
+<p>Wabbajack will normally ignore every other profile but you might have more than one profile that should be included. In this case you can create a <code>otherprofiles.txt</code> file in your main profile folder and write the names of the other profiles (1 per line) in it.</p>
+<p><strong>Example</strong>:</p>
+<p>Profiles: <code>SFW</code>, <code>NSFW</code> (<code>SFW</code> is the main profile)</p>
+<p>contents of <code>MO2\profiles\SFW\otherprofiles.txt</code>:</p>
+<pre><code class="language-txt">NSFW
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../modlist_author_documentation/Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../modlist_author_documentation/Meta Files.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../modlist_author_documentation/Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../modlist_author_documentation/Meta Files.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

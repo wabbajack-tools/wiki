@@ -1,0 +1,801 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Wabbajack Documentation</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The Official Wabbajack Documentation.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">About Wabbajack</a></li><li class="chapter-item expanded affix "><li class="part-title">User Documentation</li><li class="chapter-item expanded "><a href="user_documentation/Supported Games and Mod Managers.html"><strong aria-hidden="true">1.</strong> Supported Games and Mod Managers</a></li><li class="chapter-item expanded "><a href="user_documentation/Installing a Modlist.html"><strong aria-hidden="true">2.</strong> Installing a Modlist</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Troubleshooting FAQ</div></li><li class="chapter-item expanded affix "><li class="part-title">Modlist Developer Documentation</li><li class="chapter-item expanded "><a href="modlist_author_documentation/Compilation.html"><strong aria-hidden="true">4.</strong> Compilation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="modlist_author_documentation/Introduction.html"><strong aria-hidden="true">4.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="modlist_author_documentation/Pre-Compilation.html"><strong aria-hidden="true">4.2.</strong> Pre-Compilation</a></li><li class="chapter-item expanded "><a href="modlist_author_documentation/Meta Files.html"><strong aria-hidden="true">4.3.</strong> Meta Files</a></li><li class="chapter-item expanded "><a href="modlist_author_documentation/Keeping the Game Folder clean.html"><strong aria-hidden="true">4.4.</strong> Keeping the Game Folder clean</a></li><li class="chapter-item expanded "><a href="modlist_author_documentation/Native-Game-Installer - (Installers not using MO2).html"><strong aria-hidden="true">4.5.</strong> Native-Game-Installer - (Installers not using MO2)</a></li><li class="chapter-item expanded "><a href="modlist_author_documentation/Compilation Settings.html"><strong aria-hidden="true">4.6.</strong> Compilation Settings</a></li><li class="chapter-item expanded "><a href="modlist_author_documentation/Post-Compilation.html"><strong aria-hidden="true">4.7.</strong> Post-Compilation</a></li></ol></li><li class="chapter-item expanded "><a href="wabbajack_cdn_and_gallery_access/Wabbajack CDN & Gallery Access.html"><strong aria-hidden="true">5.</strong> Wabbajack CDN &amp; Gallery Access</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wabbajack_cdn_and_gallery_access/Getting CDN Access.html"><strong aria-hidden="true">5.1.</strong> Getting CDN Access</a></li><li class="chapter-item expanded "><a href="wabbajack_cdn_and_gallery_access/Adding a Custom Repository to Wabbajack.html"><strong aria-hidden="true">5.2.</strong> Adding a Custom Repository to Wabbajack</a></li><li class="chapter-item expanded "><a href="wabbajack_cdn_and_gallery_access/Criteria for 'Featured Mod List' status.html"><strong aria-hidden="true">5.3.</strong> Criteria for 'Featured Mod List' status</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Compilation Issues FAQ</div></li><li class="chapter-item expanded affix "><li class="part-title">Technical Notes</li><li class="chapter-item expanded "><a href="technical_talk/Auto-healing & Force-healing Overview.html"><strong aria-hidden="true">7.</strong> Auto-healing &amp; Force-healing Overview</a></li><li class="chapter-item expanded "><a href="technical_talk/Hashing Overview.html"><strong aria-hidden="true">8.</strong> Hashing Overview</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Wabbajack Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="wabbajack"><a class="header" href="#wabbajack">Wabbajack</a></h1>
+<p>Wabbajack is an automated Modlist installer, making sharing your modded setups or installing the setups of others a more streamlined experience and giving list creators all the tools they need.</p>
+<h2 id="social-links"><a class="header" href="#social-links">Social Links</a></h2>
+<ul>
+<li><a href="https://www.wabbajack.org">wabbajack.org</a> The official Wabbajack website.</li>
+<li><a href="https://discord.gg/wabbajack">Discord</a> The official Wabbajack discord for instructions, modlists, wabbajack-tool support or friendly chatting with fellow modders. Or for times you find something unclear in this wiki and need some clarification.</li>
+<li><a href="https://www.patreon.com/user?u=11907933">Patreon</a> contains update posts and keeps the <a href="https://www.digicert.com/code-signing/">Code Signing Certificate</a> as well as our supplementary build server alive.</li>
+</ul>
+<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
+<p><strong>How does Wabbajack differ from Automaton?</strong></p>
+<p>I, halgari, used to be a developer working on Automaton. Sadly development was moving a bit too slowly for my liking, and I realized that a complete rewrite would allow the implementation of some really nice features (like BSA packing). As such I made the decision to strike out on my own and make an app that worked first, and then make it pretty. The end result is an app with a ton of features, and a less than professional UI. But that's my motto when coding &quot;<em>make it work, then make it pretty</em>&quot;.</p>
+<p><strong>Can I charge for a Wabbajack Modlist I created?</strong></p>
+<p>No, as specified in the <a href="../../index.html#license--copyright">License</a>, Wabbajack Modlists must be available for free. Any payment in exchange for access to a Wabbajack installer is strictly prohibited. This includes paywalling, &quot;pay for beta access&quot;, &quot;pay for current version, previous version is free&quot;, or any sort of other quid-pro-quo monetization structure. The Wabbajack team reserves the right to implement software that will prohibit the installation of any lists that are paywalled.</p>
+<p><strong>Can I accept donations for my installer?</strong></p>
+<p>Absolutely! As long as the act of donating does not entitle the donator to access to the installer. The installer must be free, donations must be a &quot;thank you&quot; - not a purchase of services or content.</p>
+<h3 id="for-mod-authors"><a class="header" href="#for-mod-authors">For Mod Authors</a></h3>
+<p><strong>How does Wabbajack download mods from the Nexus?</strong></p>
+<p>Wabbajack uses the official <a href="https://app.swaggerhub.com/apis-docs/NexusMods/nexus-mods_public_api_params_in_form_data/1.0#/">Nexus API</a> to retrieve download links from the Nexus. Mod Managers such as MO2 or Vortex also use this API to download files. Downloading using the API is the same as downloading directly from the website, both will increase your download count and give you donation points.</p>
+<p><strong>How can I opt out of having my mod be included in a Modlist?</strong></p>
+<p>As explained before:</p>
+<blockquote>
+<p>We use the official <a href="https://app.swaggerhub.com/apis-docs/NexusMods/nexus-mods_public_api_params_in_form_data/1.0#/">Nexus API</a> to retrieve download links from the Nexus.</p>
+</blockquote>
+<p>Everyone who has access to the Nexus can download your mod. The Nexus does not and can not lock out Wabbajack from using the API to download a specific mod based on <em>author preferences</em>.</p>
+<p><strong>Will the end user even know they use my mod?</strong></p>
+<p>Your mod is exposed in several layers of the user experience when installing a Modlist. Before the installation even starts, the user has access to the manifest of the Modlist. This contains a list of all mods to be installed as well as the authors, version, size, links and more meta data depending on origin.</p>
+<p>Wabbajack will start a Slideshow during installation which features all mods to be installed in random order. The Slideshow displays the title, author, main image, description, version and a link to the Nexus page.</p>
+<p>After installation the user most likely needs to check the instructions of the Modlist for recommended MCM options. If your mod has an MCM and needs a lot of configuring than your mod will likely be featured in the instructions.</p>
+<p>Some Modlists also have an extensive README and we highly encourage new Modlist Authors to add a section about important mods to their README (see <a href="https://github.com/wabbajack-tools/wiki/wiki/09.-Post-Compilation">Post-Compilation</a>).</p>
+<p><strong>What if my mod is not on the Nexus?</strong></p>
+<p>You can check all sites we can download from <a href="https://github.com/wabbajack-tools/wiki/wiki/05.-Meta-Files">here</a> and we can easily add support for other sites. As long as your mod is publicly accessible and available on the Internet, Wabbajack can probably download it. Even if the site requires a login and does not have an API, we can always just resort to our internal browser and download the mod as if a user would go to the website using Firefox/Chrome and click the download button.</p>
+<h2 id="license--copyright"><a class="header" href="#license--copyright">License &amp; Copyright</a></h2>
+<p>All original code in Wabbajack is given freely via the <a href="../../LICENSE.txt">GPL3 license</a>. Parts of Wabbajack use libraries that carry their own Open Sources licenses, those parts retain their original copyrights. Selling of Modlist files is strictly forbidden. As is hosting the files behind any sort of paywall. You received this tool free of charge, respect this by giving freely as you were given.</p>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>Look at the <a href="https://github.com/wabbajack-tools/wabbajack-tools.github.io/blob/redux/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a> file for detailed guidelines.</p>
+<h2 id="thanks-to"><a class="header" href="#thanks-to">Thanks to</a></h2>
+<p>Our testers and Discord members who encourage development and help test the builds.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="supported-games-and-mod-managers"><a class="header" href="#supported-games-and-mod-managers">Supported Games and Mod Managers</a></h1>
+<h2 id="supported-games"><a class="header" href="#supported-games">Supported Games</a></h2>
+<p>If you own a game on this list on the Epic Games Store, and the store isn't listed as supported, please get in touch on <a href="https://discord.gg/wabbajack">Discord</a>, so you can help us make Wabbajack support those versions as well.
+This is needed, since the EGS has no public database of its game IDs.</p>
+<table><thead><tr><th>Game</th><th>Platform</th><th>Versions</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Cyberpunk 2077</td><td>Steam, GOG</td><td></td><td>Experimental</td></tr>
+<tr><td>Darkest Dungeon</td><td>Steam, GOG, Epic Games Store</td><td></td><td>Experimental</td></tr>
+<tr><td>Dishonored</td><td>Steam, GOG</td><td></td><td>Experimental</td></tr>
+<tr><td>Dragon's Dogma: Dark Arisen</td><td>Steam, GOG</td><td></td><td>Experimental</td></tr>
+<tr><td>Dragon Age 2</td><td>Steam, Origin</td><td></td><td>Experimental</td></tr>
+<tr><td>Dragon Age Inquisition</td><td>Steam, Origin</td><td></td><td>Experimental</td></tr>
+<tr><td>Dragon Age Origins</td><td>Stean, GOG, Origin</td><td></td><td>Experimental</td></tr>
+<tr><td>Enderal</td><td>Steam</td><td></td><td></td></tr>
+<tr><td>Enderal Special Edition</td><td>Steam</td><td></td><td></td></tr>
+<tr><td>Fallout 4</td><td>Steam</td><td></td><td></td></tr>
+<tr><td>Fallout 4 VR</td><td>Steam</td><td></td><td></td></tr>
+<tr><td>Fallout 3</td><td>Steam, GOG</td><td>Normal and GotY</td><td>Platform-locked*</td></tr>
+<tr><td>Fallout New Vegas</td><td>Steam, GOG</td><td>Normal and region locked RU version</td><td>Platform-locked*</td></tr>
+<tr><td>Karryn's Prison</td><td>Steam</td><td></td><td>Experimental</td></tr>
+<tr><td>Kerbal Space Program</td><td>Steam, GOG</td><td></td><td>Experimental</td></tr>
+<tr><td>Sims 4</td><td>Steam</td><td></td><td>Experimental</td></tr>
+<tr><td>Stardew Valley</td><td>Steam, GOG</td><td></td><td>Experimental, Platform-locked*</td></tr>
+<tr><td>Terraria</td><td>Steam</td><td>tModloader</td><td>Experimental</td></tr>
+<tr><td>TES Morrowind</td><td>Steam, GOG</td><td></td><td></td></tr>
+<tr><td>TES Oblivion</td><td>Steam, GOG</td><td>Normal and GotY</td><td>Platform-locked*</td></tr>
+<tr><td>TES Skyrim</td><td>Steam</td><td></td><td></td></tr>
+<tr><td>TES Skyrim Special Edition</td><td>Steam</td><td></td><td>Platform-locked*</td></tr>
+<tr><td>TES Skyrim VR</td><td>Steam</td><td></td><td></td></tr>
+<tr><td>The Witcher</td><td>Steam, GOG</td><td>Enhanced Edition</td><td>Experimental</td></tr>
+<tr><td>The Witcher 3</td><td>Steam, GOG</td><td>Normal and GotY</td><td>Experimental, Platform-locked*</td></tr>
+<tr><td>Kingdom Come: Deliverance</td><td>Steam, GOG</td><td></td><td>Experimental</td></tr>
+<tr><td>Mechwarrior 5: Mercenaries</td><td>Epic Games Store</td><td></td><td>Experimental</td></tr>
+<tr><td>No Man's Sky</td><td>Steam, GOG</td><td></td><td>Experimental</td></tr>
+</tbody></table>
+<p><strong>Experimental</strong>:</p>
+<p>A Mod Organizer 2 (MO2) plugin called <a href="https://github.com/ModOrganizer2/modorganizer-basic_games">Basic Games Plugin</a> enables the easy creation of new game plugins for non BGS games. This is still fairly experimental in both MO2 and Wabbajack and doesn't work perfectly in all games yet.</p>
+<p>Some like Mechwarrior 5 use a complete new method of creating a modlist, that <strong>will</strong>
+require slightly more manual steps after Wabbajack is done compared to most modlists using MO2</p>
+<p><strong>Platform-locked</strong>*:</p>
+<p>Games marked as platform-locked have differences in core game files between different platforms, making modlists &quot;locked&quot; to the version they are built for.
+For clear per modlist compatibility information please consult the readmes and other documentation provided by the authors of those lists. (Some will work with multiple platforms, BUT that is NOT the default.) Please keep in mind, that for some games we might not know yet if they will cause issues so only the ones we 100% know have issues are marked as such.</p>
+<h2 id="supported-mod-mangers"><a class="header" href="#supported-mod-mangers">Supported Mod Mangers</a></h2>
+<p>As of the time this is being written the only officially supported mod manager is <a href="https://github.com/ModOrganizer2/modorganizer/releases">Mod Organizer 2</a>.</p>
+<p>There is however the option for creating a wabbajack installer that simply recreates a whole folder by linking individual files to their originally sourced downloads.<br />
+Modlists created with this option will require more manual instructions for where users will be required to copy/move those files, but it is a way to allow modlists for games like Dishonored, the small demo for that system or Mechwarrior 5 that don't have Mod Organizer 2 support. You can learn about this option <a href="user_documentation/nat">here</a>, for more info and guidance join the <a href="https://discord.gg/wabbajack">Discord</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installing-a-modlist"><a class="header" href="#installing-a-modlist">Installing a Modlist</a></h1>
+<p>Every Modlist comes with its own README containing information and instructions on how to install it correctly. You should definitely read the Modlist specific README if you want a successful installation.</p>
+<p><strong>The core procedure for using the Gallery is:</strong></p>
+<ol>
+<li>Open Wabbajack and Navigate to the Gallery</li>
+<li>Decide on a List to install</li>
+<li>Click the download button</li>
+<li>Wait for the first download of the .wabbajack file to finish</li>
+<li>When it is done click the play button where previously you had the download button</li>
+<li>Open and read the specific readme of the list you are about to install</li>
+<li>Select the paths for where the list should be installed
+<ul>
+<li>Installation Location: The location where the files required to play will be installed to
+<ul>
+<li>Can't be set to Game Location</li>
+<li>Can't be the same as another list (lists can't be merged)</li>
+</ul>
+</li>
+<li>Download Location: The location where the downloaded archives are stored.
+<ul>
+<li>Can share the same location as the downloads folders of other lists (avoids duplicate downloads)</li>
+<li>Don't merge download locations if you plan to create and share your own modlists, because Wabbajack can't really differentiate which archives are the ones it needs and which just have similar files.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wait till Wabbajack is done</li>
+<li>Go back to the readme (which will open automatically) and complete any final steps mentioned there</li>
+</ol>
+<p><strong>The core procedure for using a downloaded .wabbajack file:</strong></p>
+<p>If you have used Wabbajack before skip to step 3.</p>
+<ol>
+<li>Open Wabbajack and Navigate to <code>install from disk</code></li>
+<li>Select the .wabbajack file as the <code>Target Modlist</code></li>
+<li>Open and read the specific readme of the list you are about to install</li>
+<li>Select the paths for where the list should be installed
+<ul>
+<li>Installation Location: The location where the files required to play will be installed to
+<ul>
+<li>Can't be set to Game Location</li>
+<li>Can't be the same as another list (lists can't be merged)</li>
+</ul>
+</li>
+<li>Download Location: The location where the downloaded archives are stored.
+<ul>
+<li>Can share the same location as the downloads folders of other lists (avoids duplicate downloads)</li>
+<li>Don't merge download locations if you plan to create and share your own modlists, because Wabbajack can't really differentiate which archives are the ones it needs and which just have similar files.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wait till Wabbajack is done</li>
+<li>Go back to the readme (which will open automatically) and complete any final steps mentioned there</li>
+</ol>
+<p>Do note that installation can take anything from a few minutes to hours depending on the size of the Modlist, your Internet connection as well as your hardware. In the meantime you can take a look at some of the included mods of the Modlist in the Slideshow that is playing during installation.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="compilation"><a class="header" href="#compilation">Compilation</a></h1>
+<p>This Chapter covers all the steps for making your own modlist.</p>
+<ul>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Introduction.html">Introduction</a></li>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Pre-Compilation.html">Pre-Compilation</a></li>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Meta%20Files.html">Meta Files</a></li>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Keeping%20the%20Game%20Folder%20clean.html">Keeping the Game Folder clean</a></li>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).html">Native-Game-Installer - (Installers not using MO2)</a></li>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Compilation%20Settings.html">Compilation Settings</a></li>
+<li><a href="modlist_author_documentation/modlist_author_documentation/Post-Compilation.html">Post-Compilation</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Modlist Creation or Compilation as we call it, is a trial and error process. You will likely get a decent amount of compilation errors in the beginning and have to spent some time fixing them before your first compilation succeeds. After that you can do incremental builds which take significantly less time and have close to zero errors compared to your first build. In short the main requirement is an eagerness to learn and a willingness to fall on your nose a few times while doing so.</p>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<p>Wabbajack requires that you created your Modlist using a <strong>portable</strong> version of Mod Organizer 2. This is a <strong>hard requirement</strong> for the intended and fully supported Wabbajack experience. Wabbajack won't work with Vortex, Kortex, Wyre Bash, Nexus Mod Manager, Oblivion Mod Manager or any other Mod Manager, not even Mod Organizer 1. At least not without some really hard drawbacks and complications.</p>
+<p>There is an option for compiling free of any Mod Manager, but that option isn't tested a lot and comes with more manual instructions needed for the people interested in installing your modlist. The option for this is the <a href="modlist_author_documentation/Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).html">Native-Game-Installer - (Installers not using MO2)</a>.</p>
+<p>Aside from needed a portable MO2 installation or using the &quot;Native Game Installer&quot; way you need to have a specific setup and workflow when modding that will be explained in the following chapters.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pre-compilation"><a class="header" href="#pre-compilation">Pre-Compilation</a></h1>
+<p>Compilation itself is similar to Installation as you just configure some paths and start the process, sit back and wait for Wabbajack to finish. Wabbajack requires a rather specific MO2 setup and you might have to change your workflow when modding for a WJ Modlist.</p>
+<h2 id="everything-comes-from-somewhere"><a class="header" href="#everything-comes-from-somewhere">Everything comes from somewhere</a></h2>
+<blockquote>
+<p>Wabbajack is an automated Modlist Installer that can reproduce an entire modding setup on another machine without bundling any assets or re-distributing any mods.</p>
+</blockquote>
+<p>The focus is on <em>without bundling any assets or re-distributing any mods</em>. This means that Wabbajack needs to know where <strong>every single file</strong> came from. The most common origin is your downloads folder.</p>
+<p>If you take a quick look inside your MO2 downloads folder you will find 2 types of files:</p>
+<ol>
+<li>The actual download (some archive)</li>
+<li>A <code>.meta</code> file that has the same name the archive its for</li>
+</ol>
+<p>You might have <code>SkyUI_5_1-3863-5-1.7z</code> and <code>SkyUI_5_1-3863-5-1.7z.meta</code>.</p>
+<p>These <code>.meta</code> files are created by MO2 and typically get created when you click the <em>MOD MANAGER DOWNLOAD</em> button on Nexus Mods. If you open the <code>.meta</code> file you will find some metadata for the accompanied archive, the most important entries being <code>fileID</code>, <code>modID</code> and <code>gameName</code>.</p>
+<p>Wabbajack will use the MO2 <code>.meta</code> files to find out where the archive came from using the <a href="https://app.swaggerhub.com/apis-docs/NexusMods/nexus-mods_public_api_params_in_form_data/1.0#/">Nexus Mods API</a>. This means that you <strong>should</strong> use the <em>MOD MANAGER DOWNLOAD</em> button on Nexus Mods or you have to create those <code>.meta</code> files yourself (you can also use the <em>Query Info</em> context menu option in the MO2 Downloads tab. This will populate the metadata of the selected archive).</p>
+<p>For more information about <code>.meta</code> files, support sites and how to actually create them, see the <a href="modlist_author_documentation/Meta%20Files.html">Meta Files</a> section.</p>
+<h2 id="mod-organizer-2"><a class="header" href="#mod-organizer-2">Mod Organizer 2</a></h2>
+<p>You now know about <code>.meta</code> files and understand that every file has to come from somewhere, this also means that you also need to create <code>.meta</code> files for MO2 and files in your game folder. We recommend using the <a href="https://github.com/ModOrganizer2/modorganizer/releases/">MO2 GitHub Releases</a> instead of the ones you find on the Nexus.</p>
+<h2 id="patches"><a class="header" href="#patches">Patches</a></h2>
+<p>Reading all the previous section you might wonder if Wabbajack is able to detect modified files and how it deals with them. Wabbajack can't include the modified file so instead we just include the difference between the original and modified version.</p>
+<p>This basically means <code>original + patch = final</code> and we only include <code>patch</code> in the <code>.wabbajack</code> file which, by itself, is just gibberish and completely useless without the original file. This allows us to distribute arbitrary changes without violating copyrights as we do not copy copyrighted material. Instead, we copy instructions on how to modify the copyrighted material.</p>
+<p>You don't even have to tell Wabbajack that a specific file was modified, that would be way too much work. Instead Wabbajack will figure out which file got modified and create a binary patch. The modified file can be anything from some modified settings file to a patched plugin or optimized mesh/texture.</p>
+<h2 id="bsa-decomposition"><a class="header" href="#bsa-decomposition">BSA Decomposition</a></h2>
+<p>Wabbajack is able to analyse <code>.bsa</code> and <code>.ba2</code> files and can also create those. This means that any changes made to a BSA/BA2 are copied on the end-user's installation, including the creation of new BSAs or the modification of existing ones. Unpacking, modifying, and then repacking a BSA is possible and those modifications will carry over to the final install. Similarly, creation of new BSAs will be replicated. Wabbajack does not analyze the BSA as a whole - instead it will look inside the BSA, hash the files within, and compare those to their original sources. It will then construct the BSA if new or reconstruct it if modified as necessary. Note that with particularly large BSAs this building and rebuilding process can take a significant amount of time on the user's machine depending on the user's hardware specifications.</p>
+<h2 id="merges"><a class="header" href="#merges">Merges</a></h2>
+<p>Similar to BSAs, Wabbajack is able to analyze and create merged mods. Wabbajack will source the necessary files to create the merge from aforementioned sources of mods and then rebuild the merge on the user's end. Generally it is recommended to tag merges with the <code>WABBAJACK_NOMATCH_INCLUDE</code> flag to ensure that any files generated by the merging process are also carried over to the user. Wabbajack does not by default include the files and information necessary to build or rebuild the merge in the program used to build the merge originally, only the merge itself will be installed.</p>
+<h2 id="minimal-downloads-folder"><a class="header" href="#minimal-downloads-folder">Minimal Downloads Folder</a></h2>
+<p>Wabbajack will <em>match</em> files to determine where they came from. This can sometimes not work as intended and Wabbajack might end up matching files against the wrong archive. This can happen when you have multiple versions of the same mod in your downloads folder. It is highly recommended that you <strong>delete unused downloads and previous versions of mods</strong> so that Wabbajack doesn't end up mis-matching files and the end user ends up downloading more than they need.</p>
+<h2 id="configurations-superseded-by-compiler-settings-inside-of-wabbajack"><a class="header" href="#configurations-superseded-by-compiler-settings-inside-of-wabbajack">Configurations superseded by compiler settings inside of Wabbajack</a></h2>
+<p>The following options can still be used, to guarantee backwards compatibility for compiling lists made for Wabbajack 2.5 with Wabbajack 3.0 but are as the title implies superseded by compiler settings that can be changed inside of the Wabbajack app. The new way of managing this is described in <a href="modlist_author_documentation/Compilation%20Settings.html">Compilation-Settings</a>.</p>
+<h3 id="special-flags"><a class="header" href="#special-flags">Special Flags</a></h3>
+<p>There are some special cases where you want to change the default Wabbajack behavior for a specific mod. You can place the following flags in the notes or comments section of a mod to change how Wabbajack handles that mod.</p>
+<table><thead><tr><th>Flag</th><th>Description</th><th>Notes</th></tr></thead><tbody>
+<tr><td><code>WABBAJACK_INCLUDE</code></td><td>All mod files will be inlined into the<code>.wabbajack</code> file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
+<tr><td><code>WABBAJACK_NOMATCH_INCLUDE</code></td><td>Any unmatched files will be inlined into the<code>.wabbajack</code> file</td><td>Useful for custom patches or generated files</td></tr>
+<tr><td><code>WABBAJACK_ALWAYS_ENABLE</code></td><td>The mod will not be ignored by Wabbajack even if it's disabled</td><td>Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included</td></tr>
+<tr><td><code>WABBAJACK_ALWAYS_DISABLE</code></td><td>The mod will always be ignored by Wabbajack</td><td>Useful if you don't want some mods included in the Modlist but still want to keep it active in your own setup</td></tr>
+</tbody></table>
+<h3 id="tagfile-tags"><a class="header" href="#tagfile-tags">Tagfile Tags</a></h3>
+<p>You can create an empty <code>tagfile</code> with no extention in any folder you want to apply this tags to. This is meant to be used with folders that aren't mods.</p>
+<table><thead><tr><th>Flag/File</th><th>Description</th><th>Notes</th></tr></thead><tbody>
+<tr><td><code>WABBAJACK_INCLUDE</code></td><td>All files in this folder will be inlined into the<code>.wabbajack</code> file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
+<tr><td><code>WABBAJACK_NOMATCH_INCLUDE</code></td><td>Any unmatched files will be inlined into the<code>.wabbajack</code> file</td><td>Useful for custom patches or generated files</td></tr>
+<tr><td><code>WABBAJACK_IGNORE</code></td><td>All files in this folder will be ignored by Wabbajack and therefore not be put into into the<code>.wabbajack</code> file.</td><td>Useful for tools or other things outside a mod you don't want/need reproduced on a users machine. Handle with care since excluded stuff can potentially break a setup.*</td></tr>
+<tr><td><code>WABBAJACK_INCLUDE_SAVES</code></td><td>When this file exists Wabbajack will include your save files in the<code>.wabbajack</code> file.</td><td>This will remove previous savefiles when the list gets installed as an update.</td></tr>
+<tr><td><code>WABBAJACK_NOMATCH_INCLUDE_FILES.txt</code></td><td>All files listed in this file will be included in the<code>.wabbajack</code> file.</td><td>Every file needs to be in the same folder as the tag file. Every file need to be written into a new line. Every file needs to be added with its file extension.</td></tr>
+<tr><td><code>WABBAJACK_IGNORE_FILES.txt</code></td><td>All files listed in this file will be ignored by Wabbajack and not included in the<code>.wabbajack</code> file.</td><td>Every file needs to be in the same folder as the tag file. Every file need to be written into a new line. Every file needs to be added with its file extension.</td></tr>
+</tbody></table>
+<p>*It will finish the installation of a modlist, but the installed list might not run if you excluded a crutial part of it.</p>
+<h3 id="multiple-mo2-profiles"><a class="header" href="#multiple-mo2-profiles">Multiple MO2 Profiles</a></h3>
+<p>Wabbajack will normally ignore every other profile but you might have more than one profile that should be included. In this case you can create a <code>otherprofiles.txt</code> file in your main profile folder and write the names of the other profiles (1 per line) in it.</p>
+<p><strong>Example</strong>:</p>
+<p>Profiles: <code>SFW</code>, <code>NSFW</code> (<code>SFW</code> is the main profile)</p>
+<p>contents of <code>MO2\profiles\SFW\otherprofiles.txt</code>:</p>
+<pre><code class="language-txt">NSFW
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="meta-files"><a class="header" href="#meta-files">Meta Files</a></h1>
+<p><em>Read <a href="modlist_author_documentation/Pre-Compilation.html#everything-comes-from-somewhere">Everything comes from somewhere</a> first, as that section explains the basic concept of meta files. This section focuses more on advanced uses, like using mods not hosted on Nexus mods.</em></p>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<p>You already know how <code>.meta</code> files should look for mods that come from Nexus Mods:</p>
+<pre><code class="language-ini">[General]
+gameName=Skyrim
+modID=3863
+fileID=1000172397
+</code></pre>
+<p>This is the basic configuration for an archive that came from Nexus Mods. You can get these types of <code>.meta</code> files through MO2 by using the <em>Query Info</em> option in the Downloads tab.</p>
+<p>Mods can also be hosted somewhere else, eg on other modding sites like LoversLab, ModDB or normal file hosting services like GDrive and MEGA. Below is a table for all supported sites that Wabbajack can download from.</p>
+<h2 id="non-nexus-meta-files"><a class="header" href="#non-nexus-meta-files">Non Nexus Meta Files</a></h2>
+<ul>
+<li>Every <code>.meta</code> file, no matter the site, has to start with <code>[General]</code></li>
+<li><code>.meta</code> files are <strong>case sensitive</strong></li>
+<li>The &quot;Whitelist&quot; Wabbajack uses to manage non Nexus sources is available on <a href="https://github.com/wabbajack-tools/opt-out-lists/blob/master/ServerWhitelist.yml">GitHub</a> and you might have to create a Pull Request if you want to add a link to a file we haven't checked and whitelisted yet.</li>
+</ul>
+<h3 id="directurl"><a class="header" href="#directurl">directURL</a></h3>
+<p>A .meta file for sites that don't require logins is handled via the <code>directURL=link</code> tag inside of the meta file. Files will be automatically downloaded.</p>
+<pre><code class="language-ini">[General]
+directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
+installed=true
+</code></pre>
+<h3 id="manualurl"><a class="header" href="#manualurl">manualURL</a></h3>
+<p>A .meta files for sites that require the user to manually navigate and download the file and in some cases login. This option is recommended for LoversLab due to frequent outages and other issues with their automated api downloads. </p>
+<pre><code class="language-ini">manualURL=https://foo.bar.bz/someFile.zip
+prompt=Please download the second file on this page
+</code></pre>
+<h3 id="ips4-sites"><a class="header" href="#ips4-sites">IPS4 sites</a></h3>
+<blockquote>
+<p><strong>Warning</strong>
+This still uses LoversLab as the example but because LoversLab has a tendency to break it's api we highly recommend not using this meta option for Loverslab and using <code>manualURL instead</code>, same goes for attachment files on those sites.</p>
+</blockquote>
+<blockquote>
+<p><strong>Info</strong>
+Due to some issues of domain registration for VectorPlexus (url was moved to www.vectorplexis.com) and unexpected downtimes we advise to use mirrors provided by the mod authors instead for maximum uptime of the modlist.</p>
+</blockquote>
+<p>In order to configure a <code>.meta</code> file for a IPS4 site, use the following format:</p>
+<p>Let's say we're making a meta for a file found at <code>https://www.loverslab.com/files/file/11116-test-file-for-wabbajack-integration</code></p>
+<p>Start by downloading the file and noting the name once it's downloaded. If you've downloaded the file more than once, Windows may include <code>(1)</code> on the end of the filename, so you'll need to remove that part from the filename.</p>
+<p>Now create a .meta file in this format:</p>
+<pre><code class="language-ini">[General]
+ips4Site=&lt;Site Name&gt;
+ips4Mod=&lt;modID&gt;
+ips4File=&lt;filename&gt;
+</code></pre>
+<ul>
+<li>ips4Site - is the site name for this download, currently this can be <code>Vector Plexus</code> or <code>Lovers Lab</code></li>
+<li>ips4Mod - the number part of the URL, in this case its <code>11116</code></li>
+<li>ips4File - the name of the file after it's downloaded (removing any extra text added by windows)</li>
+</ul>
+<p>So for the example file above, our <code>.meta</code> would be:</p>
+<pre><code class="language-ini">[General]
+ips4Site=Lovers Lab
+ips4Mod=11116
+ips4File=WABBAJACK_TEST_FILE.zip
+</code></pre>
+<h2 id="reference-table"><a class="header" href="#reference-table">Reference Table</a></h2>
+<table><thead><tr><th>Site</th><th>Requires Login</th><th>Requires Whitelist Entry</th><th>Notes</th></tr></thead><tbody>
+<tr><td><a href="https://www.loverslab.com/">LoversLab</a></td><td>Yes</td><td>No</td><td>IPS4 Site, The api is not reliable so use of <code>manualURL</code> strongly recommended.</td></tr>
+<tr><td><a href="https://vectorplexis.com/">VectorPlexus</a></td><td>Yes</td><td>No</td><td>IPS4 Site, The api isn't unreliable but due to some issues of domain registration and unexpected downtimes we advise to use mirrors provided by the mod authors instead.</td></tr>
+<tr><td><a href="https://www.moddb.com/">ModDB</a></td><td>No</td><td>No</td><td>Downloads can be very slow</td></tr>
+<tr><td><a href="https://www.patreon.com/">Patreon</a></td><td>No</td><td>Yes</td><td>Only public downloads, pay-walled downloads can not be downloaded</td></tr>
+<tr><td><a href="https://github.com/">GitHub</a></td><td>No</td><td>No</td><td></td></tr>
+<tr><td><a href="https://drive.google.com/">Google Drive</a></td><td>No</td><td>Yes</td><td></td></tr>
+<tr><td><a href="https://mega.nz/">MEGA</a></td><td>No (Optional)</td><td>Yes</td><td></td></tr>
+<tr><td><a href="https://www.mediafire.com/">Mediafire</a></td><td>No</td><td>Yes</td><td></td></tr>
+<tr><td><a href="https://www.dropbox.com/">Dropbox</a></td><td>No</td><td>Yes</td><td></td></tr>
+<tr><td><a href="https://disk.yandex.com/">Yandex Disk</a></td><td>No</td><td>Yes</td><td></td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="keeping-the-game-folder-clean"><a class="header" href="#keeping-the-game-folder-clean">Keeping the Game Folder clean</a></h1>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>The general idea is that we need a way to keep the Vanilla games clean in their installation locations, so that we don't cause issues with other tools or modlists, but there are files and mods that need to be in the games directory. For this there are two solutions both with their own pros and cons, Root Builder and A &quot;Stock Game&quot; copy inside MO2 Instances.</p>
+<h2 id="root-builder"><a class="header" href="#root-builder">Root Builder</a></h2>
+<p>Since the author of the Tool can describe it best here an excerpt from their website:</p>
+<blockquote>
+<p>Root Builder is a plugin for Mod Organizer 2, allowing users to manage files in the base game directory through Mod Organizer.</p>
+<p>Some of the things you can do with Root Builder:</p>
+<ul>
+<li>Install script extenders (SKSE, OBSE, FOSE, etc) through Mod Organizer.</li>
+<li>Install ENB and different presets for it through Mod Organizer.</li>
+<li>Manage different versions of the same game as mods within Mod Organizer.</li>
+<li>Keep your game folder untouched and as clean as the day it was installed.</li>
+<li>Keep all your mods in Mod Organizer, saving your setup if you need to reinstall or switch computer.</li>
+</ul>
+</blockquote>
+<p>Source: <a href="https://kezyma.github.io/?p=rootbuilder">Root Builder Website</a></p>
+<table><thead><tr><th>Pros</th><th>Cons</th></tr></thead><tbody>
+<tr><td>Can use different root folder Binaries depending on different supported platforms like Steam or GOG by using MO2 Profiles</td><td>You need to be careful with game updates, if the game updates the binaries for that version might not be there anymore</td></tr>
+<tr><td>Can use different ENB presets in different performance MO2 Profiles</td><td></td></tr>
+<tr><td>Requires less storage space</td><td></td></tr>
+</tbody></table>
+<p>For using Root Builder we recommend the very on point and well written official instructions on the <a href="https://kezyma.github.io/?p=rootbuilder#intall-col">official website</a>.
+A guide that also features compiling with Root Builder can be found <a href="https://github.com/The-Animonculory/Modding-Resources/blob/main/Root%20Builder%20for%20Skyrim%20AE.md">here</a>.</p>
+<h2 id="stock-game"><a class="header" href="#stock-game">Stock Game</a></h2>
+<p>The general idea is to build a WJ modlist that stores the game files inside the MO2 install folder.
+WJ will recognize these files and copy them from the end-user's game folder. This has the side-effect of keeping the game folder completely clean.</p>
+<table><thead><tr><th>Pros</th><th>Cons</th></tr></thead><tbody>
+<tr><td>Game updates can't break it</td><td>requires a lot of storage space</td></tr>
+<tr><td></td><td>locked into one specific platform (only users owing the game on the same store can use the modlist)</td></tr>
+<tr><td></td><td>Can only include one ENB preset</td></tr>
+</tbody></table>
+<h3 id="preperation"><a class="header" href="#preperation">Preperation</a></h3>
+<ol>
+<li>Build a WJ list as normal</li>
+<li>Create a folder in the MO2 base folder, let's call it <code>Stock Game</code>, so users don't think these are <code>Game Folder Files</code></li>
+<li>Copy in all the game files from your <code>Skyrim Special Edition</code> folder</li>
+<li>Remap MO2 files, open <code>Mod Organizer.ini</code> and change <code>GamePath=</code> to <code>c:\\Path\\To\\MO2\\Stock Game</code></li>
+<li>Open MO2 and edit the custom executable paths for SKSE/Launcher/Skyrim to the new path inside the MO2 folder</li>
+</ol>
+<h3 id="optimization"><a class="header" href="#optimization">Optimization</a></h3>
+<p>Doing the above will add about 12GB of bloat to the installed modlist, but we can likely reduce this quite a bit.</p>
+<ul>
+<li>Any <code>.ESMs</code> that have been cleaned are no longer required (as the cleaned files are in a mod), so delete those .ESMs from <code>Stock Game\\Data</code></li>
+<li>Any <code>.BSA</code> that are 100% replaced with files by the same name can be removed. So if you're using <code>unofficial performance optimized textures</code>, you can safely delete all the Texture BSAs</li>
+</ul>
+<h3 id="final-setup"><a class="header" href="#final-setup">Final setup</a></h3>
+<p>You can now put any ENBs, .dlls, etc. Directly into the <code>Stock Game</code> folder.</p>
+<p>Users should now be able to Install via WJ -&gt; MO2 -&gt; Run SKSE, removing the rather &quot;complicated&quot; step of copying game files into the game folder. This also allows multiple lists to be installed at one time that use the same base game, removing the need for a ENB manager.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="native-game-installer---installers-not-using-mo2"><a class="header" href="#native-game-installer---installers-not-using-mo2">Native-Game-Installer - (Installers not using MO2)</a></h1>
+<p>The following guide explains how you set up a native or Mod Organizer 2 less Wabbajack compile of a folder structure for modding.</p>
+<h2 id="preparation-of-the-modlist-folder"><a class="header" href="#preparation-of-the-modlist-folder">Preparation of the modlist folder</a></h2>
+<p>Create a folder in which to create the list, and optionally create a <code>downloads</code> folder in side this modlist folder. Now add all the mods to this base folder and place the raw downloads from the nexus into the <code>downloads</code>.</p>
+<h2 id="create-the-compiler-settings-file"><a class="header" href="#create-the-compiler-settings-file">Create the compiler settings file</a></h2>
+<p>In the root of the modlist folder, create a file called &quot;ListName.compiler_settings&quot;. Open it and set the contents to the following:</p>
+<pre><code class="language-json">{
+  &quot;Source&quot;: &quot;E:\\wj_tmp\\dishonored&quot;,
+  &quot;Downloads&quot;: &quot;E:\\wj_tmp\\dishonored\\downloads&quot;,
+  &quot;Game&quot;: &quot;Dishonored&quot;,
+  &quot;OutputFile&quot;: &quot;E:\\wj_tmp&quot;
+}
+
+</code></pre>
+<h2 id="build-your-setup"><a class="header" href="#build-your-setup">Build your setup</a></h2>
+<p>Now you can go ahead and build your setup how you need and want it.</p>
+<h2 id="opening-wabbajack-to-compile-the-list"><a class="header" href="#opening-wabbajack-to-compile-the-list">Opening Wabbajack to Compile the List</a></h2>
+<p>From here on out just move on to the next Chapter.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="compilation-settings"><a class="header" href="#compilation-settings">Compilation Settings</a></h1>
+<p>Compilation itself is very straight forward and similar to Installation: you let Wabbajack run and hope it finishes successfully. The key for making it run successfully is having a &quot;Wabbajack-compliant&quot; MO2 setup which you can get by following the advice from the previous chapters.</p>
+<h2 id="find-or-generate-your-compiler_settings"><a class="header" href="#find-or-generate-your-compiler_settings">Find or Generate your .compiler_settings</a></h2>
+<ul>
+<li>Click on the three dots next to the <code>Compiler Settings</code> field.</li>
+<li>In the file chooser that opens you have to:
+<ul>
+<li>If it is your first time compiling a list, navigate to <code>profiles/{profile_name}/</code> and select the <code>modlist.txt</code> this will generate the required <code>.compiler_settings</code> file for this and future compiles</li>
+<li>If you already have used Wabbajack with the Mod Organizer 2 instance you want to compile before or are using <a href="modlist_author_documentation/Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).html">07. Native-Game-Installer - (Installers not using MO2)</a> then you switch the filetype form <code>MO2 Modlist (.txt)</code> to <code>Compiler Settings File (.compiler_settings)</code> and select the <code>ModlistName.compiler_settings</code> file</li>
+</ul>
+</li>
+</ul>
+<h2 id="download-location"><a class="header" href="#download-location">Download Location</a></h2>
+<p>The download location is the path to the folder where all your archives and <code>.meta</code> files are located.</p>
+<h2 id="output-location"><a class="header" href="#output-location">Output Location</a></h2>
+<p>The location where the modlist <code>.wabbajack</code> file will be outputted too.</p>
+<h2 id="wabbajack-compilation-configuration-editor"><a class="header" href="#wabbajack-compilation-configuration-editor">Wabbajack Compilation Configuration Editor</a></h2>
+<p>In Wabbajack select <em>Create a Modlist</em> to navigate to the configuration screen. Here you can configure some metadata for your Modlist which will later be viewable by the user.</p>
+<table><thead><tr><th>Field</th><th>Description</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Modlist Name</td><td><strong>REQUIRED:</strong> Name of your Modlist</td><td></td></tr>
+<tr><td>Version</td><td><strong>REQUIRED:</strong> Current Version</td><td>Do note that this has to be a semantic version (1.0 or 0.1 (it can have multiple<code>.</code> separators)) and not some random text like &quot;The best version on Earth&quot; (this is not the Nexus)!</td></tr>
+<tr><td>Author</td><td>Modlist Author</td><td>Should be your name in original Modlists and/or the name of the original Modlist author if you adapted a normal Modlist to a Wabbajack Modlist</td></tr>
+<tr><td>Description</td><td>700 characters Descriptions</td><td></td></tr>
+<tr><td>Image</td><td>Modlist Image</td><td>Aspect ratio should be 16:9 for the best result</td></tr>
+<tr><td>Website</td><td>Website URL</td><td></td></tr>
+<tr><td>Readme</td><td><strong>REQUIRED:</strong> Readme URL</td><td>Link to the readme mentioned in</td></tr>
+<tr><td>NSFW</td><td>NSFW Checkbox</td><td>Only really needed for official Modlists as our Galleries have the option to hide NSFW Modlists</td></tr>
+<tr><td>Publish Update</td><td>Publish Update Checkbox</td><td>If you completed <a href="modlist_author_documentation/../wabbajack_cdn_and_gallery_access/Getting%20CDN%20Access.html">Getting CDN Access</a> and <a href="modlist_author_documentation/../wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.html">Adding a Custom Repository to Wabbajack</a> you can use this option to automatically publish your list</td></tr>
+<tr><td>MachineUrl</td><td>machineURL of the modlist required for <code>Publish Update</code></td><td><a href="modlist_author_documentation/../wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.html">Adding a Custom Repository to Wabbajack</a> Is referencing this field with its <code>JohnsLists/JohnsSkyrimMakeover</code> Example</td></tr>
+<tr><td>Nomatch Include</td><td>Adds folders to a list from which all content that can't be matched to a source should be included still</td><td>Useful for custom patches or generated files</td></tr>
+<tr><td>Include</td><td>Adds files and folders to a list which will be included with the .wabbajack file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
+<tr><td>Ignore</td><td>Adds files and folders to a list that will be ignored and therefore will not be part of final installations</td><td>Useful for mods and tools you use during development you don't want included in the final installation</td></tr>
+<tr><td>Other Profiles</td><td>Adds profile folders to a list for other MO2 profiles you want to include in the final installation</td><td>Useful for performance, or content profiles</td></tr>
+<tr><td>Always Enabled Mods</td><td>Adds mod folders to a list of mods that will be included in your list no matter if they are enabled (active in game) or not</td><td>Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included</td></tr>
+</tbody></table>
+<h2 id="compilation-errors"><a class="header" href="#compilation-errors">Compilation Errors</a></h2>
+<p>You will likely get a ton of errors during your first compilation which is to be expected. We highly recommend you join our <a href="https://discord.gg/wabbajack">Discord</a> and check the <code>modlist-development-help</code> channel for help.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="post-compilation"><a class="header" href="#post-compilation">Post-Compilation</a></h1>
+<p>After you have finished the Compilation you are basically done with Wabbajack and can upload the resulting <code>.wabbajack</code> file to somewhere, share it with people or just keep it for yourself as a Modlist backup. This section is for people who want to share their Modlist with the community.</p>
+<p>In the Wabbajack community we differentiate between <em>official</em>/<em>featured</em> and <em>unofficial</em> Modlists. The former being curated Modlists that comply with the criteria in <a href="modlist_author_documentation/../wabbajack_cdn_and_gallery_access/Criteria%20for%20&#x27;Featured%20Mod%20List&#x27;%20status.html">Criteria for 'Featured Mod List' status</a> and have met the standards of the Wabbajack team are available in the main Wabbajack Gallery with no further user action required to find them, while the latter are Modlists that come from custom repositories and are only visible when enabling the <code>Show Unofficial Lists</code> filter.</p>
+<p>Official Modlists require to have their own support Discord and often have 500-2500+ users depending on the game. Do note that these Modlists receive regular updates and the authors are putting in a lot of hours to deliver the best possible version.</p>
+<p>Managing a Modlist can be tricky if you have never done something like this. In the early days of Wabbajack we mostly relied on GDocs READMEs and hosted all accompanying files on GDrive while managing issues through the support channel on Discord. This system was later almost completely replaced through valiant effort by one of our developers: almost all new Modlists use GitHub for managing their Modlist.</p>
+<p>GitHub was made for developers and is the site you are currently on. It mostly hosts source code for open source projects, such as Wabbajack, but can also be used for project management. Another strong point is Markdown support. This README you are currently reading is, like every other GitHub README, written in Markdown and rendered on GitHub.</p>
+<p>On the topic of READMEs: you should create a good one.</p>
+<p>It is not sufficient to just slap some install and MCM instructions in there. Your Modlist might contain a thousand mods and offer hundreds of playtime but the user might not know what in oblivion is even going on and what's included.</p>
+<p>Example structure for a good README:</p>
+<ul>
+<li><strong>Preamble</strong>: Give a quick overview about what your Modlist is about, the core idea and also mention that it's a Wabbajack Modlist (some might not know what Wabbajack is so link to this README)</li>
+<li><strong>Requirements</strong>: Simple list of requirements such as min CPU, GPU, RAM and most importantly: Drive Space. Also include a list of accounts the user needs such as a Nexus Mods, LoversLab, VectorPlexus Account or any other sites your are downloading from</li>
+<li><strong>Installation</strong>: Installation instructions specific to your Modlist. You can take a look at some of the Modlists linked below as almost all of them use the same instructions with minor changes</li>
+<li><strong>Important Mods you should know about</strong>: This is an important section you should not forget. Go in-depth on core mods and talk about <em>important mods the user should know about</em>. It can be overwhelming for the user to just be thrusted into a completely modded world without knowing what's even included and possible.</li>
+<li><strong>MCM</strong>: If your Modlist has some sort of MCM like for Skyrim or Fallout 4 then you should give instructions on what settings to use</li>
+<li><strong>Changelog</strong>: Should not be in the README and can be in a separate file called <code>CHANGELOG.md</code> but make sure to create one</li>
+</ul>
+<p>Some Modlists that host all their stuff on GitHub:</p>
+<ul>
+<li>the OG GitHub Modlist: <a href="https://github.com/erri120/lotus">Lotus</a></li>
+<li><a href="https://github.com/PierreDespereaux/Keizaal">Keizaal</a></li>
+<li><a href="https://github.com/jdsmith2816/eldersouls">Elder Souls</a></li>
+<li><a href="https://github.com/NotTotal/Total-Visual-Overhaul">Total Visual Overhaul</a></li>
+<li><a href="https://github.com/ixanza/serenity">Serenity</a></li>
+<li><a href="https://github.com/jdsmith2816/rge">RGE</a></li>
+<li><a href="https://github.com/TitansBane/Elysium">Elysium</a></li>
+</ul>
+<p>Other modlists opt to host all of their information on a dedicated website:</p>
+<ul>
+<li><a href="https://thephoenixflavour.com">The Phoenix Flavour</a></li>
+<li><a href="https://www.fgsmodlists.com/living-skyrim">Living Skyrim</a></li>
+<li><a href="https://www.fgsmodlists.com/moise">MOISE</a></li>
+<li><a href="https://www.fgsmodlists.com/dd">Dungeons &amp; Deviousness</a></li>
+<li><a href="https://eziothedeadpoet.github.io/Tales-from-the-Northern-Lands/">Tales From the Northern Lands</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wabbajack-cdn--gallery-access"><a class="header" href="#wabbajack-cdn--gallery-access">Wabbajack CDN &amp; Gallery Access</a></h1>
+<p>This Chapter covers how to get your fresh compiled modlist to be displayed inside the Wabbajack Gallery.</p>
+<ul>
+<li><a href="wabbajack_cdn_and_gallery_access/wabbajack_cdn_and_gallery_access/Getting%20CDN%20Access.html">Getting CDN Access</a></li>
+<li><a href="wabbajack_cdn_and_gallery_access/wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.html">Adding a Custom Repository to Wabbajack</a></li>
+<li><a href="wabbajack_cdn_and_gallery_access/wabbajack_cdn_and_gallery_access/Criteria%20for%20&#x27;Featured%20Mod%20List&#x27;%20status.html">Criteria for 'Featured Mod List' status</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-cdn-access"><a class="header" href="#getting-cdn-access">Getting CDN Access</a></h1>
+<p>The Wabbajack CDN recognizes Github personal access tokens. These tokens are generated by a user, and should be treated as you would a password: don't share them and revoke them if you think they are stolen. These PATs can be setup with various levels of permissions, so it is important to follow the steps below so you do not create a token that has too broad of information. This will insure that if the token does get leaked, the user can only read/update data in the repository (which could then be undone later by you). Higher level tokens could be used to create new repositories or delete existing account data, so just use the lowest level of permissions and all will be well. As an aside, Wabbajack never stores these tokens to disk, so should you lose them you will need to regenerate them, the Wabbajack admins have no power to recover lost tokens. </p>
+<h2 id="creating-a-token"><a class="header" href="#creating-a-token">Creating a Token</a></h2>
+<p>To create a token, start by going to Github, logging in, then click on your avatar on the top-right of the screen, and click <code>Settings</code>:</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365541-f21082d8-ea97-4dcd-a462-bf614221deb2.png" alt="Step1" /></p>
+<p>On the next screen, find <code>Developer Settings</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365547-03428256-5e49-40b7-a21b-06335dbc8417.png" alt="Step2" /></p>
+<p>Now select <code>Personal access tokens</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365587-ad0a0589-6765-4b66-983d-1e80f27165dc.png" alt="Step3" /></p>
+<p>Click <code>Generate new token</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365616-0cf0b484-fe00-4a6f-a210-45e3e68d6ced.png" alt="Step4" /></p>
+<p>You may be asked to enter your password for security reasons. On the next page, select a name for the token (the name doesn't matter). And an expiry date. Github will warn you if you don't set the token to expire, but if you <em>do</em> set it to expire you will need to go through these steps again once the token's expire date has passed. It's up to you what to decide what to time length to use here.</p>
+<p>Leave all the permissions at the default, except for the ones shown in this image. Wabbajack will need these permissions to see and update your <code>modlist.json</code> on your behalf.</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161394552-61c02f18-6622-47b9-8d98-0955dfbf8c42.png" alt="Step10" /></p>
+<p>Now click &quot;Generate Token&quot;</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365721-82f9caf3-c1b3-4724-ab81-c26e6ffffd97.png" alt="Step6" /></p>
+<p>On the final page, click the icon to copy the token to the clipboard. It is recommended that you save this somewhere secure, once you close this browser tab you will never be able to retrieve this token again and you will need to recreate it from scratch.</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365754-11491cb8-06e5-493e-a23d-e891688716e7.png" alt="Step7" /></p>
+<h2 id="installing-the-token"><a class="header" href="#installing-the-token">Installing the token</a></h2>
+<p>Now go to <code>c:\Users\&lt;your user name&gt;\AppData\Local\Wabbajack</code> and create a text file called <code>author-api-key.txt</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365868-b66b646e-28cb-4178-a55c-d7f97260e02e.png" alt="Step8" /></p>
+<p>Open the file, paste your token into it, save the file, and exit your text editor</p>
+<h2 id="using-the-cdn"><a class="header" href="#using-the-cdn">Using the CDN</a></h2>
+<p>Having this file in your <code>Wabbajack</code> folder will enable the CDN upload service. So open Wabbajack and click the <code>Settings</code> button, you should see a panel named <code>File Uploader</code>:</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161365931-ef977ad2-2b53-462b-b70e-562cf7de1eb4.png" alt="Step9" /></p>
+<p>Click <code>Select</code> to select a file to upload, and <code>Upload</code> to upload it. After a successful upload you will be able to see your files at <a href="https://build.wabbajack.org/authored_files">https://build.wabbajack.org/authored_files</a></p>
+<p>Clicking the <code>Manage Files</code> button will take you to a screen that will allow you to see your files and delete any file you no longer need. Space is limited on the CDN, so please delete any files you no longer need, but feel free to upload generated LOD files, .wabbajack files or whatever else you need. </p>
+<h2 id="using-cdn-files"><a class="header" href="#using-cdn-files">Using CDN files</a></h2>
+<p>After you have uploaded a file, you can get a link to it from the <a href="https://build.wabbajack.org/authored_files">authored files page</a>. <strong>Note:</strong> do not use the slow links on that page, these links are used for troubleshooting and when users cannot otherwise download a file. They are quite heavy on the server so please use main file link. Right-click on the file link on that page, then click <code>copy link</code>.</p>
+<p>After you have a link to a file, go to your Mod Organizer 2 folder, and edit the <code>.meta</code> file for the file you uploaded. You need only this text in the <code>.meta</code> for Wabbajack to be able to source from it:</p>
+<pre><code class="language-ini">[General]
+directURL=&lt;link you copied goes here&gt;
+</code></pre>
+<h2 id="final-notes"><a class="header" href="#final-notes">Final Notes</a></h2>
+<p>Wabbajack staff reserve the right to delete troll files or files including illegal content. We also reserve the right to ban GitHub accounts that repeatedly violated these limitations. We will try to contact you first, and will assume that such problems arise from ignorance rather than malice.  If you have questions about any of these feel free to ask on our official <a href="https://discord.gg/wabbajack">Discord</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adding-a-custom-repository-to-wabbajack"><a class="header" href="#adding-a-custom-repository-to-wabbajack">Adding a Custom Repository to Wabbajack</a></h1>
+<p>This is a guide for how you can make your own custom repository for making your Mod Lists show up on the Wabbajack in app gallery as unofficial Mod Lists.<br />
+This guide requires you to have already completed <a href="wabbajack_cdn_and_gallery_access/Getting%20CDN%20Access.html">Getting CDN Access</a>.</p>
+<h2 id="create-a-github-repository"><a class="header" href="#create-a-github-repository">Create a Github Repository</a></h2>
+<p>To start with, log into your Github Account and create a new repository by clicking the <code>+</code> next to your avatar:</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161399306-8b3aa14a-9939-4440-9823-5ba0aa95e398.png" alt="Step1" /></p>
+<p>On the next page, give the repository a name, make sure it's set to public, and have Github create a <code>README.md</code> by default. Click <code>Create repository</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161399316-df090b1b-c52c-45a1-a175-b432dc0644d1.png" alt="Step2" /></p>
+<p>On the next page, click <code>Add file</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161399676-0ce978c3-cb46-4bae-ad56-7fc97f5850a1.png" alt="Step3" /></p>
+<p>Set the name of the file to <code>modlists.json</code>. It can be named anything, but it's nice to have some uniformity.</p>
+<p>Now fill out all the various fields for your modlist, you can use this text as a template:</p>
+<pre><code class="language-json">[
+  {
+    &quot;$type&quot;: &quot;ModListMetadata, Wabbajack.Lib&quot;,
+    &quot;title&quot;: &quot;My Modlist&quot;,
+    &quot;description&quot;: &quot;Best thing since sliced bread&quot;,
+    &quot;author&quot;: &quot;&lt;any name you want to show up in the UI&gt;&quot;,
+    &quot;maintainers&quot;: [
+      &quot;github/&lt;your github name&gt;&quot;
+    ],
+    &quot;game&quot;: &quot;skyrimspecialedition&quot;,
+    &quot;tags&quot;: [
+      &quot;testing&quot;,
+      &quot;&lt;any tags you want in the UI, each in its own string&quot;
+    ],
+    &quot;nsfw&quot;: false,
+    &quot;image_contains_title&quot;: false,
+    &quot;force_down&quot;: false,
+    &quot;links&quot;: {
+      &quot;$type&quot;: &quot;Links, Wabbajack.Lib&quot;,
+      &quot;image&quot;: &quot;&lt;link to an image to show in the UI&gt;&quot;,
+      &quot;readme&quot;: &quot;&lt;link to your readme for your modlist&gt;&quot;,
+      &quot;download&quot;: &quot;https://authored-files.wabbajack.org/Halgaris Helper.wabbajack_29d245c9-5f7f-4394-b600-a22e43427337&quot;,
+      &quot;machineURL&quot;: &quot;machineURL&quot;,
+      &quot;discordURL&quot;: &quot;&lt;your discord link here&gt;&quot;
+    },
+    &quot;download_metadata&quot;: {
+      &quot;$type&quot;: &quot;DownloadMetadata, Wabbajack.Lib&quot;,
+      &quot;Hash&quot;: &quot;e1+K7eJbDJw=&quot;,
+      &quot;Size&quot;: 0,
+      &quot;NumberOfArchives&quot;: 14,
+      &quot;SizeOfArchives&quot;: 135206078,
+      &quot;NumberOfInstalledFiles&quot;: 1311,
+      &quot;SizeOfInstalledFiles&quot;: 336453775
+    },
+    &quot;version&quot;: &quot;1.0&quot;
+  }
+]
+
+</code></pre>
+<p><strong>Notes on the metadata above:</strong></p>
+<ul>
+<li>Download Metadata - The contents of <code>download_metadata</code> can be found in the <code>.wabbajack.meta.json</code> file that's created by Wabbajack after you create compile your list.</li>
+<li>MachineURL - no strings, punctuation or special characters allowed (except underscore <code>_</code>). This name must be unique to this repository</li>
+<li><code>image_contains_title</code> - set to <code>true</code> if your gallery image contains the modlist title</li>
+<li><code>force_down</code> - something broken in your list? Set this to true to disable it in the UI</li>
+<li><code>nsfw</code> - you <em>must</em> set this to true if your modlist contains explicit sexual acts. If your list just contains nudity, then you don't have to set this to true.</li>
+</ul>
+<p>Once you're satisfied, with the contents of the metadata, click <code>Commit new file</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161399933-2012365b-0891-45f3-a21d-14a72dca1247.png" alt="Step5" /></p>
+<h2 id="adding-your-repository"><a class="header" href="#adding-your-repository">Adding your repository</a></h2>
+<p>Now you need to add your repository to the Wabbajack master repository list. View your <code>modlists.json</code> file in GitHub, and right-click on the <code>Raw</code> button and select <code>Copy Link</code></p>
+<p><img src="https://user-images.githubusercontent.com/654621/161399961-bc0cdb28-74d8-4c69-8cb0-11863083bee1.png" alt="Step6" /></p>
+<p>Now navigate to this file: <a href="https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json">https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json</a> and select the <code>Edit</code> button</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png" alt="Step8" /></p>
+<p>Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above.</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161400507-40238db1-4ec3-4599-8082-ba961ac79b1b.png" alt="Step9" /></p>
+<p>Click &quot;Create a new Branch...&quot; and &quot;Propose Changes&quot;.</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161400527-669820df-7147-419d-b903-4eff6eeddb9c.png" alt="Step10" /></p>
+<p>On the next page, click &quot;Create Pull Request&quot;</p>
+<p><img src="https://user-images.githubusercontent.com/654621/161400531-0cae7ffd-4039-4f95-9f16-ce6e1b3b9e3d.png" alt="Step10" /></p>
+<p>Probably best at this point to put a link to the Pull Request you just created in the <a href="https://discord.gg/wabbajack">Wabbajack Discord</a> but otherwise we'll probably see it soon and take a look. One the PR is merged, your modlist should show up in the Wabbajack UI.</p>
+<h2 id="common-errors"><a class="header" href="#common-errors">Common Errors</a></h2>
+<p>When uploading a new list to your repository, there are several errors that you may encounter.</p>
+<h3 id="you-do-not-have-access-to-this-list"><a class="header" href="#you-do-not-have-access-to-this-list">You do not have access to this list</a></h3>
+<p>If you get this error, chances are the list's definition does not include your <em>Github username</em> in the list of maintainers. Remember to prefix your username with <code>github/</code> so if your username is <code>JohnDoe</code> then the maintainer list should have an entry of <code>&quot;github/JohnDoe&quot;</code>.</p>
+<h3 id="namespaced-list-required"><a class="header" href="#namespaced-list-required">Namespaced list required</a></h3>
+<p>Lists names provided in the UI should be namespaced with the repo name. The format in of the <code>machineURL</code> entry in Wabbajack is <code>&lt;repo&gt;/&lt;list-name&gt;</code>. So if you have a repo named <code>JohnsLists</code> and your list that you are updating is <code>JohnsSkyrimMakeover</code> then the machineURL field in WJ's compiler UI should be set to <code>JohnsLists/JohnsSkyrimMakeover</code>.</p>
+<h3 id="404-error-when-updating-a-wj-featured-list"><a class="header" href="#404-error-when-updating-a-wj-featured-list">404 Error when updating a <code>wj-featured/</code> list</a></h3>
+<p>The repo <code>wj-featured</code> is managed by the wabbajack team, you'll need to request membership to the WJ modlist team group, or just go and make your own repo.</p>
+<h3 id="404-errors-when-uploading-lists"><a class="header" href="#404-errors-when-uploading-lists">404 errors when uploading lists</a></h3>
+<p>You probably forgot to set the permissions on your Github Personal access token, verify that's all setup correctly as per <a href="https://github.com/wabbajack-tools/wiki/wiki/Getting-CDN-Access">these instructions</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="criteria-for-featured-mod-list-status"><a class="header" href="#criteria-for-featured-mod-list-status">Criteria for 'Featured Mod List' status</a></h1>
+<p>The general opinion of the Wabbajack project, post-decentralization, is that any well managed, well curated list should be valid for &quot;featuring in the UI&quot;. This is a rather general and subjective statement, so instead of writing down the minimum requirements for a list to be accepted this is a list of known reasons why a list <em>will</em> be rejected.</p>
+<h2 id="rejection-reasons"><a class="header" href="#rejection-reasons">Rejection Reasons</a></h2>
+<h3 id="manual-downloads-outside-of-wabbajack"><a class="header" href="#manual-downloads-outside-of-wabbajack">Manual downloads outside of Wabbajack</a></h3>
+<p>Wabbajack has a <code>manualURL=</code> .meta directive that will instruct the user to download an install a file via the in-app browser. There should never be a reason for a user to us a browser from outside of Wabbajack. There should never be a step that requires the user to install a mod by hand.</p>
+<p>There is an exception made here for lists that do not enable ENBs by default, but leave that as a manual option by the user. If your list has a optional ENB, it is recommended that you configure WJ to download the ENB files but not install them, and let the user copy them manually.</p>
+<h3 id="pay-walled-mods"><a class="header" href="#pay-walled-mods">Pay-walled mods</a></h3>
+<p>No mods through Wabbajack should ever be paywalled. Free logins to patreon that then download files are allowed. Logins to 3rd party sites that have subscriptions are allowed, but a user should <em>never</em> be required to buy a non-game studio product to install a modlist. Downloadable content for the game is a fine requirement, a 3rd party paywalled mod is not.</p>
+<h3 id="skyrim-should-auto-downgrade"><a class="header" href="#skyrim-should-auto-downgrade">Skyrim should auto-downgrade</a></h3>
+<p>If your list uses Skyrim 1.5.97, it should expect the user to have a unmodified copy of Skyrim. To avoid confusion we will not accept any list that requires the user to downgrade manually. Wabbajack has built-in facilities to auto downgrade via the &quot;Stock Game Folder&quot; take advantage of this.</p>
+<h3 id="modlists-must-have-open-permissions"><a class="header" href="#modlists-must-have-open-permissions">Modlists must have &quot;Open Permissions&quot;</a></h3>
+<p>Your modlist must allow other users to fork, modify and re-upload your modlist as per the Wabbajack <a href="https://github.com/wabbajack-tools/wabbajack/blob/main/LICENSE.txt">License</a>. This does <em>not</em> mean that you have to support such modifications, and the forking user should rename the list.</p>
+<h3 id="if-you-fork-a-list-you-must-not-advertise-via-their-name-unless-given-permission-to-do-so"><a class="header" href="#if-you-fork-a-list-you-must-not-advertise-via-their-name-unless-given-permission-to-do-so">If you fork a list, you must not advertise via their name unless given permission to do so</a></h3>
+<p>If you fork &quot;Bill's Skyrim&quot; you cannot name your list &quot;Better Bill's Skyrim&quot;. Make your own name, make your own community, unless you ask the original author permission first</p>
+<h3 id="do-not-opt-in-to-donation-points-on-the-nexus-for-files-that-are-not-generic-to-modding"><a class="header" href="#do-not-opt-in-to-donation-points-on-the-nexus-for-files-that-are-not-generic-to-modding">Do <em>not</em> opt-in to Donation Points on the nexus for files that are not generic to modding</a></h3>
+<p>If a file you put on the Nexus is only usable by Wabbajack (patches, auto-generated files, .wabbajack files, etc.) Do not opt-in to donation points on these files. This is at the request of the Nexus. Collections on Nexus Mods do not get donation points, we should play by the same rules. If a mod is generally useful to modders at large, feel free to opt-in.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="auto-healing--force-healing-overview"><a class="header" href="#auto-healing--force-healing-overview">Auto-healing &amp; Force-healing Overview</a></h1>
+<p>In the past with the Nexus deleting files every day, we saw a need
+for rapid fully automatic healing for Wabbajack lists. This code was
+brittle, quite complex, and hard to debug. However, these days with
+the Nexus no longer deleting files, we have an opportunity to simplify
+the process.</p>
+<h2 id="parts-in-play"><a class="header" href="#parts-in-play">Parts in play</a></h2>
+<ul>
+<li>List Validation service -  a GitHub action with some static storage, and rights to log into all our download soruces</li>
+<li>Storage Server - the backing store behind the Wabbajack CDN consists of 3 storage spaces:
+<ul>
+<li>Patches - a directory of files stored as <code>{from_hash_hex}_{to_hash_hex}</code></li>
+<li>Mirrors - a directory of files in the CDN multi-parts format stored as <code>{file_hash_hex}</code></li>
+<li>Authored files - a directory of files in the CDN multi-parts format</li>
+</ul>
+</li>
+</ul>
+<h2 id="multi-parts-format"><a class="header" href="#multi-parts-format">Multi-Parts Format</a></h2>
+<p>The structure for CDN files in this format is:</p>
+<ul>
+<li><code>./definition.json.gz</code> - JSON data storing the hash of the files, and the hash of each part</li>
+<li><code>./parts/{idx}</code> - each part stored as <code>0</code>, <code>1</code>, etc. Each file is uncompressed and roughly 2MB</li>
+</ul>
+<h2 id="file-validation-process"><a class="header" href="#file-validation-process">File Validation Process</a></h2>
+<p>The workflow for list validation in 3.0 is as follows:</p>
+<ol>
+<li>Load the <code>configs/forced_healing.json</code> file that contains mirrored and patch files specified by list authors</li>
+<li>Download every modlist and archive it for future use, if already downloaded, don't redownload</li>
+<li>For each modlist, load it, and start validating the files</li>
+<li>For each file that passes, return <code>Valid</code></li>
+<li>If the file fails, check the mirrors list for a match, if it matches return <code>Mirrored</code></li>
+<li>If the file fails, check the patches list for a match,
+<ul>
+<li>If one is found, validate the new file in the patch, if it fails try the next patch</li>
+</ul>
+</li>
+<li>If all patches fail to match, return <code>Invalid</code></li>
+<li>Write out reports for all modlists</li>
+</ol>
+<h2 id="list-author-interaction"><a class="header" href="#list-author-interaction">List Author Interaction</a></h2>
+<p>List authors now have two controls they can use:</p>
+<ul>
+<li><code>wabbajack-cli.exe force-heal -o &lt;old_file&gt; -i &lt;new-file&gt;</code> 
+<ul>
+<li>Creates a patch for back porting <code>&lt;new-file&gt;</code> to <code>&lt;old-file&gt;</code></li>
+<li>Uploads the patch</li>
+<li>Adds the patch go the <code>config/forced_healing.json</code> file</li>
+</ul>
+</li>
+<li><code>wabbajack-cli.exe mirror-file -f &lt;file&gt;</code>
+<ul>
+<li>Uploads a file as a mirror</li>
+<li>Adds the file to the <code>config/forced_healing.json</code> file</li>
+<li>Note: using this to violate author copyrights is strictly forbidden do not mirror files without seeking prior approval from WJ staff.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hashing-overview"><a class="header" href="#hashing-overview">Hashing Overview</a></h1>
+<h2 id="hashing-algorithms"><a class="header" href="#hashing-algorithms">Hashing Algorithms</a></h2>
+<p>Wabbajack uses a programming concept known as &quot;content hashing&quot;. File hashing is a rather common computer programming concept in which a file is reduced to a set of bytes of a set length. There are many different ways to hash a file, and they very in performance and what is known as the &quot;collision chance&quot;. The &quot;collision chance&quot; is the likeliness that two files will hash to the same hash code even though the contents of those files are different. In Wabbajack we want to avoid hash collision as much as possible, as two different files hashing to the same code would be catastrophic.</p>
+<p>A non-goal for the Wabbajack hashing routines is for them to be &quot;secure&quot;. A secure hash algorithm goes to great lengths to make sure that a given code cannot be &quot;decoded&quot; into the original string. These secure (or cryptographic) hash codes are often used to store passwords in databases. With a secure hash, the hash of a password can be stored in a database, and if the database is compromised no harm is done as the user's password cannot be determined by the hash. Unfortunately these cryptographic hash routines are often orders of magnitude slower than non-cryptographic hash.</p>
+<p>Several hash codes that you may see in the modding community are:</p>
+<ul>
+<li><code>CRC</code> - Not really a hash code, but acts like one. It is only really useful for basic file consistency checks. It's often 32 bytes in length and has a very high hash collision chance (it's easy to make two hashes collide)</li>
+<li><code>MD5</code> - A cryptographic hash, but not a very secure one. MD5 is used for historical reasons, but modern computers can brute-force a MD5 in about 30 minutes. MD5 also has some flaws that cause it to collide a lot, making it much less secure</li>
+<li><code>SHA1</code> - A slightly better cryptographic hash, has been brute-forced in about 45 minutes</li>
+<li><code>SHA256</code> - Takes a super computer to brute force, and it doesn't collide. However, the time required to calculate a <code>SHA256</code> of a large file makes it less than optimal for Wabbajack</li>
+</ul>
+<p>As you can see, the best hashes mentioned above tend to be slow, and cryptographic (a feature Wabbajack doesn't require). Thankfully a few years back a developer by the name of Yann Collet (<a href="https://github.com/Cyan4973">https://github.com/Cyan4973</a>) realized that someone needed to make a hash algorithm that didn't collide, and was fast enough to be used to hash large multi-GB files (like videos), and so he made xxHash, and later xxHash64. xxHash64 has a very low hash collision rate, is not cryptographic, and runs almost at the speed of a computer's memory, and in our case that means the hashing rate is limited by the speed of the disk storage.</p>
+<h2 id="hash-formatting-base-64-vs-base-16"><a class="header" href="#hash-formatting-base-64-vs-base-16">Hash formatting (Base 64 vs Base 16)</a></h2>
+<p>Hash codes in almost any format are in the form of raw bytes of data. And yet in apps we need a way to make these bytes a bit more presentable to users. A common way of displaying hash codes is via hexadecimal numbers, for example &quot;Cheese for Everyone!&quot; might be displayed as: <code>b3584f423b8c21b871a0abce260259f58cb3657e03fb1121c674f170e990d35d</code>. While this format works well for displaying single codes, some files in Wabbajack may contain hundreds of thousands of hash codes. Therefore Wabbajack chooses to use base 64 encoding instead. Most numbers used by humans (like the number <code>42</code>) are written in base 10 format (10 values for a single digit place). Hexadecimal numbers are also known as &quot;base 16&quot; numbers as they include <code>a</code> through <code>f</code> as possible digit values. Base64 expands this with all the letters of the alphabet, lower and upper case, and some punctuation. Thus the xxHas64 code for &quot;Cheese for Everyone!&quot; in base 64 encoding is : <code>eSIyd+KOG3s=</code></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
