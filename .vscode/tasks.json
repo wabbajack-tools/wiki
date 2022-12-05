@@ -4,9 +4,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Serve",
-            "type": "shell",
-            "command": "E:\\Wabbajack\\Github_Wiki\\wiki\\.vscode\\serve.bat",
+            "label": "mdBook: serve",
+            "type": "process",
+            "command": "mdbook",
+            "args": [
+                "serve",
+                "--open"
+            ],
             "problemMatcher": []
         }
     ]

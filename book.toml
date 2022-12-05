@@ -8,9 +8,13 @@ description = "The Official Wabbajack Documentation."
 
 [build]
 create-missing = false
-extra-watch-dirs = ["../"]
 
 [output.html]
+cname = "wiki.wabbajack.org"
 default-theme = "rust"
 preferred-dark-theme = "navy"
-cname = "www.wabbajack.org"
+git-repository-url = "https://github.com/wabbajack-tools/wiki"
+edit-url-template = "https://github.com/wabbajack-tools/wiki/edit/main/{path}"
+
+[output.html.print]
+enable = false
