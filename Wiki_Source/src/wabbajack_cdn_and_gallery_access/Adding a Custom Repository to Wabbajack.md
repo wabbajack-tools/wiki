@@ -70,7 +70,7 @@ Now fill out all the various fields for your modlist, you can use this text as a
 * `force_down` - something broken in your list? Set this to true to disable it in the UI
 * `nsfw` - you *must* set this to true if your modlist contains explicit sexual acts. If your list just contains nudity, then you don't have to set this to true.
 
-Once you're satisfied, with the contents of the metadata, click `Commit new file`
+Once you're satisfied with the contents of the metadata, [validate your json](https://jsonlint.com/) and click `Commit new file` afterwards.
 
 ![Step5](https://user-images.githubusercontent.com/654621/161399933-2012365b-0891-45f3-a21d-14a72dca1247.png)
 
