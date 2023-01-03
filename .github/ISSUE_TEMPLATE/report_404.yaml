@@ -1,5 +1,5 @@
-name: 404 Report
-description: Report a 404 error
+name: 404 Page Not Found Report
+description: Report a 404 Page Not Found Error, 
 title: "[404]: "
 labels: []
 body:
