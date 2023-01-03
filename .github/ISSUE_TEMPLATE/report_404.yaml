@@ -21,7 +21,7 @@ body:
     attributes:
       label: If it was in the Wiki, where on the page did you get linked to the error ?
       description: Please describe the position good enough, so that we can find the link and fix it.
-      placeholder: 'The link can be found when seaching for the word "foo"'
+      placeholder: 'The link can be found when seaching for the word "foo".'
     validations:
       required: false
   - type: textarea
