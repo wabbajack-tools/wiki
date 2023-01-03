@@ -42,7 +42,7 @@ manualURL=https://foo.bar.bz/someFile.zip
 prompt=Please download the second file on this page
 ```
 
-> **Warning**
+> **Note**
 > Using `manualURL` makes it impossible for the WJ list validator to check those files in regards to their uptime, so it falls on you to listen to user reports and to verify regularly that the correct file still exists at the source you have linked.
 
 ### IPS4 sites
