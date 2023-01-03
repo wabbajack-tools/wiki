@@ -1,12 +1,12 @@
 name: 404 Page Not Found Report
 description: Report a 404 Page Not Found Error
-title: "[404]: "
+title: "Not found Report Issue"
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to report the issue!
   - type: textarea
     id: origin_link
     attributes:
@@ -21,7 +21,7 @@ body:
     attributes:
       label: If it was in the Wiki, where on the page did you get linked to the error ?
       description: Please describe the position good enough, so that we can find the link and fix it.
-      placeholder: Chapter 
+      placeholder: 'The link can be found when seaching for the word "foo"'
     validations:
       required: false
   - type: textarea
