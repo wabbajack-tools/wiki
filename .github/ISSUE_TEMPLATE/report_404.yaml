@@ -20,7 +20,7 @@ body:
   - type: textarea
     id: target
     attributes:
-      label: Please post the link that showed you the 404 Error:
+      label: Please post the link that showed you the 404 Error\:
       description: This is required so we can add automated redirects to either the main page or the intended section.
       placeholder: 
       value: 
