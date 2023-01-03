@@ -47,12 +47,6 @@ prompt=Please download the second file on this page
 
 ### IPS4 sites
 
-> **Warning**
-> This still uses LoversLab as the example but because LoversLab has a tendency to break it's api we highly recommend not using this meta option for Loverslab and using `manualURL instead`, same goes for attachment files on those sites.
-
-> **Info**
-> Due to some issues of domain registration for VectorPlexus (url was moved to www.vectorplexis.com) and unexpected downtimes we advise to use mirrors provided by the mod authors instead for maximum uptime of the modlist.
-
 In order to configure a `.meta` file for a IPS4 site, use the following format:
 
 Let's say we're making a meta for a file found at `https://www.loverslab.com/files/file/11116-test-file-for-wabbajack-integration`
@@ -80,6 +74,13 @@ ips4Site=Lovers Lab
 ips4Mod=11116
 ips4File=WABBAJACK_TEST_FILE.zip
 ```
+
+
+> **Note**
+> This still uses LoversLab as the example but because LoversLab has a tendency to break it's api we highly recommend not using this meta option for Loverslab and using `manualURL instead`, same goes for attachment files on those sites.
+
+> **Note**
+> Due to some issues of domain registration for VectorPlexus (url was moved to www.vectorplexis.com) and unexpected downtimes we advise to use mirrors provided by the mod authors instead for maximum uptime of the modlist.
 
 ## Reference Table
 
