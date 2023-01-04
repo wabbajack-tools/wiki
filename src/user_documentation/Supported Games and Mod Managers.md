@@ -28,7 +28,7 @@ This is needed, since the EGS has no public database of its game IDs.
 | TES Morrowind               | Steam, GOG                   |                                     |                                |
 | TES Oblivion                | Steam, GOG                   | Normal and GotY                     | Platform-locked*               |
 | TES Skyrim                  | Steam                        |                                     |                                |
-| TES Skyrim Special Edition  | Steam                        |                                     | Platform-locked*               |
+| TES Skyrim Special Edition  | Steam, GOG                   |                                     | Platform-locked*               |
 | TES Skyrim VR               | Steam                        |                                     |                                |
 | The Witcher                 | Steam, GOG                   | Enhanced Edition                    | Experimental                   |
 | The Witcher 3               | Steam, GOG                   | Normal and GotY                     | Experimental, Platform-locked* |
