@@ -2,6 +2,9 @@
 
 The following guide explains how you set up a native or Mod Organizer 2 less Wabbajack compile of a folder structure for modding.
 
+> **Warning**
+> This Page potenitally requires updating the template for Wabbajack version 3.0.
+
 ## Preparation of the modlist folder
 
 Create a folder in which to create the list, and optionally create a `downloads` folder in side this modlist folder. Now add all the mods to this base folder and place the raw downloads from the nexus into the `downloads`.
