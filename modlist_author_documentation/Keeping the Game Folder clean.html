@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Keeping the Game Folder clean - Wabbajack Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="The Official Wabbajack Documentation.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">About Wabbajack</a></li><li class="chapter-item expanded affix "><li class="part-title">User Documentation</li><li class="chapter-item expanded "><a href="../user_documentation/Supported Games and Mod Managers.html"><strong aria-hidden="true">1.</strong> Supported Games and Mod Managers</a></li><li class="chapter-item expanded "><a href="../user_documentation/Installing a Modlist.html"><strong aria-hidden="true">2.</strong> Installing a Modlist</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Troubleshooting FAQ</div></li><li class="chapter-item expanded affix "><li class="part-title">Modlist Developer Documentation</li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Compilation.html"><strong aria-hidden="true">4.</strong> Compilation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modlist_author_documentation/Introduction.html"><strong aria-hidden="true">4.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Pre-Compilation.html"><strong aria-hidden="true">4.2.</strong> Pre-Compilation</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Meta Files.html"><strong aria-hidden="true">4.3.</strong> Meta Files</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Keeping the Game Folder clean.html" class="active"><strong aria-hidden="true">4.4.</strong> Keeping the Game Folder clean</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Native-Game-Installer - (Installers not using MO2).html"><strong aria-hidden="true">4.5.</strong> Native-Game-Installer - (Installers not using MO2)</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Compilation Settings.html"><strong aria-hidden="true">4.6.</strong> Compilation Settings</a></li><li class="chapter-item expanded "><a href="../modlist_author_documentation/Post-Compilation.html"><strong aria-hidden="true">4.7.</strong> Post-Compilation</a></li></ol></li><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Wabbajack CDN & Gallery Access.html"><strong aria-hidden="true">5.</strong> Wabbajack CDN & Gallery Access</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Getting CDN Access.html"><strong aria-hidden="true">5.1.</strong> Getting CDN Access</a></li><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Adding a Custom Repository to Wabbajack.html"><strong aria-hidden="true">5.2.</strong> Adding a Custom Repository to Wabbajack</a></li><li class="chapter-item expanded "><a href="../wabbajack_cdn_and_gallery_access/Criteria for 'Featured Mod List' status.html"><strong aria-hidden="true">5.3.</strong> Criteria for 'Featured Mod List' status</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Compilation Issues FAQ</div></li><li class="chapter-item expanded affix "><li class="part-title">Technical Notes</li><li class="chapter-item expanded "><a href="../technical_talk/Auto-healing & Force-healing Overview.html"><strong aria-hidden="true">7.</strong> Auto-healing & Force-healing Overview</a></li><li class="chapter-item expanded "><a href="../technical_talk/Hashing Overview.html"><strong aria-hidden="true">8.</strong> Hashing Overview</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Wabbajack Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/wabbajack-tools/wiki" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/wabbajack-tools/wiki/edit/main/src/modlist_author_documentation/Keeping the Game Folder clean.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="keeping-the-game-folder-clean"><a class="header" href="#keeping-the-game-folder-clean">Keeping the Game Folder clean</a></h1>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>The general idea is that we need a way to keep the Vanilla games clean in their installation locations, so that we don't cause issues with other tools or modlists, but there are files and mods that need to be in the games directory. For this there are two solutions both with their own pros and cons, Root Builder and A &quot;Stock Game&quot; copy inside MO2 Instances.</p>
+<h2 id="root-builder"><a class="header" href="#root-builder">Root Builder</a></h2>
+<p>Since the author of the Tool can describe it best here an excerpt from their website:</p>
+<blockquote>
+<p>Root Builder is a plugin for Mod Organizer 2, allowing users to manage files in the base game directory through Mod Organizer.</p>
+<p>Some of the things you can do with Root Builder:</p>
+<ul>
+<li>Install script extenders (SKSE, OBSE, FOSE, etc) through Mod Organizer.</li>
+<li>Install ENB and different presets for it through Mod Organizer.</li>
+<li>Manage different versions of the same game as mods within Mod Organizer.</li>
+<li>Keep your game folder untouched and as clean as the day it was installed.</li>
+<li>Keep all your mods in Mod Organizer, saving your setup if you need to reinstall or switch computer.</li>
+</ul>
+</blockquote>
+<p>Source: <a href="https://kezyma.github.io/?p=rootbuilder">Root Builder Website</a></p>
+<div class="table-wrapper"><table><thead><tr><th>Pros</th><th>Cons</th></tr></thead><tbody>
+<tr><td>Can use different root folder Binaries depending on different supported platforms like Steam or GOG by using MO2 Profiles</td><td>You need to be careful with game updates, if the game updates the binaries for that version might not be there anymore</td></tr>
+<tr><td>Can use different ENB presets in different performance MO2 Profiles</td><td></td></tr>
+<tr><td>Requires less storage space</td><td></td></tr>
+</tbody></table>
+</div>
+<p>For using Root Builder we recommend the very on point and well written official instructions on the <a href="https://kezyma.github.io/?p=rootbuilder#intall-col">official website</a>.
+A guide that also features compiling with Root Builder can be found <a href="https://github.com/The-Animonculory/Modding-Resources/blob/main/Root%20Builder%20for%20Skyrim%20AE.md">here</a>.</p>
+<h2 id="stock-game"><a class="header" href="#stock-game">Stock Game</a></h2>
+<p>The general idea is to build a WJ modlist that stores the game files inside the MO2 install folder.
+WJ will recognize these files and copy them from the end-user's game folder. This has the side-effect of keeping the game folder completely clean.</p>
+<div class="table-wrapper"><table><thead><tr><th>Pros</th><th>Cons</th></tr></thead><tbody>
+<tr><td>Game updates can't break it</td><td>requires a lot of storage space</td></tr>
+<tr><td></td><td>locked into one specific platform (only users owing the game on the same store can use the modlist)</td></tr>
+<tr><td></td><td>Can only include one ENB preset</td></tr>
+</tbody></table>
+</div>
+<h3 id="preperation"><a class="header" href="#preperation">Preperation</a></h3>
+<ol>
+<li>Build a WJ list as normal</li>
+<li>Create a folder in the MO2 base folder, let's call it <code>Stock Game</code>, so users don't think these are <code>Game Folder Files</code></li>
+<li>Copy in all the game files from your <code>Skyrim Special Edition</code> folder</li>
+<li>Remap MO2 files, open <code>Mod Organizer.ini</code> and change <code>GamePath=</code> to <code>c:\\Path\\To\\MO2\\Stock Game</code></li>
+<li>Open MO2 and edit the custom executable paths for SKSE/Launcher/Skyrim to the new path inside the MO2 folder</li>
+</ol>
+<h3 id="optimization"><a class="header" href="#optimization">Optimization</a></h3>
+<p>Doing the above will add about 12GB of bloat to the installed modlist, but we can likely reduce this quite a bit.</p>
+<ul>
+<li>Any <code>.ESMs</code> that have been cleaned are no longer required (as the cleaned files are in a mod), so delete those .ESMs from <code>Stock Game\\Data</code></li>
+<li>Any <code>.BSA</code> that are 100% replaced with files by the same name can be removed. So if you're using <code>unofficial performance optimized textures</code>, you can safely delete all the Texture BSAs</li>
+</ul>
+<h3 id="final-setup"><a class="header" href="#final-setup">Final setup</a></h3>
+<p>You can now put any ENBs, .dlls, etc. Directly into the <code>Stock Game</code> folder.</p>
+<p>Users should now be able to Install via WJ -&gt; MO2 -&gt; Run SKSE, removing the rather &quot;complicated&quot; step of copying game files into the game folder. This also allows multiple lists to be installed at one time that use the same base game, removing the need for a ENB manager.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../modlist_author_documentation/Meta Files.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../modlist_author_documentation/Native-Game-Installer - (Installers not using MO2).html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../modlist_author_documentation/Meta Files.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../modlist_author_documentation/Native-Game-Installer - (Installers not using MO2).html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
