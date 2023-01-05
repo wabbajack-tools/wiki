@@ -4,6 +4,11 @@
 
 [About Wabbajack](../README.md)
 
+# Policies & License
+
+- [Wabbajack License]()
+- [Wabbajack Monetization Policy](policies_and_license/Wabbajack%20Monetization%20Policy.md)]
+
 # User Documentation
 
 - [Supported Games and Mod Managers](user_documentation/Supported%20Games%20and%20Mod%20Managers.md)
