@@ -2,7 +2,7 @@
 
 # Summary
 
-[About Wabbajack](../README.md)
+[Wabbajack Wiki](../README.md)
 
 # Important 
 
