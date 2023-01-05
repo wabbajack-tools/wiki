@@ -7,7 +7,7 @@
 # Policies & License
 
 - [Wabbajack License]()
-- [Wabbajack Monetization Policy](policies_and_license/Wabbajack%20Monetization%20Policy.md)]
+- [Wabbajack Monetization Policy](policies_and_license/Wabbajack%20Monetization%20Policy.md)
 
 # User Documentation
 
