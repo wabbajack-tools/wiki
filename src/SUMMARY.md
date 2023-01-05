@@ -6,9 +6,9 @@
 
 # Important 
 
-- [Policies & License](policies_and_license/Policies and License.md)
-    - [Wabbajack License](policies_and_license/Wabbajack%20License.md)
-    - [Wabbajack Monetization Policy](policies_and_license/Wabbajack%20Monetization%20Policy.md)
+- [Policies & License](policies_and_license/Policies%20and%20License.md)
+  - [Wabbajack License](policies_and_license/Wabbajack%20License.md)
+  - [Wabbajack Monetization Policy](policies_and_license/Wabbajack%20Monetization%20Policy.md)
 
 # User Documentation
 
