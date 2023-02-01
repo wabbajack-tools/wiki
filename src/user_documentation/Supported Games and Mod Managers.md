@@ -22,7 +22,7 @@ This is needed, since the EGS has no public database of its game IDs.
 | Fallout New Vegas                  | Steam, GOG                   | Normal and region locked RU version | Platform-locked*               |
 | Karryn's Prison                    | Steam                        |                                     | Experimental                   |
 | Kerbal Space Program               | Steam, GOG                   |                                     | Experimental                   |
-| Added Mount & Blade II: Bannerlord | Steam, GOG                   |                                     | Experimental                   |
+| Mount & Blade II: Bannerlord       | Steam, GOG                   |                                     | Experimental                   |
 | Sims 4                             | Steam                        |                                     | Experimental                   |
 | Stardew Valley                     | Steam, GOG                   |                                     | Experimental, Platform-locked* |
 | Terraria                           | Steam                        | tModloader                          | Experimental                   |
