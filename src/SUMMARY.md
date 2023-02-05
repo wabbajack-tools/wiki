@@ -4,7 +4,7 @@
 
 [Wabbajack Wiki](../README.md)
 
-# Important 
+# Important
 
 - [Policies & License](policies_and_license/Policies%20and%20License.md)
   - [Wabbajack License](policies_and_license/Wabbajack%20License.md)
@@ -14,7 +14,7 @@
 
 - [Supported Games and Mod Managers](user_documentation/Supported%20Games%20and%20Mod%20Managers.md)
 - [Installing a Modlist](user_documentation/Installing%20a%20Modlist.md)
-- [Troubleshooting FAQ]()
+- [Troubleshooting FAQ](user_documentation/Troubleshooting%20FAQ.md)
 
 # Modlist Developer Documentation
 
