@@ -30,7 +30,7 @@ This page is and will always be in development and update over time.
 
 ## Using Wabbajack
 
-### Wabbajack shows a back screen when trying to X
+### Wabbajack shows a black screen when trying to X
 
 > **Install/Repair WebView2**
 >
