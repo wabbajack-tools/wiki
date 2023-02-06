@@ -39,7 +39,7 @@ This page is and will always be in development and update over time.
 >
 > **Repair your windows installation**
 >
-> Wabbjack is built using various libraries made by Microsoft and some of them require core funktions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your windows if you ever have run such a deblaoter software/script.
+> Wabbjack is built using various libraries made by Microsoft and some of them require core functions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your windows if you ever have run such a deblaoter software/script.
 
 ### Don't run as Admin!
 
