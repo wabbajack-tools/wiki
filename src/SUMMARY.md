@@ -32,7 +32,7 @@
   - [Adding a Custom Repository to Wabbajack](wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.md)
   - [Criteria for 'Featured Mod List' status](wabbajack_cdn_and_gallery_access/Criteria%20for%20'Featured%20Mod%20List'%20status.md)
 
-- [Compilation Issues FAQ]()
+- [Compilation Issues FAQ](modlist_author_documentation/Compilation%20Issues%20FAQ.md)
 
 # Technical Notes
 
