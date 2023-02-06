@@ -29,10 +29,10 @@ This page is and will always be in development and update over time.
 
 ### Failed Compilation: Can't find game Morrowind
 
-> **U are trying to compile a Modlist for Morrowind:**
+> **You are trying to compile a Modlist for Morrowind:**
 >
 > Something with the game detection is broken, please join the discord for more direct help identifying the issue.
 >
-> **U are trying to compile a non Morrowind Modlist:**
+> **You are trying to compile a non Morrowind Modlist:**
 >
 > You are using a Pseudo Portable instance and need to [convert it to a portable one](#portable-instances).
