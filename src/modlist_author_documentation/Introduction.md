@@ -4,7 +4,7 @@ Modlist Creation or Compilation as we call it, is a trial and error process. You
 
 ## Requirements
 
-Wabbajack requires that you created your Modlist using a **portable** version of Mod Organizer 2. This is a **hard requirement** for the intended and fully supported Wabbajack experience. Wabbajack won't work with Vortex, Kortex, Wyre Bash, Nexus Mod Manager, Oblivion Mod Manager or any other Mod Manager, not even Mod Organizer 1. At least not without some really hard drawbacks and complications.
+Wabbajack requires that you created your Modlist using a [**portable**](https://wiki.wabbajack.org/modlist_author_documentation/Compilation%20Issues%20FAQ.html#portable-instances) version of Mod Organizer 2. This is a **hard requirement** for the intended and fully supported Wabbajack experience. Wabbajack won't work with Vortex, Kortex, Wyre Bash, Nexus Mod Manager, Oblivion Mod Manager or any other Mod Manager, not even Mod Organizer 1. At least not without some really hard drawbacks and complications.
 
 There is an option for compiling free of any Mod Manager, but that option isn't tested a lot and comes with more manual instructions needed for the people interested in installing your modlist. The option for this is the [Native-Game-Installer - (Installers not using MO2)](Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).md).
 
