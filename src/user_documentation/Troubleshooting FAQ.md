@@ -15,7 +15,7 @@ This page is and will always be in development and update over time.
 
   **Important:** `%localappdata%` **NOT** `%appdata%` !!
 
-  This will **NOT** affect any already installed lists or doenloaded files.
+  This will **NOT** affect any already installed lists or downloaded files.
 
 - If have never used Wabbjack before  or the previous instructions didn't work try the following:  
   > **Manually Install Wabbjack**
