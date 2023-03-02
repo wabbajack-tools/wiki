@@ -36,3 +36,13 @@ This page is and will always be in development and update over time.
 > **You are trying to compile a non Morrowind Modlist:**
 >
 > You are using a Pseudo Portable instance and need to [convert it to a portable one](#portable-instances).
+
+### Cannot find source for .meta files
+
+> **The sourced downloads folder is inside of MO2.**  
+> Place it outside MO2 so you can name it however you want.  
+> Example of how to do it: D:\WJ Downloads\{list_name} with the list being D:\WJ Projects\{list_name}  
+> (list_name doesn't need to be the same name, it is just an example.)  
+
+> **If you want to keep it inside of MO2;**  
+> Use the compiler settings to tell Wabbajack to ignore the renamed downloads folder if you want a custom folder name and the folder present inside the MO2 location.
