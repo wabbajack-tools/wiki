@@ -1,32 +1,31 @@
-# Native-Game-Installer - (Installers not using MO2)
+# Native-Game-Installer (Installers not using MO2)
 
-The following guide explains how you set up a native or Mod Organizer 2 less Wabbajack compile of a folder structure for modding.
+The following guide explains how to set up a "native" (or MO2-less) Wabbajack compilation for any given folder structure.
 
 > **Warning**
 > This Page potenitally requires updating the template for Wabbajack version 3.0.
 
-## Preparation of the modlist folder
+## Preparing the Modlist Folder
 
 Create a folder in which to create the list, and optionally create a `downloads` folder in side this modlist folder. Now add all the mods to this base folder and place the raw downloads from the nexus into the `downloads`.
 
-## Create the compiler settings file
+## Creating the `.compiler_settings` File
 
 In the root of the modlist folder, create a file called "ListName.compiler_settings". Open it and set the contents to the following:
 
 ```json
 {
-  "Source": "E:\\wj_tmp\\dishonored",
-  "Downloads": "E:\\wj_tmp\\dishonored\\downloads",
-  "Game": "Dishonored",
-  "OutputFile": "E:\\wj_tmp"
+    "Source": "E:\\wj_tmp\\dishonored",
+    "Downloads": "E:\\wj_tmp\\dishonored\\downloads",
+    "Game": "Dishonored",
+    "OutputFile": "E:\\wj_tmp"
 }
-
 ```
 
-## Build your setup
+## Building Your Setup
 
-Now you can go ahead and build your setup how you need and want it.
+Now you can go ahead and build your setup as needed.
 
 ## Opening Wabbajack to Compile the List
 
-From here on out just move on to the next Chapter.
+See the next chapter for further instructions.
