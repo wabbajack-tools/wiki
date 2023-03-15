@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -145,37 +147,37 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="pre-compilation"><a class="header" href="#pre-compilation">Pre-Compilation</a></h1>
-<p>Compilation itself is similar to Installation as you just configure some paths and start the process, sit back and wait for Wabbajack to finish. Wabbajack requires a rather specific MO2 setup and you might have to change your workflow when modding for a WJ Modlist.</p>
-<h2 id="everything-comes-from-somewhere"><a class="header" href="#everything-comes-from-somewhere">Everything comes from somewhere</a></h2>
+<p>Compilation is similar to Installation in that one configures some filesystem paths, starts the process, and waits for Wabbajack to finish. Wabbajack requires a rather specific MO2 setup and you might have to change your workflow when developing a modlist.</p>
+<h2 id="everything-comes-from-somewhere"><a class="header" href="#everything-comes-from-somewhere">Everything Comes from Somewhere</a></h2>
 <blockquote>
-<p>Wabbajack is an automated Modlist Installer that can reproduce an entire modding setup on another machine without bundling any assets or re-distributing any mods.</p>
+<p>Wabbajack is an automated modlist installer that can reproduce an entire modding setup on another machine without bundling any assets or re-distributing any mods.</p>
 </blockquote>
-<p>The focus is on <em>without bundling any assets or re-distributing any mods</em>. This means that Wabbajack needs to know where <strong>every single file</strong> came from. The most common origin is your downloads folder.</p>
+<p>The focus is on &quot;<em>without bundling any assets or re-distributing any mods</em>.&quot; This means that Wabbajack needs to know where <strong>every single file</strong> originates. The most common origin is your downloads folder.</p>
 <p>If you take a quick look inside your MO2 downloads folder you will find 2 types of files:</p>
 <ol>
-<li>The actual download (some archive)</li>
-<li>A <code>.meta</code> file that has the same name the archive its for</li>
+<li>The actual download (some archive, e.g. <code>.7z</code>, <code>.zip</code>, <code>.rar</code>)</li>
+<li>A <code>.meta</code> file that has the same name the archive it is assocaited with</li>
 </ol>
-<p>You might have <code>SkyUI_5_1-3863-5-1.7z</code> and <code>SkyUI_5_1-3863-5-1.7z.meta</code>.</p>
-<p>These <code>.meta</code> files are created by MO2 and typically get created when you click the <em>MOD MANAGER DOWNLOAD</em> button on Nexus Mods. If you open the <code>.meta</code> file you will find some metadata for the accompanied archive, the most important entries being <code>fileID</code>, <code>modID</code> and <code>gameName</code>.</p>
-<p>Wabbajack will use the MO2 <code>.meta</code> files to find out where the archive came from using the <a href="https://app.swaggerhub.com/apis-docs/NexusMods/nexus-mods_public_api_params_in_form_data/1.0#/">Nexus Mods API</a>. This means that you <strong>should</strong> use the <em>MOD MANAGER DOWNLOAD</em> button on Nexus Mods or you have to create those <code>.meta</code> files yourself (you can also use the <em>Query Info</em> context menu option in the MO2 Downloads tab. This will populate the metadata of the selected archive).</p>
-<p>For more information about <code>.meta</code> files, support sites and how to actually create them, see the <a href="Meta%20Files.html">Meta Files</a> section.</p>
+<p>For instance, you might have <code>SkyUI_5_1-3863-5-1.7z</code> and <code>SkyUI_5_1-3863-5-1.7z.meta</code>.</p>
+<p>These <code>.meta</code> files are created by MO2 and typically get created when you click the <strong><code>MOD MANAGER DOWNLOAD</code></strong> button on Nexus Mods. If you open the <code>.meta</code> file you will find some metadata for the associated archive, the most important entries being <code>fileID</code>, <code>modID</code> and <code>gameName</code>.</p>
+<p>Wabbajack will use these <code>.meta</code> files to determine where each archive originates using the <a href="https://app.swaggerhub.com/apis-docs/NexusMods/nexus-mods_public_api_params_in_form_data/1.0#/">Nexus Mods API</a>. This means that you <strong>should</strong> use the <strong><code>MOD MANAGER DOWNLOAD</code></strong> button on Nexus Mods or you will have to create <code>.meta</code> files manually. Note: you may also use the <strong><code>Query Info</code></strong> context menu option after dropping an archive into the MO2 <code>Downloads</code> tab. Doing so will retrieve the metadata of the selected archive and create an associated <code>.meta</code> file.</p>
+<p>For more information on <code>.meta</code> files, support sites, and instructions for how to create them, see the <a href="Meta%20Files.html">Meta Files</a> section.</p>
 <h2 id="mod-organizer-2"><a class="header" href="#mod-organizer-2">Mod Organizer 2</a></h2>
-<p>You now know about <code>.meta</code> files and understand that every file has to come from somewhere, this also means that you also need to create <code>.meta</code> files for MO2 and files in your game folder. We recommend using the <a href="https://github.com/ModOrganizer2/modorganizer/releases/">MO2 GitHub Releases</a> instead of the ones you find on the Nexus.</p>
+<p>You now know about <code>.meta</code> files and understand that every file <em>has to come from somewhere</em>. This implies that you must create <code>.meta</code> files for MO2 and files in your game folder. We recommend using the <a href="https://github.com/ModOrganizer2/modorganizer/releases/">MO2 GitHub Releases</a> instead of the ones you can find on the Nexus.</p>
 <h2 id="patches"><a class="header" href="#patches">Patches</a></h2>
-<p>Reading all the previous section you might wonder if Wabbajack is able to detect modified files and how it deals with them. Wabbajack can't include the modified file so instead we just include the difference between the original and modified version.</p>
-<p>This basically means <code>original + patch = final</code> and we only include <code>patch</code> in the <code>.wabbajack</code> file which, by itself, is just gibberish and completely useless without the original file. This allows us to distribute arbitrary changes without violating copyrights as we do not copy copyrighted material. Instead, we copy instructions on how to modify the copyrighted material.</p>
-<p>You don't even have to tell Wabbajack that a specific file was modified, that would be way too much work. Instead Wabbajack will figure out which file got modified and create a binary patch. The modified file can be anything from some modified settings file to a patched plugin or optimized mesh/texture.</p>
+<p>Having read the preceding sections, you may be wondering if Wabbajack is able to detect modified files and, if so, how it deals with them. Wabbajack cannot inline modified files, so instead we just include the difference between the original and modified version.</p>
+<p>This basically means <code>original + patch = final</code> and we only include <code>patch</code> in the <code>.wabbajack</code> file which, by itself, is just gibberish and completely useless without the original file. This allows us to distribute arbitrary changes without violating copyrights as we do not distribute any copyrighted material. Instead, we copy instructions on how to modify the copyrighted material.</p>
+<p>In fact, you don't even have to tell Wabbajack that a specific file was modified--that would be way too much work! Instead, Wabbajack will figure out which files have been modified automagically and create a <a href="https://vickieli.dev/binary%20exploitation/intro-to-binary-patching/">binary patch</a>. The modified files can be anything--configuration files, plugins, textures, etc.--and Wabbajack will automatically generate and inline the necessary binary patches for each.</p>
 <h2 id="bsa-decomposition"><a class="header" href="#bsa-decomposition">BSA Decomposition</a></h2>
-<p>Wabbajack is able to analyse <code>.bsa</code> and <code>.ba2</code> files and can also create those. This means that any changes made to a BSA/BA2 are copied on the end-user's installation, including the creation of new BSAs or the modification of existing ones. Unpacking, modifying, and then repacking a BSA is possible and those modifications will carry over to the final install. Similarly, creation of new BSAs will be replicated. Wabbajack does not analyze the BSA as a whole - instead it will look inside the BSA, hash the files within, and compare those to their original sources. It will then construct the BSA if new or reconstruct it if modified as necessary. Note that with particularly large BSAs this building and rebuilding process can take a significant amount of time on the user's machine depending on the user's hardware specifications.</p>
+<p>Wabbajack is able to both <strong>analyze and create</strong> <code>.bsa</code> and <code>.ba2</code> files. Accordingly, any changes made to a BSA/BA2 are replicated in the end-user's installation. This process may include the creation of new BSAs or patching existing ones. Unpacking, modifying, and repacking a BSA is fully automated, and modifications will appropriately carry over to each end-user install. BSAs packed manually by a modlist author are also replicated in a similar fashion. Wabbajack does not analyze a BSA as a whole--instead, it unpacks the BSA, hashes the files within, and compares them to their original sources. It then packs the BSA (if new) or repacks it (if modified) as necessary. Note that with particularly large BSAs this building and rebuilding process can take a significant amount of time on the end-user's machine depending on their hardware specifications.</p>
 <h2 id="merges"><a class="header" href="#merges">Merges</a></h2>
-<p>Similar to BSAs, Wabbajack is able to analyze and create merged mods. Wabbajack will source the necessary files to create the merge from aforementioned sources of mods and then rebuild the merge on the user's end. Generally it is recommended to tag merges with the <code>WABBAJACK_NOMATCH_INCLUDE</code> flag to ensure that any files generated by the merging process are also carried over to the user. Wabbajack does not by default include the files and information necessary to build or rebuild the merge in the program used to build the merge originally, only the merge itself will be installed.</p>
+<p>Similar to BSAs, Wabbajack is able to analyze and create merged mods. Wabbajack will source the necessary files to create the merge from the previously mentioned sources and rebuild the merge on the user-end. Generally, it is recommended to mark merges as <code>No Match Include</code> (see <a href="Compilation%20Settings.html">Compilation - Settings</a>) to ensure that any files generated by the merging process are also carried over to the user. Wabbajack does not, by default, include the files and information necessary to build or rebuild the merge in the program used to build the merge originally--only the merge itself will be installed.</p>
 <h2 id="minimal-downloads-folder"><a class="header" href="#minimal-downloads-folder">Minimal Downloads Folder</a></h2>
-<p>Wabbajack will <em>match</em> files to determine where they came from. This can sometimes not work as intended and Wabbajack might end up matching files against the wrong archive. This can happen when you have multiple versions of the same mod in your downloads folder. It is highly recommended that you <strong>delete unused downloads and previous versions of mods</strong> so that Wabbajack doesn't end up mis-matching files and the end user ends up downloading more than they need.</p>
-<h2 id="configurations-superseded-by-compiler-settings-inside-of-wabbajack"><a class="header" href="#configurations-superseded-by-compiler-settings-inside-of-wabbajack">Configurations superseded by compiler settings inside of Wabbajack</a></h2>
-<p>The following options can still be used, to guarantee backwards compatibility for compiling lists made for Wabbajack 2.5 with Wabbajack 3.0 but are as the title implies superseded by compiler settings that can be changed inside of the Wabbajack app. The new way of managing this is described in <a href="Compilation%20Settings.html">Compilation-Settings</a>.</p>
-<h3 id="special-flags"><a class="header" href="#special-flags">Special Flags</a></h3>
-<p>There are some special cases where you want to change the default Wabbajack behavior for a specific mod. You can place the following flags in the notes or comments section of a mod to change how Wabbajack handles that mod.</p>
+<p>Wabbajack will <em>match</em> files to determine where they came from. Rarely, this may not work as intended and Wabbajack may end up matching files against the wrong archives. This can happen when you have multiple versions of the same mod in your downloads folder. Additionally, Wabbajack will download every archive that exists in <em>your</em> downloads folder into the end-user's downloads folder. Therefore, it is highly recommended that you <strong>delete unused downloads and previous versions of mods from your downloads folder frequently</strong> so that Wabbajack doesn't end up mis-matching files and the end user doesn't end up downloading more archives than they need.</p>
+<h2 id="configurations-superseded-by-compiler-settings-within-the-wabbajack-app"><a class="header" href="#configurations-superseded-by-compiler-settings-within-the-wabbajack-app">Configurations Superseded by Compiler Settings within the Wabbajack App</a></h2>
+<p><strong>IMPORTANT: The following method has been superseded. It may still be used to guarantee backwards compatibility for compiling lists made for Wabbajack 2.5 with Wabbajack 3.0. The new method to manage these options is described in <a href="Compilation%20Settings.html">Compilation - Settings</a>.</strong></p>
+<h3 id="special-flags-superseded"><a class="header" href="#special-flags-superseded">Special Flags (Superseded)</a></h3>
+<p>In some cases, we would like to modify Wabbajack's default behavior for a specific mod. To do so, you may place the following flags in the notes or comments section of a mod to change how Wabbajack handles that mod:</p>
 <div class="table-wrapper"><table><thead><tr><th>Flag</th><th>Description</th><th>Notes</th></tr></thead><tbody>
 <tr><td><code>WABBAJACK_INCLUDE</code></td><td>All mod files will be inlined into the<code>.wabbajack</code> file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
 <tr><td><code>WABBAJACK_NOMATCH_INCLUDE</code></td><td>Any unmatched files will be inlined into the<code>.wabbajack</code> file</td><td>Useful for custom patches or generated files</td></tr>
@@ -196,11 +198,11 @@
 </div>
 <p>*It will finish the installation of a modlist, but the installed list might not run if you excluded a crutial part of it.</p>
 <h3 id="multiple-mo2-profiles"><a class="header" href="#multiple-mo2-profiles">Multiple MO2 Profiles</a></h3>
-<p>Wabbajack will normally ignore every other profile but you might have more than one profile that should be included. In this case you can create a <code>otherprofiles.txt</code> file in your main profile folder and write the names of the other profiles (1 per line) in it.</p>
+<p>Wabbajack will normally ignore every other profile besides the active profile in your MO2 instance, but you might have more than one profile that you would like to include. In this case, you can create a <code>otherprofiles.txt</code> file in your main profile folder and write the names of the other profiles (1 per line) in it.</p>
 <p><strong>Example</strong>:</p>
-<p>Profiles: <code>SFW</code>, <code>NSFW</code> (<code>SFW</code> is the main profile)</p>
+<p>Profiles: <code>Main</code>, <code>Performance</code> (<code>Main</code> is the main profile)</p>
 <p>contents of <code>MO2\profiles\SFW\otherprofiles.txt</code>:</p>
-<pre><code class="language-txt">NSFW
+<pre><code class="language-txt">Performance
 </code></pre>
 
                     </main>

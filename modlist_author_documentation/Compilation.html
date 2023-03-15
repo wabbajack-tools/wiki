@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -145,7 +147,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="compilation"><a class="header" href="#compilation">Compilation</a></h1>
-<p>This Chapter covers all the steps for making your own modlist.</p>
+<p>This chapter intruduces and describes the full workflow required to develop and deploy a modlist.</p>
 <ul>
 <li><a href="Introduction.html">Introduction</a></li>
 <li><a href="Pre-Compilation.html">Pre-Compilation</a></li>

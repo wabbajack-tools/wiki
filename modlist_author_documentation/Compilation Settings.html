@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -145,43 +147,43 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="compilation-settings"><a class="header" href="#compilation-settings">Compilation Settings</a></h1>
-<p>Compilation itself is very straight forward and similar to Installation: you let Wabbajack run and hope it finishes successfully. The key for making it run successfully is having a &quot;Wabbajack-compliant&quot; MO2 setup which you can get by following the advice from the previous chapters.</p>
-<h2 id="find-or-generate-your-compiler_settings"><a class="header" href="#find-or-generate-your-compiler_settings">Find or Generate your .compiler_settings</a></h2>
+<p>Compilation itself is very straightforward and similar to installation: you let Wabbajack run and hope it finishes successfully! The key to make it run successfully is having a &quot;Wabbajack-compliant&quot; MO2 setup which you can set up by following the recommendations from the previous sections.</p>
+<h2 id="find-or-generate-your-compiler_settings"><a class="header" href="#find-or-generate-your-compiler_settings">Find or Generate Your <code>.compiler_settings</code></a></h2>
 <ul>
 <li>Click on the three dots next to the <code>Compiler Settings</code> field.</li>
-<li>In the file chooser that opens you have to:
+<li>In the file selection window that opens:
 <ul>
-<li>If it is your first time compiling a list, navigate to <code>profiles/{profile_name}/</code> and select the <code>modlist.txt</code> this will generate the required <code>.compiler_settings</code> file for this and future compiles</li>
-<li>If you already have used Wabbajack with the Mod Organizer 2 instance you want to compile before or are using <a href="Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).html">07. Native-Game-Installer - (Installers not using MO2)</a> then you switch the filetype form <code>MO2 Modlist (.txt)</code> to <code>Compiler Settings File (.compiler_settings)</code> and select the <code>ModlistName.compiler_settings</code> file</li>
+<li>If it is your first time compiling a list, navigate to <code>profiles/{profile_name}/</code> and select <code>modlist.txt</code>. This will generate the required <code>.compiler_settings</code> file for this and future compilation.</li>
+<li>If you have already used Wabbajack with the MO2 instance you want to compile with or are using <a href="Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).html">ative-Game-Installer (Installers not using MO2)</a>, change the file extension from <code>MO2 Modlist (.txt)</code> to <code>Compiler Settings File (.compiler_settings)</code> and select the <code>ModlistName.compiler_settings</code> file.</li>
 </ul>
 </li>
 </ul>
 <h2 id="download-location"><a class="header" href="#download-location">Download Location</a></h2>
 <p>The download location is the path to the folder where all your archives and <code>.meta</code> files are located.</p>
 <h2 id="output-location"><a class="header" href="#output-location">Output Location</a></h2>
-<p>The location where the modlist <code>.wabbajack</code> file will be outputted too.</p>
+<p>The output location is the path to the folder where your modlist's <code>.wabbajack</code> file will be written.</p>
 <h2 id="wabbajack-compilation-configuration-editor"><a class="header" href="#wabbajack-compilation-configuration-editor">Wabbajack Compilation Configuration Editor</a></h2>
-<p>In Wabbajack select <em>Create a Modlist</em> to navigate to the configuration screen. Here you can configure some metadata for your Modlist which will later be viewable by the user.</p>
+<p>In Wabbajack, select <em>Create a Modlist</em> to navigate to the configuration screen. Here you can configure some metadata for your modlist which will later be viewable by the user.</p>
 <div class="table-wrapper"><table><thead><tr><th>Field</th><th>Description</th><th>Notes</th></tr></thead><tbody>
-<tr><td>Modlist Name</td><td><strong>REQUIRED:</strong> Name of your Modlist</td><td></td></tr>
-<tr><td>Version</td><td><strong>REQUIRED:</strong> Current Version</td><td>Do note that this has to be a semantic version (1.0 or 0.1 (it can have multiple<code>.</code> separators)) and not some random text like &quot;The best version on Earth&quot; (this is not the Nexus)!</td></tr>
-<tr><td>Author</td><td>Modlist Author</td><td>Should be your name in original Modlists and/or the name of the original Modlist author if you adapted a normal Modlist to a Wabbajack Modlist</td></tr>
-<tr><td>Description</td><td>700 characters Descriptions</td><td></td></tr>
-<tr><td>Image</td><td>Modlist Image</td><td>Aspect ratio should be 16:9 for the best result</td></tr>
+<tr><td>Modlist Name</td><td><strong>REQUIRED:</strong> Name of your modlist</td><td></td></tr>
+<tr><td>Version</td><td><strong>REQUIRED:</strong> Current Version</td><td>Wabbajack modlists <strong>must</strong> use <a href="https://semver.org/">semantic versioning</a> and not some random text like &quot;the best version on Earth&quot; (this isn't the Nexus!)!</td></tr>
+<tr><td>Author</td><td>Modlist author--your name or alias</td><td>Should be your name in original modlists and/or the name of the original modlist author if you adapted a non-WJ modlist to WJ</td></tr>
+<tr><td>Description</td><td>Modlist description (max 700 charcters)</td><td></td></tr>
+<tr><td>Image</td><td>Modlist image</td><td>Aspect ratio should be 16:9 for best results</td></tr>
 <tr><td>Website</td><td>Website URL</td><td></td></tr>
-<tr><td>Readme</td><td><strong>REQUIRED:</strong> Readme URL</td><td>Link to the readme mentioned in</td></tr>
-<tr><td>NSFW</td><td>NSFW Checkbox</td><td>Only really needed for official Modlists as our Galleries have the option to hide NSFW Modlists</td></tr>
+<tr><td>Readme</td><td><strong>REQUIRED:</strong> Readme URL</td><td>Link to the readme</td></tr>
+<tr><td>NSFW</td><td>NSFW Checkbox</td><td>Only really needed for official modlists as our galleries have the option to hide NSFW modlists</td></tr>
 <tr><td>Publish Update</td><td>Publish Update Checkbox</td><td>If you completed <a href="../wabbajack_cdn_and_gallery_access/Getting%20CDN%20Access.html">Getting CDN Access</a> and <a href="../wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.html">Adding a Custom Repository to Wabbajack</a> you can use this option to automatically publish your list</td></tr>
-<tr><td>MachineUrl</td><td>machineURL of the modlist required for <code>Publish Update</code></td><td><a href="../wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.html">Adding a Custom Repository to Wabbajack</a> Is referencing this field with its <code>JohnsLists/JohnsSkyrimMakeover</code> Example</td></tr>
-<tr><td>Nomatch Include</td><td>Adds folders to a list from which all content that can't be matched to a source should be included still</td><td>Useful for custom patches or generated files</td></tr>
-<tr><td>Include</td><td>Adds files and folders to a list which will be included with the .wabbajack file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> As it would result in you distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
+<tr><td>MachineUrl</td><td><code>machineURL</code> of the modlist required for the <code>Publish Update</code> option</td><td><a href="../wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.html">Adding a Custom Repository to Wabbajack</a> Is referencing this field with its <code>JohnsLists/JohnsSkyrimMakeover</code> Example</td></tr>
+<tr><td>No Match Include</td><td>Adds folders to a list from which all content that can't be matched to a source should still be included</td><td>Useful for custom patches or generated files</td></tr>
+<tr><td>Include</td><td>Adds files and folders to a list which will be included with the .wabbajack file</td><td><strong>DO NOT USE ON DOWNLOADED MODS</strong> as this would result in inlining the mod into the <code>.wabbajack</code> file and (unacceptably) distributing that mod. Can lead to large <code>.wabbajack</code> files if used unsparingly</td></tr>
 <tr><td>Ignore</td><td>Adds files and folders to a list that will be ignored and therefore will not be part of final installations</td><td>Useful for mods and tools you use during development you don't want included in the final installation</td></tr>
 <tr><td>Other Profiles</td><td>Adds profile folders to a list for other MO2 profiles you want to include in the final installation</td><td>Useful for performance, or content profiles</td></tr>
 <tr><td>Always Enabled Mods</td><td>Adds mod folders to a list of mods that will be included in your list no matter if they are enabled (active in game) or not</td><td>Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included</td></tr>
 </tbody></table>
 </div>
 <h2 id="compilation-errors"><a class="header" href="#compilation-errors">Compilation Errors</a></h2>
-<p>You will likely get a ton of errors during your first compilation which is to be expected. We highly recommend you join our <a href="https://discord.gg/wabbajack">Discord</a> and check the <code>modlist-development-help</code> channel for help.</p>
+<p>You will likely get a ton of errors during your first compilation, which is to be expected. We highly recommend you join our <a href="https://discord.gg/wabbajack">Discord server</a> and go to the <code>#modlist-development-help</code> channel for help.</p>
 
                     </main>
 

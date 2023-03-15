@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -145,23 +147,23 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="post-compilation"><a class="header" href="#post-compilation">Post-Compilation</a></h1>
-<p>After you have finished the Compilation you are basically done with Wabbajack and can upload the resulting <code>.wabbajack</code> file to somewhere, share it with people or just keep it for yourself as a Modlist backup. This section is for people who want to share their Modlist with the community.</p>
-<p>In the Wabbajack community we differentiate between <em>official</em>/<em>featured</em> and <em>unofficial</em> Modlists. The former being curated Modlists that comply with the criteria in <a href="../wabbajack_cdn_and_gallery_access/Criteria%20for%20&#x27;Featured%20Mod%20List&#x27;%20status.html">Criteria for 'Featured Mod List' status</a> and have met the standards of the Wabbajack team are available in the main Wabbajack Gallery with no further user action required to find them, while the latter are Modlists that come from custom repositories and are only visible when enabling the <code>Show Unofficial Lists</code> filter.</p>
-<p>Official Modlists require to have their own support Discord and often have 500-2500+ users depending on the game. Do note that these Modlists receive regular updates and the authors are putting in a lot of hours to deliver the best possible version.</p>
-<p>Managing a Modlist can be tricky if you have never done something like this. In the early days of Wabbajack we mostly relied on GDocs READMEs and hosted all accompanying files on GDrive while managing issues through the support channel on Discord. This system was later almost completely replaced through valiant effort by one of our developers: almost all new Modlists use GitHub for managing their Modlist.</p>
+<p>After a successful compilation, Wabbajack has completed its work and you may upload the created <code>.wabbajack</code> file to, say, the Nexus, share it with people, or just keep it for yourself as a backup. This section is for people who want to share their modlist with the community.</p>
+<p>In the Wabbajack community we differentiate between <em>official</em>/<em>featured</em> and <em>unofficial</em> modlists. The former are curated modlists that comply with the criteria in <a href="../wabbajack_cdn_and_gallery_access/Criteria%20for%20&#x27;Featured%20Mod%20List&#x27;%20status.html">Criteria for 'Featured Mod List' status</a> and have met the standards of the Wabbajack team. Official modlists are available in the main Wabbajack Gallery with no further user action required to find them, whereas unofficial modlists that come from custom repositories and are only visible when enabling the <code>Show Unofficial Lists</code> filter.</p>
+<p>Official Modlists are required to have their own support Discord and often have 500-2500+ users depending on the game. Do note that these modlists receive regular updates and the authors put in a lot of work to deliver the best possible version of their modlist with each update.</p>
+<p>Managing a modlist can be tricky if you have never done it before. In the early days of Wabbajack we mostly relied on Google Docs READMEs and hosted all accompanying files on Google Drive while managing issues through the support channel on Discord. This system was later almost completely replaced through the valiant efforts of one of our developers: almost all new modlists use GitHub for managing and hosting readmes and other info.</p>
 <p>GitHub was made for developers and is the site you are currently on. It mostly hosts source code for open source projects, such as Wabbajack, but can also be used for project management. Another strong point is Markdown support. This README you are currently reading is, like every other GitHub README, written in Markdown and rendered on GitHub.</p>
 <p>On the topic of READMEs: you should create a good one.</p>
-<p>It is not sufficient to just slap some install and MCM instructions in there. Your Modlist might contain a thousand mods and offer hundreds of playtime but the user might not know what in oblivion is even going on and what's included.</p>
+<p>It is not sufficient to just slap some install and MCM instructions in there. Your modlist might contain a thousand mods and offer hundreds of hours playtime, but it's no use if the user doesn't know what in Oblivion is going on and what's included in the modlist!</p>
 <p>Example structure for a good README:</p>
 <ul>
-<li><strong>Preamble</strong>: Give a quick overview about what your Modlist is about, the core idea and also mention that it's a Wabbajack Modlist (some might not know what Wabbajack is so link to this README)</li>
-<li><strong>Requirements</strong>: Simple list of requirements such as min CPU, GPU, RAM and most importantly: Drive Space. Also include a list of accounts the user needs such as a Nexus Mods, LoversLab, VectorPlexus Account or any other sites your are downloading from</li>
-<li><strong>Installation</strong>: Installation instructions specific to your Modlist. You can take a look at some of the Modlists linked below as almost all of them use the same instructions with minor changes</li>
-<li><strong>Important Mods you should know about</strong>: This is an important section you should not forget. Go in-depth on core mods and talk about <em>important mods the user should know about</em>. It can be overwhelming for the user to just be thrusted into a completely modded world without knowing what's even included and possible.</li>
-<li><strong>MCM</strong>: If your Modlist has some sort of MCM like for Skyrim or Fallout 4 then you should give instructions on what settings to use</li>
-<li><strong>Changelog</strong>: Should not be in the README and can be in a separate file called <code>CHANGELOG.md</code> but make sure to create one</li>
+<li><strong>Preamble</strong>: Give a quick overview about what your modlist is about, your vision of the modlist, and also mention that it's a Wabbajack modlist (some might not know what Wabbajack is so link to this README)</li>
+<li><strong>Requirements</strong>: Simple list of requirements such as minimum CPU, GPU, RAM and most importantly: storage space. Also include a list of accounts the user needs such as a Nexus Mods, LoversLab, VectorPlexus or any other sites your modlist is using archives from</li>
+<li><strong>Installation</strong>: Installation instructions specific to your modlist. You can take a look at some of the modlists linked below as almost all of them use the same instructions with minor changes</li>
+<li><strong>Important mods you should know about</strong>: This is an important section you should not forget. Go in-depth on core mods and talk about <em>important mods the user should know about</em>. It can be overwhelming for the user to be thrust into a completely modded world without knowing at least a little about what's included.</li>
+<li><strong>MCM</strong>: If your modlist has MCMs (Mod Configuration Menus), as in Skyrim or Fallout 4, you should provide instructions on how to configure any MCMs that might need to be configured</li>
+<li><strong>Changelog</strong>: Should not be in the README and can be in a separate file called <code>CHANGELOG.md</code>--but make sure to create one! Good versioning is essential</li>
 </ul>
-<p>Some Modlists that host all their stuff on GitHub:</p>
+<p>Some modlists that host all their stuff on GitHub:</p>
 <ul>
 <li>the OG GitHub Modlist: <a href="https://github.com/erri120/lotus">Lotus</a></li>
 <li><a href="https://github.com/PierreDespereaux/Keizaal">Keizaal</a></li>

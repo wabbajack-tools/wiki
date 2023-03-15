@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -146,12 +148,12 @@
                     <main>
                         <h1 id="keeping-the-game-folder-clean"><a class="header" href="#keeping-the-game-folder-clean">Keeping the Game Folder clean</a></h1>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
-<p>The general idea is that we need a way to keep the Vanilla games clean in their installation locations, so that we don't cause issues with other tools or modlists, but there are files and mods that need to be in the games directory. For this there are two solutions both with their own pros and cons, Root Builder and A &quot;Stock Game&quot; copy inside MO2 Instances.</p>
-<h2 id="root-builder"><a class="header" href="#root-builder">Root Builder</a></h2>
-<p>Since the author of the Tool can describe it best here an excerpt from their website:</p>
+<p>In order to allow installing multiple modlists on the same system for the same game, we need a way to keep the vanilla games clean and unmodified in their respective installation locations to ensure no conflicts with other tools or modlists. However, for every modlist, there are files and mods that <strong>must</strong> reside in the game directory. There are two ways to tackle this: RootBuilder, or a &quot;Stock Game&quot; copy inside an MO2 instance.</p>
+<h2 id="rootbuilder"><a class="header" href="#rootbuilder">RootBuilder</a></h2>
+<p>Since the author of the tool can describe it best, here an excerpt from their website:</p>
 <blockquote>
-<p>Root Builder is a plugin for Mod Organizer 2, allowing users to manage files in the base game directory through Mod Organizer.</p>
-<p>Some of the things you can do with Root Builder:</p>
+<p>RootBuilder is a plugin for Mod Organizer 2, allowing users to manage files in the base game directory through Mod Organizer.</p>
+<p>Some of the things you can do with RootBuilder:</p>
 <ul>
 <li>Install script extenders (SKSE, OBSE, FOSE, etc) through Mod Organizer.</li>
 <li>Install ENB and different presets for it through Mod Organizer.</li>
@@ -160,21 +162,21 @@
 <li>Keep all your mods in Mod Organizer, saving your setup if you need to reinstall or switch computer.</li>
 </ul>
 </blockquote>
-<p>Source: <a href="https://kezyma.github.io/?p=rootbuilder">Root Builder Website</a></p>
+<p>Source: <a href="https://kezyma.github.io/?p=rootbuilder">RootBuilder Website</a></p>
 <div class="table-wrapper"><table><thead><tr><th>Pros</th><th>Cons</th></tr></thead><tbody>
-<tr><td>Can use different root folder Binaries depending on different supported platforms like Steam or GOG by using MO2 Profiles</td><td>You need to be careful with game updates, if the game updates the binaries for that version might not be there anymore</td></tr>
-<tr><td>Can use different ENB presets in different performance MO2 Profiles</td><td></td></tr>
+<tr><td>Can use different root folder binaries depending on different supported platforms like Steam or GOG by using MO2 Profiles</td><td>You need to be careful with game updates--if the game updates, the binaries for that version may not exist anymore</td></tr>
+<tr><td>Can use different ENB presets in different MO2 profiles</td><td></td></tr>
 <tr><td>Requires less storage space</td><td></td></tr>
 </tbody></table>
 </div>
-<p>For using Root Builder we recommend the very on point and well written official instructions on the <a href="https://kezyma.github.io/?p=rootbuilder#intall-col">official website</a>.
-A guide that also features compiling with Root Builder can be found <a href="https://github.com/The-Animonculory/Modding-Resources/blob/main/Root%20Builder%20for%20Skyrim%20AE.md">here</a>.</p>
+<p>For using RootBuilder, we recommend following the <a href="https://kezyma.github.io/?p=rootbuilder#intall-col">official instructions</a>.
+A guide that also features compiling with RootBuilder can be found <a href="https://github.com/The-Animonculory/Modding-Resources/blob/main/Root%20Builder%20for%20Skyrim%20AE.md">here</a>.</p>
 <h2 id="stock-game"><a class="header" href="#stock-game">Stock Game</a></h2>
-<p>The general idea is to build a WJ modlist that stores the game files inside the MO2 install folder.
+<p>The Stock Game method involves building a WJ modlist that stores the game files <em>inside</em> the MO2 install folder.
 WJ will recognize these files and copy them from the end-user's game folder. This has the side-effect of keeping the game folder completely clean.</p>
 <div class="table-wrapper"><table><thead><tr><th>Pros</th><th>Cons</th></tr></thead><tbody>
-<tr><td>Game updates can't break it</td><td>requires a lot of storage space</td></tr>
-<tr><td></td><td>locked into one specific platform (only users owing the game on the same store can use the modlist)</td></tr>
+<tr><td>Game updates can't break it</td><td>Requires a lot of storage space</td></tr>
+<tr><td></td><td>Locked to one platform (e.g., Steam <em>only</em> or GOG <em>only</em>--not both)</td></tr>
 <tr><td></td><td>Can only include one ENB preset</td></tr>
 </tbody></table>
 </div>
@@ -187,14 +189,14 @@ WJ will recognize these files and copy them from the end-user's game folder. Thi
 <li>Open MO2 and edit the custom executable paths for SKSE/Launcher/Skyrim to the new path inside the MO2 folder</li>
 </ol>
 <h3 id="optimization"><a class="header" href="#optimization">Optimization</a></h3>
-<p>Doing the above will add about 12GB of bloat to the installed modlist, but we can likely reduce this quite a bit.</p>
+<p>Doing the above will add about 12 GB of bloat to the installed modlist, but we can likely reduce this quite a bit:</p>
 <ul>
-<li>Any <code>.ESMs</code> that have been cleaned are no longer required (as the cleaned files are in a mod), so delete those .ESMs from <code>Stock Game\\Data</code></li>
-<li>Any <code>.BSA</code> that are 100% replaced with files by the same name can be removed. So if you're using <code>unofficial performance optimized textures</code>, you can safely delete all the Texture BSAs</li>
+<li>Any <code>.ESM</code>s that have been cleaned are no longer required (as the cleaned files are in a mod), so delete such <code>.ESM</code>s from <code>Stock Game\\Data</code></li>
+<li>Any <code>.BSA</code> that are 100% replaced with files by the same name can be removed. So if you're using <code>unofficial performance optimized textures</code>, for instance, you can safely delete all the texture BSAs</li>
 </ul>
-<h3 id="final-setup"><a class="header" href="#final-setup">Final setup</a></h3>
-<p>You can now put any ENBs, .dlls, etc. Directly into the <code>Stock Game</code> folder.</p>
-<p>Users should now be able to Install via WJ -&gt; MO2 -&gt; Run SKSE, removing the rather &quot;complicated&quot; step of copying game files into the game folder. This also allows multiple lists to be installed at one time that use the same base game, removing the need for a ENB manager.</p>
+<h3 id="final-setup"><a class="header" href="#final-setup">Final Setup</a></h3>
+<p>You can now put any ENBs, <code>.dll</code>s, etc. directly into the <code>Stock Game</code> folder.</p>
+<p>Users should now be able to Install via WJ -&gt; MO2 -&gt; Run SKSE, circumventing the rather complicated step of copying game files into the game folder. This also allows multiple lists to be installed at the same time that use the same base game, removing the need for an ENB manager.</p>
 
                     </main>
 

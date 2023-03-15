@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -144,28 +146,27 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="native-game-installer---installers-not-using-mo2"><a class="header" href="#native-game-installer---installers-not-using-mo2">Native-Game-Installer - (Installers not using MO2)</a></h1>
-<p>The following guide explains how you set up a native or Mod Organizer 2 less Wabbajack compile of a folder structure for modding.</p>
+                        <h1 id="native-game-installer-installers-not-using-mo2"><a class="header" href="#native-game-installer-installers-not-using-mo2">Native-Game-Installer (Installers not using MO2)</a></h1>
+<p>The following guide explains how to set up a &quot;native&quot; (or MO2-less) Wabbajack compilation for any given folder structure.</p>
 <blockquote>
 <p><strong>Warning</strong>
 This Page potenitally requires updating the template for Wabbajack version 3.0.</p>
 </blockquote>
-<h2 id="preparation-of-the-modlist-folder"><a class="header" href="#preparation-of-the-modlist-folder">Preparation of the modlist folder</a></h2>
+<h2 id="preparing-the-modlist-folder"><a class="header" href="#preparing-the-modlist-folder">Preparing the Modlist Folder</a></h2>
 <p>Create a folder in which to create the list, and optionally create a <code>downloads</code> folder in side this modlist folder. Now add all the mods to this base folder and place the raw downloads from the nexus into the <code>downloads</code>.</p>
-<h2 id="create-the-compiler-settings-file"><a class="header" href="#create-the-compiler-settings-file">Create the compiler settings file</a></h2>
+<h2 id="creating-the-compiler_settings-file"><a class="header" href="#creating-the-compiler_settings-file">Creating the <code>.compiler_settings</code> File</a></h2>
 <p>In the root of the modlist folder, create a file called &quot;ListName.compiler_settings&quot;. Open it and set the contents to the following:</p>
 <pre><code class="language-json">{
-  &quot;Source&quot;: &quot;E:\\wj_tmp\\dishonored&quot;,
-  &quot;Downloads&quot;: &quot;E:\\wj_tmp\\dishonored\\downloads&quot;,
-  &quot;Game&quot;: &quot;Dishonored&quot;,
-  &quot;OutputFile&quot;: &quot;E:\\wj_tmp&quot;
+    &quot;Source&quot;: &quot;E:\\wj_tmp\\dishonored&quot;,
+    &quot;Downloads&quot;: &quot;E:\\wj_tmp\\dishonored\\downloads&quot;,
+    &quot;Game&quot;: &quot;Dishonored&quot;,
+    &quot;OutputFile&quot;: &quot;E:\\wj_tmp&quot;
 }
-
 </code></pre>
-<h2 id="build-your-setup"><a class="header" href="#build-your-setup">Build your setup</a></h2>
-<p>Now you can go ahead and build your setup how you need and want it.</p>
+<h2 id="building-your-setup"><a class="header" href="#building-your-setup">Building Your Setup</a></h2>
+<p>Now you can go ahead and build your setup as needed.</p>
 <h2 id="opening-wabbajack-to-compile-the-list"><a class="header" href="#opening-wabbajack-to-compile-the-list">Opening Wabbajack to Compile the List</a></h2>
-<p>From here on out just move on to the next Chapter.</p>
+<p>See the next chapter for further instructions.</p>
 
                     </main>
 

@@ -69,10 +69,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -145,7 +147,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="meta-files"><a class="header" href="#meta-files">Meta Files</a></h1>
-<p><em>Read <a href="Pre-Compilation.html#everything-comes-from-somewhere">Everything comes from somewhere</a> first, as that section explains the basic concept of meta files. This section focuses more on advanced uses, like using mods not hosted on Nexus mods.</em></p>
+<p><em>Read <a href="Pre-Compilation.html#everything-comes-from-somewhere">Everything comes from somewhere</a> first, as that section explains the basic concepts of meta files. This section focuses more on advanced cases, like using mods not hosted on Nexus mods.</em></p>
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
 <p>You already know how <code>.meta</code> files should look for mods that come from Nexus Mods:</p>
 <pre><code class="language-ini">[General]
@@ -153,43 +155,43 @@ gameName=Skyrim
 modID=3863
 fileID=1000172397
 </code></pre>
-<p>This is the basic configuration for an archive that came from Nexus Mods. You can get these types of <code>.meta</code> files through MO2 by using the <em>Query Info</em> option in the Downloads tab.</p>
-<p>Mods can also be hosted somewhere else, eg on other modding sites like LoversLab, ModDB or normal file hosting services like GDrive and MEGA. Below is a table for all supported sites that Wabbajack can download from.</p>
-<h2 id="non-nexus-meta-files"><a class="header" href="#non-nexus-meta-files">Non Nexus Meta Files</a></h2>
+<p>This is the basic configuration for an archive that originates from Nexus Mods. You can get these types of <code>.meta</code> files through MO2 by using the <strong><code>Query Info</code></strong> context menu option in the Downloads tab.</p>
+<p>Mods can also be hosted somewhere else, e.g., other modding sites like LoversLab, ModDB or file hosting services like Google Drive and MEGA. For a full table of all supported sites that Wabbajack can download from, see the section at the bottom of this page.</p>
+<h2 id="non-nexus-meta-files"><a class="header" href="#non-nexus-meta-files">Non-Nexus <code>.meta</code> Files</a></h2>
 <ul>
 <li>Every <code>.meta</code> file, no matter the site, has to start with <code>[General]</code></li>
-<li><code>.meta</code> files are <strong>case sensitive</strong></li>
-<li>The &quot;Whitelist&quot; Wabbajack uses to manage non Nexus sources is available on <a href="https://github.com/wabbajack-tools/opt-out-lists/blob/master/ServerWhitelist.yml">GitHub</a> and you might have to create a Pull Request if you want to add a link to a file we haven't checked and whitelisted yet.</li>
+<li><code>.meta</code> files are <strong>case-sensitive</strong></li>
+<li>The &quot;Whitelist&quot; Wabbajack uses to manage non-Nexus sources is available on <a href="https://github.com/wabbajack-tools/opt-out-lists/blob/master/ServerWhitelist.yml">GitHub</a>. You may have to create a Pull Request if you want to add a link to a file that we haven't checked and whitelisted yet.</li>
 </ul>
-<h3 id="directurl"><a class="header" href="#directurl">directURL</a></h3>
-<p>A .meta file for sites that don't require logins is handled via the <code>directURL=link</code> tag inside of the meta file. Files will be automatically downloaded.</p>
+<h3 id="directurl"><a class="header" href="#directurl"><code>directURL</code></a></h3>
+<p><code>.meta</code> files for sites that don't require logins are handled via the <code>directURL=link</code> tag. Archives with such <code>.meta</code> files will be automatically downloaded.</p>
 <pre><code class="language-ini">[General]
 directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
 installed=true
 </code></pre>
-<h3 id="manualurl"><a class="header" href="#manualurl">manualURL</a></h3>
-<p>A .meta files for sites that require the user to manually navigate and download the file and in some cases login. This option is recommended for LoversLab due to frequent outages and other issues with their automated api downloads. </p>
+<h3 id="manualurl"><a class="header" href="#manualurl"><code>manualURL</code></a></h3>
+<p><code>.meta</code> files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads.</p>
 <pre><code class="language-ini">manualURL=https://foo.bar.bz/someFile.zip
 prompt=Please download the second file on this page
 </code></pre>
 <blockquote>
 <p><strong>Note</strong>
-Using <code>manualURL</code> makes it impossible for the WJ list validator to check those files in regards to their uptime, so it falls on you to listen to user reports and to verify regularly that the correct file still exists at the source you have linked.</p>
+Using <code>manualURL</code> makes it impossible for the WJ list validator to check files with this tag in regards to their uptime, so it falls to you to listen to user reports and verify regularly that the correct file still exists at the source you have linked.</p>
 </blockquote>
 <h3 id="ips4-sites"><a class="header" href="#ips4-sites">IPS4 sites</a></h3>
 <p>In order to configure a <code>.meta</code> file for a IPS4 site, use the following format:</p>
 <p>Let's say we're making a meta for a file found at <code>https://www.loverslab.com/files/file/11116-test-file-for-wabbajack-integration</code></p>
-<p>Start by downloading the file and noting the name once it's downloaded. If you've downloaded the file more than once, Windows may include <code>(1)</code> on the end of the filename, so you'll need to remove that part from the filename.</p>
-<p>Now create a .meta file in this format:</p>
+<p>Start by downloading the file and noting its name once it's downloaded. If you've downloaded the file more than once, Windows may include <code>(1)</code> at the end of the filename, so you'll need to remove that part from the filename.</p>
+<p>Now create a <code>.meta</code> file in this format:</p>
 <pre><code class="language-ini">[General]
 ips4Site=&lt;Site Name&gt;
 ips4Mod=&lt;modID&gt;
 ips4File=&lt;filename&gt;
 </code></pre>
 <ul>
-<li>ips4Site - is the site name for this download, currently this can be <code>Vector Plexus</code> or <code>Lovers Lab</code></li>
-<li>ips4Mod - the number part of the URL, in this case its <code>11116</code></li>
-<li>ips4File - the name of the file after it's downloaded (removing any extra text added by windows)</li>
+<li><code>ips4Site</code> - the site name for this download, currently this can only be <code>Vector Plexus</code> or <code>Lovers Lab</code></li>
+<li><code>ips4Mod</code> - the number part of the URL, which in this case is <code>11116</code></li>
+<li><code>ips4File</code> - the name of the file after is has finished downloading (removing any extra text added by windows)</li>
 </ul>
 <p>So for the example file above, our <code>.meta</code> would be:</p>
 <pre><code class="language-ini">[General]
@@ -199,26 +201,26 @@ ips4File=WABBAJACK_TEST_FILE.zip
 </code></pre>
 <blockquote>
 <p><strong>Note</strong>
-This still uses LoversLab as the example but because LoversLab has a tendency to break it's api we highly recommend not using this meta option for Loverslab and using <code>manualURL instead</code>, same goes for attachment files on those sites.</p>
+This still uses LoversLab as the example but because LoversLab has a tendency to break it's API we highly recommend not using this meta option for LoversLab and using <code>manualURL</code> instead. The same goes for attachment files on LoversLab.</p>
 </blockquote>
 <blockquote>
 <p><strong>Note</strong>
-Due to some issues of domain registration for VectorPlexus (url was moved to www.vectorplexis.com) and unexpected downtimes we advise to use mirrors provided by the mod authors instead for maximum uptime of the modlist.</p>
+Due to issues related to domain registration for VectorPlexus (URL was moved to www.vectorplexis.com) and unexpected downtimes, we advise modlist authors to use mirrors provided by mod authors instead to ensure maximum uptime for your modlist.</p>
 </blockquote>
 <h2 id="reference-table"><a class="header" href="#reference-table">Reference Table</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Site</th><th>Requires Login</th><th>Requires Whitelist Entry</th><th>Notes</th></tr></thead><tbody>
-<tr><td><a href="https://www.loverslab.com/">LoversLab</a></td><td>Yes</td><td>No</td><td>IPS4 Site, The api is not reliable so use of <code>manualURL</code> strongly recommended.</td></tr>
-<tr><td><a href="https://vectorplexis.com/">VectorPlexus</a></td><td>Yes</td><td>No</td><td>IPS4 Site, The api isn't unreliable but due to some issues of domain registration and unexpected downtimes we advise to use mirrors provided by the mod authors instead.</td></tr>
-<tr><td><a href="https://www.moddb.com/">ModDB</a></td><td>No</td><td>No</td><td>Downloads can be very slow</td></tr>
-<tr><td><a href="https://www.patreon.com/">Patreon</a></td><td>No</td><td>Yes</td><td>Only public downloads, pay-walled downloads can not be downloaded</td></tr>
-<tr><td><a href="https://github.com/">GitHub</a></td><td>No</td><td>No</td><td></td></tr>
-<tr><td><a href="https://drive.google.com/">Google Drive</a></td><td>No</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://mega.nz/">MEGA</a></td><td>No (Optional)</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://www.mediafire.com/">Mediafire</a></td><td>No</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://www.dropbox.com/">Dropbox</a></td><td>No</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://disk.yandex.com/">Yandex Disk</a></td><td>No</td><td>Yes</td><td></td></tr>
-</tbody></table>
-</div>
+<p>| Site                                      | Requires Login | Requires Whitelist Entry | Notes                                                                                                                                                                         |
+| ----------------------------------------- | -------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| <a href="https://www.loverslab.com/">LoversLab</a>   | Yes            | No                       | IPS4 Site. The API is not reliable; use of <code>manualURL</code> strongly recommended.                                                                                                  |
+| <a href="https://vectorplexis.com/">VectorPlexus</a> | Yes            | No                       | IPS4 Site. The API isn't unreliable but due to issues related to domain registration and unexpected downtimes we recommend using mirrors provided by the mod authors instead. |
+| <a href="https://www.moddb.com/">ModDB</a>           | No             | No                       | Downloads can be very slow                                                                                                                                                    |
+| <a href="https://www.patreon.com/">Patreon</a>       | No             | Yes                      | Only public downloads, pay-walled downloads <strong>cannot</strong> be downloaded                                                                                                          |
+| <a href="https://github.com/">GitHub</a>             | No             | No                       |                                                                                                                                                                               |
+| <a href="https://drive.google.com/">Google Drive</a> | No             | Yes                      |                                                                                                                                                                               |
+| <a href="https://mega.nz/">MEGA</a>                  | No (Optional)  | Yes                      |                                                                                                                                                                               |
+| <a href="https://www.mediafire.com/">Mediafire</a>   | No             | Yes                      |                                                                                                                                                                               |
+| <a href="https://www.dropbox.com/">Dropbox</a>       | No             | Yes                      |                                                                                                                                                                               |     |
+| <a href="https://disk.yandex.com/">Yandex Disk</a>   | No             | Yes                      |                                                                                                                                                                               |     |</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
