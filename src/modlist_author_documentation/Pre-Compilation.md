@@ -31,7 +31,7 @@ Having read the preceding sections, you may be wondering if Wabbajack is able to
 
 This basically means `original + patch = final` and we only include `patch` in the `.wabbajack` file which, by itself, is just gibberish and completely useless without the original file. This allows us to distribute arbitrary changes without violating copyrights as we do not distribute any copyrighted material. Instead, we copy instructions on how to modify the copyrighted material.
 
-In fact, you don't even have to tell Wabbajack that a specific file was modified--that would be way too much work! Instead, Wabbajack will figure out which files have been modified automagically and create a [binary patch](https://vickieli.dev/binary%20exploitation/intro-to-binary-patching/). The modified files can be anything--configuration files, plugins, textures, etc.--and Wabbajack will automatically generate and inline the necessary binary patches for each.
+In fact, you don't even have to tell Wabbajack that a specific file was modified--that would be way too much work! Instead, Wabbajack will figure out which files have been modified automagically and create [binary patches](https://vickieli.dev/binary%20exploitation/intro-to-binary-patching/). The modified files can be anything--configuration files, plugins, textures, etc.--and Wabbajack will automatically generate and inline the necessary binary patches for each.
 
 ## BSA Decomposition
 
@@ -60,7 +60,7 @@ In some cases, we would like to modify Wabbajack's default behavior for a specif
 | `WABBAJACK_ALWAYS_ENABLE`   | The mod will not be ignored by Wabbajack even if it's disabled | Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included |
 | `WABBAJACK_ALWAYS_DISABLE`  | The mod will always be ignored by Wabbajack                    | Useful if you don't want some mods included in the Modlist but still want to keep it active in your own setup                                                                   |
 
-### Tagfile Tags
+### Tagfile Tags (Superseded)
 
 You can create an empty `tagfile` with no extention in any folder you want to apply this tags to. This is meant to be used with folders that aren't mods.
 
