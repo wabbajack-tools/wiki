@@ -201,7 +201,11 @@ This guide requires you to have already completed <a href="Getting%20CDN%20Acces
 <ul>
 <li>Download Metadata - The contents of <code>download_metadata</code> can be found in the <code>.wabbajack.meta.json</code> file that's created by Wabbajack after you create compile your list.</li>
 <li>MachineURL - no strings, punctuation or special characters allowed (except underscore <code>_</code>). This name must be unique to this repository</li>
-<li><code>image_contains_title</code> - set to <code>true</code> if your gallery image contains the modlist title</li>
+<li><code>image_contains_title</code> - set to <code>true</code> if your gallery image contains the modlist title
+<ul>
+<li><em>Note:  Image URL MUST be in the following format:  <code>https://raw.githubusercontent.com/user/repository/main/nameofimagefile.png</code>.  Obtainlable by clicking the 'Download' button next to the image.</em></li>
+</ul>
+</li>
 <li><code>force_down</code> - something broken in your list? Set this to true to disable it in the UI</li>
 <li><code>nsfw</code> - you <em>must</em> set this to true if your modlist contains explicit sexual acts. If your list just contains nudity, then you don't have to set this to true.</li>
 </ul>
