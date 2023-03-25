@@ -67,6 +67,7 @@ Now fill out all the various fields for your modlist, you can use this text as a
 * Download Metadata - The contents of `download_metadata` can be found in the `.wabbajack.meta.json` file that's created by Wabbajack after you create compile your list.
 * MachineURL - no strings, punctuation or special characters allowed (except underscore `_`). This name must be unique to this repository
 * `image_contains_title` - set to `true` if your gallery image contains the modlist title
+    *  _Note:  Image URL MUST be in the following format:_ `https://raw.githubusercontent.com/user/repository/main/nameofimagefile.png`  _Obtainlable by clicking the 'Download' button next to the image._
 * `force_down` - something broken in your list? Set this to true to disable it in the UI
 * `nsfw` - you *must* set this to true if your modlist contains explicit sexual acts. If your list just contains nudity, then you don't have to set this to true.
 
