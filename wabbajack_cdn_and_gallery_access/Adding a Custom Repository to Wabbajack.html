@@ -203,7 +203,7 @@ This guide requires you to have already completed <a href="Getting%20CDN%20Acces
 <li>MachineURL - no strings, punctuation or special characters allowed (except underscore <code>_</code>). This name must be unique to this repository</li>
 <li><code>image_contains_title</code> - set to <code>true</code> if your gallery image contains the modlist title
 <ul>
-<li><em>Note:  Image URL MUST be in the following format:  <code>https://raw.githubusercontent.com/user/repository/main/nameofimagefile.png</code>.  Obtainlable by clicking the 'Download' button next to the image.</em></li>
+<li><em>Note:  Image URL MUST be in the following format:</em> <code>https://raw.githubusercontent.com/user/repository/main/nameofimagefile.png</code>  <em>Obtainlable by clicking the 'Download' button next to the image.</em></li>
 </ul>
 </li>
 <li><code>force_down</code> - something broken in your list? Set this to true to disable it in the UI</li>
@@ -212,11 +212,12 @@ This guide requires you to have already completed <a href="Getting%20CDN%20Acces
 <p>Once you're satisfied with the contents of the metadata, <a href="https://jsonlint.com/">validate your json</a> and click <code>Commit new file</code> afterwards.</p>
 <p><img src="https://user-images.githubusercontent.com/654621/161399933-2012365b-0891-45f3-a21d-14a72dca1247.png" alt="Step5" /></p>
 <h2 id="adding-your-repository"><a class="header" href="#adding-your-repository">Adding your repository</a></h2>
-<p>Now you need to add your repository to the Wabbajack master repository list. View your <code>modlists.json</code> file in GitHub, and click on the <code>Raw</code> button and when the file has loaded as plain text copy the link from your browsers address bar.</p>
+<p>Now you need to add your repository to the Wabbajack master repository list. View your <code>modlists.json</code> file in GitHub, click on the <code>Raw</code> button and copy the URL on the page that opens.</p>
 <p><img src="https://user-images.githubusercontent.com/654621/161399961-bc0cdb28-74d8-4c69-8cb0-11863083bee1.png" alt="Step6" /></p>
 <p>Now navigate to this file: <a href="https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json">https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json</a> and select the <code>Edit</code> button.</p>
 <p><img src="https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png" alt="Step8" /></p>
 <p>Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above.</p>
+<p><em>Note:  URL MUST be in the following format:  https://raw.githubusercontent.com/user/repository/main/modlists.json.  Obtainlable by opening the modlists.json file clicking the 'Raw' button.  Copy the URL on the page that opens.</em></p>
 <p><img src="https://user-images.githubusercontent.com/654621/161400507-40238db1-4ec3-4599-8082-ba961ac79b1b.png" alt="Step9" /></p>
 <p>Click &quot;Create a new Branch...&quot; and &quot;Propose Changes&quot;.</p>
 <p><img src="https://user-images.githubusercontent.com/654621/161400527-669820df-7147-419d-b903-4eff6eeddb9c.png" alt="Step10" /></p>
