@@ -81,7 +81,7 @@ Now you need to add your repository to the Wabbajack master repository list. Vie
 
 ![Step6](https://user-images.githubusercontent.com/654621/161399961-bc0cdb28-74d8-4c69-8cb0-11863083bee1.png)
 
-Now navigate to this file: <https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json> and select the `Edit` button
+Now navigate to this file: <https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json> and select the `Edit` button.
 
 ![Step8](https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png)
 
@@ -95,7 +95,7 @@ Click "Create a new Branch..." and "Propose Changes".
 
 ![Step10](https://user-images.githubusercontent.com/654621/161400527-669820df-7147-419d-b903-4eff6eeddb9c.png)
 
-On the next page, click "Create Pull Request"
+On the next page, click "Create Pull Request".
 
 ![Step10](https://user-images.githubusercontent.com/654621/161400531-0cae7ffd-4039-4f95-9f16-ce6e1b3b9e3d.png)
 
