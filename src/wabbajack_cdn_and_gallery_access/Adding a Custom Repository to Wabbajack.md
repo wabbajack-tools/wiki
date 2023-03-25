@@ -67,7 +67,6 @@ Now fill out all the various fields for your modlist, you can use this text as a
 * Download Metadata - The contents of `download_metadata` can be found in the `.wabbajack.meta.json` file that's created by Wabbajack after you create compile your list.
 * MachineURL - no strings, punctuation or special characters allowed (except underscore `_`). This name must be unique to this repository
 * `image_contains_title` - set to `true` if your gallery image contains the modlist title
-    *  _Note:  Image URL MUST be in the following format:  `https://raw.githubusercontent.com/user/repository/main/nameofimagefile.png`.  Obtainlable by clicking the 'Download' button next to the image._
 * `force_down` - something broken in your list? Set this to true to disable it in the UI
 * `nsfw` - you *must* set this to true if your modlist contains explicit sexual acts. If your list just contains nudity, then you don't have to set this to true.
 
@@ -77,7 +76,7 @@ Once you're satisfied with the contents of the metadata, [validate your json](ht
 
 ## Adding your repository
 
-Now you need to add your repository to the Wabbajack master repository list. View your `modlists.json` file in GitHub, and right-click on the `Raw` button and select `Copy Link`
+Now you need to add your repository to the Wabbajack master repository list. View your `modlists.json` file in GitHub, click on the `Raw` button and copy the URL on the page that opens.
 
 ![Step6](https://user-images.githubusercontent.com/654621/161399961-bc0cdb28-74d8-4c69-8cb0-11863083bee1.png)
 
@@ -86,6 +85,8 @@ Now navigate to this file: <https://github.com/wabbajack-tools/mod-lists/blob/ma
 ![Step8](https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png)
 
 Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above.
+
+_Note:  URL MUST be in the following format:  https://raw.githubusercontent.com/user/repository/main/modlists.json.  Obtainlable by opening the modlists.json file clicking the 'Raw' button.  Copy the URL on the page that opens._
 
 ![Step9](https://user-images.githubusercontent.com/654621/161400507-40238db1-4ec3-4599-8082-ba961ac79b1b.png)
 
