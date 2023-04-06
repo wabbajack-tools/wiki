@@ -157,12 +157,62 @@ This Page potenitally requires updating the template for Wabbajack version 3.0.<
 <h2 id="creating-the-compiler_settings-file"><a class="header" href="#creating-the-compiler_settings-file">Creating the <code>.compiler_settings</code> File</a></h2>
 <p>In the root of the modlist folder, create a file called &quot;ListName.compiler_settings&quot;. Open it and set the contents to the following:</p>
 <pre><code class="language-json">{
-    &quot;Source&quot;: &quot;E:\\wj_tmp\\dishonored&quot;,
-    &quot;Downloads&quot;: &quot;E:\\wj_tmp\\dishonored\\downloads&quot;,
+    &quot;ModlistIsNSFW&quot;: false,
+    &quot;Source&quot;: &quot;F:\\Wabbajack Modlists Maintenance\\Dishonored 1.1&quot;,
+    &quot;Downloads&quot;: &quot;E:\\Wabbajack Modlist Maintenance\\.Download Folders\\Dishonored&quot;,
     &quot;Game&quot;: &quot;Dishonored&quot;,
-    &quot;OutputFile&quot;: &quot;E:\\wj_tmp&quot;
+    &quot;OutputFile&quot;: &quot;F:\\Wabbajack Modlists Maintenance&quot;,
+    &quot;ModListImage&quot;: &quot;F:\\Wabbajack Modlists Maintenance\\Dishonored 1.1\thumbnail.png&quot;,
+    &quot;UseGamePaths&quot;: true,
+    &quot;UseTextureRecompression&quot;: false,
+    &quot;OtherGames&quot;: [],
+    &quot;MaxVerificationTime&quot;: &quot;00:01:00&quot;,
+    &quot;ModListName&quot;: &quot;Listname&quot;,
+    &quot;ModListAuthor&quot;: &quot;AuthorName&quot;,
+    &quot;ModListDescription&quot;: &quot;&quot;,
+    &quot;ModListReadme&quot;: &quot;&quot;,
+    &quot;ModListWebsite&quot;: &quot;&quot;,
+    &quot;ModlistVersion&quot;: &quot;1.0.0.0&quot;,
+    &quot;PublishUpdate&quot;: false,
+    &quot;MachineUrl&quot;: &quot;&quot;,
+    &quot;Profile&quot;: &quot;&quot;,
+    &quot;AdditionalProfiles&quot;: [],
+    &quot;NoMatchInclude&quot;: [],
+    &quot;Include&quot;: [],
+    &quot;Ignore&quot;: [],
+    &quot;AlwaysEnabled&quot;: [],
+    &quot;Version&quot;: &quot;1.0.0&quot;,
+    &quot;Description&quot;: &quot;&quot;
 }
 </code></pre>
+<ul>
+<li>&quot;ModlistIsNSFW&quot;: Can and should be changed in the Wabbajack UI</li>
+<li><strong>&quot;Source&quot;:</strong> Must be set to the folder you want to compile (and that will contain this <code>.compiler_settings</code> file). </li>
+<li><strong>&quot;Downloads&quot;:</strong> Should be set to the donloaded archives for the setup, can be changed in the UI.</li>
+<li><strong>&quot;Game&quot;</strong>: Must be set on the game that's being compiled.</li>
+<li><strong>&quot;OutputFile&quot;:</strong> The path to where the compiled <code>.wabbajack</code> will be stored.</li>
+<li><strong>&quot;ModListImage&quot;</strong>: The thumbnail/cover image for the modlist, MUST be a local stored image.</li>
+<li>&quot;UseGamePaths&quot;: Just keep this setting as it is.</li>
+<li>&quot;UseTextureRecompression&quot;: This feature should not be used for non Bethesda games. (and even with them it might need more testing)</li>
+<li>&quot;OtherGames&quot;: If your game requires files from other WJ supported games that need to be installed, you can add them to this list. Very unlikely and in the current stage of our indexed files only really available for Bethesda Games to source base game files for their VR versions.</li>
+<li>&quot;MaxVerificationTime&quot;: Just keep this setting as it is.</li>
+<li><strong>&quot;ModListName&quot;:</strong> Name of your List, can later be changed in the UI.</li>
+<li><strong>&quot;ModListAuthor&quot;:</strong> Your name , can later be changed in the UI.</li>
+<li>&quot;ModListDescription&quot;: Can be and should be changed in the UI.</li>
+<li><strong>&quot;ModListReadme&quot;:</strong> Mandatory link to a website(or Readme on sites like Github) with additional instructions, can be changed in the UI.</li>
+<li><strong>&quot;ModListWebsite&quot;:</strong> Link to a custom website, can also link to the readme. </li>
+<li>&quot;ModlistVersion&quot;:  Can be and should be changed in the UI.</li>
+<li>&quot;PublishUpdate&quot;: Relevant for automatic updloads when your compiles are finished. Only available after you have access to the CDN and your list in a custom repository.</li>
+<li>&quot;MachineUrl&quot;: Link to your list for the update funktion <code>repositoryName/machineUrl</code>.</li>
+<li>&quot;Profile&quot;: Just keep this setting as it is. </li>
+<li>&quot;AdditionalProfiles&quot;: Just keep this setting as it is.</li>
+<li>&quot;NoMatchInclude&quot;:  Can be and should be changed in the UI.</li>
+<li>&quot;Include&quot;:  Can be and should be changed in the UI.</li>
+<li>&quot;Ignore&quot;:  Can be and should be changed in the UI.</li>
+<li>&quot;AlwaysEnabled&quot;: Just keep this setting as it is.</li>
+<li>&quot;Version&quot;:  Can be and should be changed in the UI.</li>
+<li>&quot;Description&quot;: See ModListDescription.</li>
+</ul>
 <h2 id="building-your-setup"><a class="header" href="#building-your-setup">Building Your Setup</a></h2>
 <p>Now you can go ahead and build your setup as needed.</p>
 <h2 id="opening-wabbajack-to-compile-the-list"><a class="header" href="#opening-wabbajack-to-compile-the-list">Opening Wabbajack to Compile the List</a></h2>
