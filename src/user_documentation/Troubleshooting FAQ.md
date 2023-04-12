@@ -45,6 +45,17 @@ This page is and will always be in development and update over time.
 >
 > Wabbjack is built using various libraries made by Microsoft and some of them require core functions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your windows if you ever have run such a deblaoter software/script.
 
+### Wabbajack Modlists not loading or downloading
+
+> **Conflicting Network Settings/Apps**
+>
+> `Killer Control Centre`/`Killer Intelligence Center` are at least 2 known apps that contain settings that break Wabbajack. This software is known to be likely bundled with Dell/Alienware laptops but also be related to Intel chipsets because it shows up in the Intel Driver Support app. To fix the issues they cause with Wabbajack you need to:
+>
+> - disable the Prioritization Engine
+> - possibly need to disable Auto Bandwidth too
+>
+> At least that's what fixed it for the user that figured out this conflict and other users that had similar issues.
+
 ### Don't run as Admin!
 
 > **"But I am not running it as Admin"**
