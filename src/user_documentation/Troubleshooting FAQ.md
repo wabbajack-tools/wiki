@@ -56,6 +56,15 @@ This page is and will always be in development and update over time.
 >
 > At least that's what fixed it for the user that figured out this conflict and other users that had similar issues.
 
+### Wabbajack Extraction Errors
+
+> **Sanity Check Error**
+>
+> `[ERROR] (Wabbajack.InstallerVM) Sanity check error extracting`
+>
+> - If your system locale (language) is set to any langage not using latin-script letters (like english does) set your system language to english or any other latin-script language you can understand and the issue is likely fixed. (It has worked for some people in the past.)
+> - Other possible reasons for this and workarounds or fixes are unknown at the time of writing this.
+
 ### Don't run as Admin!
 
 > **"But I am not running it as Admin"**
