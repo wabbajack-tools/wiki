@@ -1,6 +1,6 @@
 # Repository Validation
 
-**This section is importat for everyone with merge permissions!**
+**This section is important for everyone with merge permissions!**
 
 ## General Information
 
