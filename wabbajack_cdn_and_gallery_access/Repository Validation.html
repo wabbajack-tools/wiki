@@ -149,21 +149,26 @@
                         <h1 id="repository-validation"><a class="header" href="#repository-validation">Repository Validation</a></h1>
 <p><strong>This section is important for everyone with merge permissions!</strong></p>
 <h2 id="general-information"><a class="header" href="#general-information">General Information</a></h2>
-<p>We all know how frequently in the past a broken .json file has caused us headaches like a broken gallery in the app and on the website. To fix this the github Validation for modlist repositories has been updated. It now also validates the repositories.json AND the in there linked .json files.</p>
-<p>The test will run every 4 hours, pull request and commit made to the mod-lists repository.</p>
+<p>We all know how frequently in the past a broken <code>.json</code> file has caused us headaches like a broken gallery in the app and on the website. To fix this, the GitHub Validation for modlist repositories has been updated. It now validates <code>repositories.json</code> <em>and</em> the <code>.json</code> files linked therein.</p>
+<p>The test runs every 4 hours as well as on every pull request and commit made to the <code>wabbajack-tools/mod-lists</code> repository.</p>
 <p>To check past runs or trigger a new run on the main repository (in case the website and app gallery are broken and you need to find the issue) go to the <a href="https://github.com/wabbajack-tools/mod-lists/actions/workflows/validation.yml">Github Actions Tab</a></p>
 <p><img src="assets/run_validation_on_master.webp" alt="run_validation_on_master" /></p>
 <h2 id="merging-procedure"><a class="header" href="#merging-procedure">Merging Procedure</a></h2>
-<p>Before merging older pull requests it is recommended to run the validation again <strong>even if they are validated</strong>, because the linked json file could have been broken or deleted over time or a previously broken json got fixed already.</p>
+<p>Before merging older pull requests it is recommended to run the validation again <strong>even if they have been previously validated</strong> as the linked <code>.json</code> files may have been edited or deleted since. The merging process is as follows:</p>
 <ol>
-<li>Go to the Details page of the Validation run:<br />
+<li>Go to the Details page of the Validation run: </br>
 <img src="assets/show_validation_run_details.webp" alt="show_validation_run_details" /></li>
-<li>Re-run all jobs:<br />
+<li>Re-run all jobs: </br>
 <img src="assets/re-run_all_jobs.webp" alt="re-run_all_jobs" /></li>
-<li>When the run is successful the pull request can be merged or when it was just a normal run then the gallery is in perfect condition.<br />
-If the run is unsuccessful you can find the reason for the test failing in the log under the test section:<br />
-<img src="assets/failed_run_example.webp" alt="failed_run_example" /><br />
-In this example the error was a missing <code>,</code> in the .json file of the repository planned to be merged.</li>
+<li>If the run is successful:
+<ol>
+<li>In the case of pull request validation, the pull request may now be merged</li>
+<li>In the case of a regular validation (not validating a pull request), the gallery is up and in good condition.</li>
+</ol>
+</li>
+<li>If the run is unsuccessful, you can find the reason for the test failing in the log under the test section: </br>
+<img src="assets/failed_run_example.webp" alt="failed_run_example" />
+In this example the error was a missing <code>,</code> in the <code>.json</code> file of the repository that was to be merged.</li>
 </ol>
 
                     </main>
