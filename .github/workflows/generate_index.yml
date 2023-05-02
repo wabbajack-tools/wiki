@@ -1,0 +1,23 @@
+name: Generate JSON Index
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+jobs:
+  generate_index:
+              runs-on: ubuntu-latest
+              concurrency:
+                group: ${{ github.workflow }}-${{ github.ref }}
+            
+              steps:
+                  - name: mdBook to JSON file
+                    uses: EzioTheDeadPoet/actions-mdBook-indexer@v1.5
+                    with:
+                      mbBook_url: https://wiki.wabbajack.org/
+
+                  - name: Deploy Data
+                    uses: peaceiris/actions-gh-pages@v3
+                    with:
+                      github_token: ${{ secrets.GITHUB_TOKEN }}
+                      publish_dir: ./json_index
+                      publish_branch: index_json
