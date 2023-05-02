@@ -5,37 +5,37 @@
 If you own a game on this list on the Epic Games Store, and the store isn't listed as supported, please get in touch on [Discord](https://discord.gg/wabbajack), so you can help us make Wabbajack support those versions as well.
 This is needed, since the EGS has no public database of its game IDs.
 
-| Game                               | Platform                     | Versions                            | Notes                          |
-|------------------------------------|------------------------------|-------------------------------------|--------------------------------|
-| Cyberpunk 2077                     | Steam, GOG                   |                                     | Experimental                   |
-| Darkest Dungeon                    | Steam, GOG, Epic Games Store |                                     | Experimental                   |
-| Dishonored                         | Steam, GOG                   |                                     | Experimental                   |
-| Dragon's Dogma: Dark Arisen        | Steam, GOG                   |                                     | Experimental                   |
-| Dragon Age 2                       | Steam, Origin                |                                     | Experimental                   |
-| Dragon Age Inquisition             | Steam, Origin                |                                     | Experimental                   |
-| Dragon Age Origins                 | Stean, GOG, Origin           |                                     | Experimental                   |
-| Enderal                            | Steam                        |                                     |                                |
-| Enderal Special Edition            | Steam                        |                                     |                                |
-| Fallout 4                          | Steam                        |                                     |                                |
-| Fallout 4 VR                       | Steam                        |                                     |                                |
-| Fallout 3                          | Steam, GOG                   | Normal and GotY                     | Platform-locked*               |
-| Fallout New Vegas                  | Steam, GOG                   | Normal and region locked RU version | Platform-locked*               |
-| Karryn's Prison                    | Steam                        |                                     | Experimental                   |
-| Kerbal Space Program               | Steam, GOG                   |                                     | Experimental                   |
-| Mount & Blade II: Bannerlord       | Steam, GOG                   |                                     | Experimental                   |
-| Sims 4                             | Steam                        |                                     | Experimental                   |
-| Stardew Valley                     | Steam, GOG                   |                                     | Experimental, Platform-locked* |
-| Terraria                           | Steam                        | tModloader                          | Experimental                   |
-| TES Morrowind                      | Steam, GOG                   |                                     |                                |
-| TES Oblivion                       | Steam, GOG                   | Normal and GotY                     | Platform-locked*               |
-| TES Skyrim                         | Steam                        |                                     |                                |
-| TES Skyrim Special Edition         | Steam, GOG                   |                                     | Platform-locked*               |
-| TES Skyrim VR                      | Steam                        |                                     |                                |
-| The Witcher                        | Steam, GOG                   | Enhanced Edition                    | Experimental                   |
-| The Witcher 3                      | Steam, GOG                   | Normal and GotY                     | Experimental, Platform-locked* |
-| Kingdom Come: Deliverance          | Steam, GOG                   |                                     | Experimental                   |
-| Mechwarrior 5: Mercenaries         | Epic Games Store             |                                     | Experimental                   |
-| No Man's Sky                       | Steam, GOG                   |                                     | Experimental                   |
+| Game                         | Platform                     | Versions                                                   | Notes                          |
+|------------------------------|------------------------------|------------------------------------------------------------|--------------------------------|
+| Cyberpunk 2077               | Steam, GOG                   |                                                            | Experimental                   |
+| Darkest Dungeon              | Steam, GOG, Epic Games Store |                                                            | Experimental                   |
+| Dishonored                   | Steam, GOG                   |                                                            | Experimental                   |
+| Dragon's Dogma: Dark Arisen  | Steam, GOG                   |                                                            | Experimental                   |
+| Dragon Age 2                 | Steam, Origin                |                                                            | Experimental                   |
+| Dragon Age Inquisition       | Steam, Origin                |                                                            | Experimental                   |
+| Dragon Age Origins           | Stean, GOG, Origin           |                                                            | Experimental                   |
+| Enderal                      | Steam                        |                                                            |                                |
+| Enderal Special Edition      | Steam                        |                                                            |                                |
+| Fallout 4                    | Steam                        |                                                            |                                |
+| Fallout 4 VR                 | Steam                        |                                                            |                                |
+| Fallout 3                    | Steam, GOG                   | Normal and GotY                                            | Platform-locked*               |
+| Fallout New Vegas            | Steam, GOG                   | Normal and region locked RU version                        | Platform-locked*               |
+| Karryn's Prison              | Steam                        |                                                            | Experimental                   |
+| Kerbal Space Program         | Steam, GOG                   |                                                            | Experimental                   |
+| Mount & Blade II: Bannerlord | Steam, GOG                   |                                                            | Experimental                   |
+| Sims 4                       | Steam                        |                                                            | Experimental                   |
+| Stardew Valley               | Steam, GOG                   |                                                            | Experimental, Platform-locked* |
+| Terraria                     | Steam                        | tModloader                                                 | Experimental                   |
+| TES Morrowind                | Steam, GOG                   |                                                            |                                |
+| TES Oblivion                 | Steam, GOG                   | Normal and GotY                                            | Platform-locked*               |
+| TES Skyrim                   | Steam                        |                                                            |                                |
+| TES Skyrim Special Edition   | Steam, GOG                   | [details here](#skyrim-special-edition-versions-explained) | Platform-locked*               |
+| TES Skyrim VR                | Steam                        |                                                            |                                |
+| The Witcher                  | Steam, GOG                   | Enhanced Edition                                           | Experimental                   |
+| The Witcher 3                | Steam, GOG                   | Normal and GotY                                            | Experimental, Platform-locked* |
+| Kingdom Come: Deliverance    | Steam, GOG                   |                                                            | Experimental                   |
+| Mechwarrior 5: Mercenaries   | Epic Games Store             |                                                            | Experimental                   |
+| No Man's Sky                 | Steam, GOG                   |                                                            | Experimental                   |
 
 **Experimental**:
 
@@ -55,3 +55,17 @@ As of the time this is being written the only officially supported mod manager i
 
 There is however the option for creating a wabbajack installer that simply recreates a whole folder by linking individual files to their originally sourced downloads.  
 Modlists created with this option will require more manual instructions for where users will be required to copy/move those files, but it is a way to allow modlists for games like Dishonored, the small demo for that system or Mechwarrior 5 that don't have Mod Organizer 2 support. You can learn about this option [here](nat), for more info and guidance join the [Discord](https://discord.gg/wabbajack).
+
+## Skyrim Special Edition Versions Explained
+
+| EXE Version | without AE-DLC                                                           | with AE-DLC                                                             |
+|-------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| 1.5.x       | Skyrim Special Edition                                                   | No common name available                                                |
+| 1.6.x       | Skyrim Special Edition (1.6) </br> **Skyrim Anniversary Edition Update** | Skyrim Anniversary Edition </br> **Skyrim Anniversary Edition Upgrade** |
+
+## Anniversary Edition (Update & Upgrade) Guide
+
+| EXE Versions      | Store |
+|-------------------|-------|
+| 1.6.323 - 1.6.640 | Steam |
+| 1.6.659           | GOG   |
