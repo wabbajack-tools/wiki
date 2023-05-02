@@ -10,13 +10,9 @@ jobs:
             
               steps:
                   - name: mdBook to JSON file
-                    uses: EzioTheDeadPoet/actions-mdBook-indexer@v1.5
-                    with:
-                      mbBook_url: https://wiki.wabbajack.org/
-
-                  - name: Deploy Data
-                    uses: peaceiris/actions-gh-pages@v3
+                    uses: EzioTheDeadPoet/actions-mdBook-indexer@v2.1
                     with:
                       github_token: ${{ secrets.GITHUB_TOKEN }}
-                      publish_dir: ./json_index
-                      publish_branch: index_json
+                      mbBook_url: https://wiki.wabbajack.org/
+                      output_branch: api
+                      outputfile: wabbajack_wiki.json
