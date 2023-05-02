@@ -1,7 +1,6 @@
 name: Generate JSON Index
 on:
-  push:
-    branches: [gh-pages]
+  page_build:
   workflow_dispatch:
 jobs:
   generate_index:
