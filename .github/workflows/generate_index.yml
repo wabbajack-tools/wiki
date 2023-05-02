@@ -15,4 +15,4 @@ jobs:
                       github_token: ${{ secrets.GITHUB_TOKEN }}
                       mbBook_url: https://wiki.wabbajack.org/
                       output_branch: api
-                      outputfile: wabbajack_wiki.json
+                      output_file: wabbajack_wiki.json
