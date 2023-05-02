@@ -58,6 +58,8 @@ Modlists created with this option will require more manual instructions for wher
 
 ## Skyrim Special Edition Versions Explained
 
+This is a small table explaining the best ways to differentiate between the Various Skyrim versions.
+
 | EXE Version | without AE-DLC                                                           | with AE-DLC                                                             |
 |-------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | 1.5.x       | Skyrim Special Edition                                                   | No common name available                                                |
