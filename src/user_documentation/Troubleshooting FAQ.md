@@ -65,6 +65,13 @@ This page is and will always be in development and update over time.
 > - If your system locale (language) is set to any langage not using latin-script letters (like english does) set your system language to english or any other latin-script language you can understand and the issue is likely fixed. (It has worked for some people in the past.)
 > - Other possible reasons for this and workarounds or fixes are unknown at the time of writing this.
 
+### BSOD (Bluescreen of Death) / PC Crash
+
+> **SYSTEM_THREAD_EXCEPTION_NOT_HANDLED**
+>
+> - **Overclocking:** If you get this Bluescreen one of your Drivers is acting up, as a gamer most likely due to an unstable overclock. And the reason you are likely "only" crashing when using Wabbajack is because Wabbajack was written to use all your system resources at their most potenital, effectively stresstesting your hardware. And you might say "I am only using a GPU overclock, how would that effect Wabbajack ?" and the answer is, that Wabbajack uses your GPU for processing textures when installing modlists.
+> - **Driver Issues:** If you didn't overclock your system the same principle applies only that one of your Drivers seems to be broken and should be repaired. More details on this can be found [here](https://helpdeskgeek.com/windows-10/how-to-fix-a-system-thread-exception-not-handled-bsod/).
+
 ### Don't run as Admin!
 
 > **"But I am not running it as Admin"**
