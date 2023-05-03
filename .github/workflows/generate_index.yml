@@ -1,18 +1,20 @@
 name: Generate JSON Index
 on:
-  page_build:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types:
+      - completed
   workflow_dispatch:
 jobs:
-  generate_index:
-              runs-on: ubuntu-latest
-              concurrency:
-                group: ${{ github.workflow }}-${{ github.ref }}
-            
-              steps:
-                  - name: mdBook to JSON file
-                    uses: EzioTheDeadPoet/actions-mdBook-indexer@v2.1
-                    with:
-                      github_token: ${{ secrets.GITHUB_TOKEN }}
-                      mbBook_url: https://wiki.wabbajack.org/
-                      output_branch: api
-                      output_file: wabbajack_wiki.json
+  build_index:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: mdBook to JSON file
+        uses: EzioTheDeadPoet/actions-mdBook-indexer@v2.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          mbBook_url: https://wiki.wabbajack.org/
+          output_branch: api
+          output_file: wabbajack_wiki.json
