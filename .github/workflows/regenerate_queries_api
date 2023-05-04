@@ -1,0 +1,22 @@
+name: Generate JSON Index
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types:
+      - completed
+  workflow_dispatch:
+jobs:
+  build_index:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Run PSEUDO-API Generator
+          id: query_generator
+          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@1.0
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            mbBook_url: https://rust-lang.github.io/mdBook/
+            api_repo: ${{ github.repository }}
+            api_branch: API
+            regenerate_cache: true
