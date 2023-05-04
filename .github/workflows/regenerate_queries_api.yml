@@ -18,5 +18,5 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
             api_repo: ${{ github.repository }}
-            api_branch: API
+            api_branch: api
             regenerate_cache: true
