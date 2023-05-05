@@ -12,9 +12,9 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Run PSEUDO-API Generator
-          id: query_generator
-          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@1.0
-          with:
+        id: query_generator
+        uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@1.0
+        with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
             api_repo: ${{ github.repository }}
