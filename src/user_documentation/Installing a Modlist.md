@@ -47,11 +47,12 @@ Do note that installation can take anything from a few minutes to hours dependin
 
 Windows, as a Operating System, has some protection over specific folders.
 These are;
-    - C:\Windows
-    - C:\Users\<username>\Documents
-    - C:\Users\<username>\Images
-    - C:\Users\<username>\Videos
-    - C:\Users\<username>\OneDrive\*
-    - C:\Program Files and C:\Program Files (x86)
+  - C:\Windows\
+  - C:\Users\username\Documents\
+  - C:\Users\username\Images\
+  - C:\Users\username\Videos\
+  - C:\Users\username\OneDrive\
+  - C:\Program Files\
+  - C:\Program Files (x86)\
 
 It is highly recommended you don't have your Game, Wabbajack, modlist, and the modlist downloads in any of these folders.
