@@ -29,6 +29,12 @@ Source: [RootBuilder Website](https://kezyma.github.io/?p=rootbuilder)
 For using RootBuilder, we recommend following the [official instructions](https://kezyma.github.io/?p=rootbuilder#intall-col).
 A guide that also features compiling with RootBuilder can be found [here](https://github.com/The-Animonculory/Modding-Resources/blob/main/Root%20Builder%20for%20Skyrim%20AE.md).
 
+Do take care your cached folder is ignored by Wabbajack, by flagging the `plugins\data\RootBuilder` folder as shown in the picture below.
+
+![WJ flagging compilation settings](https://raw.githubusercontent.com/The-Animonculory/Modding-Resources/main/Images/Root%20Builder/WJ3CompSets.webp)
+
+This will allow for your modlist to support both GOG and Steam (and/or other storefront) versions of games and also have a smaller footprint due to no stock game.
+
 ## Stock Game
 
 The Stock Game method involves building a WJ modlist that stores the game files _inside_ the MO2 install folder.
