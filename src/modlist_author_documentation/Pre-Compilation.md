@@ -11,7 +11,7 @@ The focus is on "_without bundling any assets or re-distributing any mods_." Thi
 If you take a quick look inside your MO2 downloads folder you will find 2 types of files:
 
 1. The actual download (some archive, e.g. `.7z`, `.zip`, `.rar`)
-2. A `.meta` file that has the same name the archive it is assocaited with
+2. A `.meta` file that has the same name the archive it is associteed with
 
 For instance, you might have `SkyUI_5_1-3863-5-1.7z` and `SkyUI_5_1-3863-5-1.7z.meta`.
 
