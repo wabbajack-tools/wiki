@@ -46,7 +46,7 @@ WJ will recognize these files and copy them from the end-user's game folder. Thi
 |                             | Locked to one platform (e.g., Steam _only_ or GOG _only_--not both) |
 |                             | Can only include one ENB preset                                     |
 
-### Preperation
+### Preparation
 
 1. Build a WJ list as normal
 2. Create a folder in the MO2 base folder, let's call it `Stock Game`, so users don't think these are `Game Folder Files`
