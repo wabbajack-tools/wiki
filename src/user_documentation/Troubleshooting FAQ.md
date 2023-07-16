@@ -56,6 +56,10 @@ This page is and will always be in development and update over time.
 >
 > At least that's what fixed it for the user that figured out this conflict and other users that had similar issues.
 
+> **Some people are unable to connect to Github**
+>
+> In India and maybe other countries as well Github has been set on block lists for some ISPs, so if people can't even reach www.github.com or any of its subdomains, then their only option for using WJ is a VPN.
+
 ### Wabbajack Extraction Errors
 
 > **Sanity Check Error**
