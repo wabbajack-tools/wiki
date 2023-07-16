@@ -23,7 +23,7 @@ Mods can also be hosted somewhere else, e.g., other modding sites like LoversLab
 -   `.meta` files are **case-sensitive**
 -   The "Whitelist" Wabbajack uses to manage non-Nexus sources is available on [GitHub](https://github.com/wabbajack-tools/opt-out-lists/blob/master/ServerWhitelist.yml). You may have to create a Pull Request if you want to add a link to a file that we haven't checked and whitelisted yet.
 
-### `directURL`
+### directURL
 
 `.meta` files for sites that don't require logins are handled via the `directURL=link` tag. Archives with such `.meta` files will be automatically downloaded.
 
@@ -33,7 +33,7 @@ directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
 installed=true
 ```
 
-### `manualURL`
+### manualURL
 
 `.meta` files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads.
 
@@ -62,9 +62,9 @@ ips4Mod=<modID>
 ips4File=<filename>
 ```
 
--   `ips4Site` - the site name for this download, currently this can only be `Vector Plexus` or `Lovers Lab`
--   `ips4Mod` - the number part of the URL, which in this case is `11116`
--   `ips4File` - the name of the file after is has finished downloading (removing any extra text added by windows)
+- `ips4Site` - the site name for this download, currently this can only be `Vector Plexus` ~~or `Lovers Lab`~~
+- `ips4Mod` - the number part of the URL, which in this case is `11116`
+- `ips4File` - the name of the file after is has finished downloading (removing any extra text added by windows)
 
 So for the example file above, our `.meta` would be:
 
@@ -75,23 +75,25 @@ ips4Mod=11116
 ips4File=WABBAJACK_TEST_FILE.zip
 ```
 
-> **Note**
-> This still uses LoversLab as the example but because LoversLab has a tendency to break it's API we highly recommend not using this meta option for LoversLab and using `manualURL` instead. The same goes for attachment files on LoversLab.
+> **Warning**:
+> This page still uses LoversLab as the example, because the logic is the same as with any supported ISP4 website, but because LoversLab has a tendency to break it's API we **disabled** using this meta option for LoversLab and people have to use `manualURL` instead. The same goes for attachment files on LoversLab.  
 
-> **Note**
-> Due to issues related to domain registration for VectorPlexus (URL was moved to www.vectorplexis.com) and unexpected downtimes, we advise modlist authors to use mirrors provided by mod authors instead to ensure maximum uptime for your modlist.
+> **Note**:
+> Due to unexpected downtimes in the past, we advise modlist authors to use mirrors provided by mod authors where possible instead of this implementation to ensure maximum uptime for your modlist.
 
 ## Reference Table
 
-| Site                                      | Requires Login | Requires Whitelist Entry | Notes                                                                                                                                                                     |
-| ----------------------------------------- | -------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [LoversLab](https://www.loverslab.com/)   | Yes            | No                       | IPS4 Site, The API is not reliable so use of `manualURL` strongly recommended.                                                                                            |
-| [VectorPlexus](https://vectorplexis.com/) | Yes            | No                       | IPS4 Site, The API isn't unreliable but due to some issues of domain registration and unexpected downtimes we recommend using mirrors provided by the mod authors instead |
-| [ModDB](https://www.moddb.com/)           | No             | No                       | Downloads can be very slow                                                                                                                                                |
-| [Patreon](https://www.patreon.com/)       | No             | Yes                      | Only public downloads, pay-walled downloads cannot be downloaded                                                                                                          |
-| [GitHub](https://github.com/)             | No             | No                       |                                                                                                                                                                           |
-| [Google Drive](https://drive.google.com/) | No             | Yes                      |                                                                                                                                                                           |
-| [MEGA](https://mega.nz/)                  | No (Optional)  | Yes                      |                                                                                                                                                                           |
-| [Mediafire](https://www.mediafire.com/)   | No             | Yes                      |                                                                                                                                                                           |
-| [Dropbox](https://www.dropbox.com/)       | No             | Yes                      |                                                                                                                                                                           |
-| [Yandex Disk](https://disk.yandex.com/)   | No             | Yes                      |                                                                                                                                                                           |
+| Site                                      | Requires Login | Requires Whitelist Entry | Notes                                                                                              |
+|-------------------------------------------|----------------|--------------------------|----------------------------------------------------------------------------------------------------|
+| [Nexusmods](https://www.nexusmods.com)    | Yes            | No                       | See [Introduction](#introduction).                                                                 |
+| [LoversLab](https://www.loverslab.com/)   | Yes            | No                       | Only [manualURL](#manualurl) support.                                                              |
+| [VectorPlexus](https://vectorplexis.com/) | Yes            | No                       | [IPS4 Site](#ips4-sites) Support (official (mod author made) mirrors recommended)                  |
+| [ModDB](https://www.moddb.com/)           | No             | No                       | [directURL](#directurl) Support. Downloads can be very slow.                                       |
+| [Patreon](https://www.patreon.com/)       | No             | Yes                      | [directURL](#directurl) Support. Only public downloads, pay-walled downloads cannot be downloaded. |
+| [GitHub](https://github.com/)             | No             | No                       | [directURL](#directurl) Support.                                                                   |
+| [Google Drive](https://drive.google.com/) | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
+| [MEGA](https://mega.nz/)                  | No (Optional)  | Yes                      | [directURL](#directurl) Support.                                                                   |
+| [Mediafire](https://www.mediafire.com/)   | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
+| [Dropbox](https://www.dropbox.com/)       | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
+| [Yandex Disk](https://disk.yandex.com/)   | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
+| Direct file downloads                     | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
