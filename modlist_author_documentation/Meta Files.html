@@ -167,13 +167,13 @@ fileID=1000172397
 <li><code>.meta</code> files are <strong>case-sensitive</strong></li>
 <li>The &quot;Whitelist&quot; Wabbajack uses to manage non-Nexus sources is available on <a href="https://github.com/wabbajack-tools/opt-out-lists/blob/master/ServerWhitelist.yml">GitHub</a>. You may have to create a Pull Request if you want to add a link to a file that we haven't checked and whitelisted yet.</li>
 </ul>
-<h3 id="directurl"><a class="header" href="#directurl"><code>directURL</code></a></h3>
+<h3 id="directurl"><a class="header" href="#directurl">directURL</a></h3>
 <p><code>.meta</code> files for sites that don't require logins are handled via the <code>directURL=link</code> tag. Archives with such <code>.meta</code> files will be automatically downloaded.</p>
 <pre><code class="language-ini">[General]
 directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
 installed=true
 </code></pre>
-<h3 id="manualurl"><a class="header" href="#manualurl"><code>manualURL</code></a></h3>
+<h3 id="manualurl"><a class="header" href="#manualurl">manualURL</a></h3>
 <p><code>.meta</code> files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads.</p>
 <pre><code class="language-ini">manualURL=https://foo.bar.bz/someFile.zip
 prompt=Please download the second file on this page
@@ -193,7 +193,7 @@ ips4Mod=&lt;modID&gt;
 ips4File=&lt;filename&gt;
 </code></pre>
 <ul>
-<li><code>ips4Site</code> - the site name for this download, currently this can only be <code>Vector Plexus</code> or <code>Lovers Lab</code></li>
+<li><code>ips4Site</code> - the site name for this download, currently this can only be <code>Vector Plexus</code> <del>or <code>Lovers Lab</code></del></li>
 <li><code>ips4Mod</code> - the number part of the URL, which in this case is <code>11116</code></li>
 <li><code>ips4File</code> - the name of the file after is has finished downloading (removing any extra text added by windows)</li>
 </ul>
@@ -204,25 +204,27 @@ ips4Mod=11116
 ips4File=WABBAJACK_TEST_FILE.zip
 </code></pre>
 <blockquote>
-<p><strong>Note</strong>
-This still uses LoversLab as the example but because LoversLab has a tendency to break it's API we highly recommend not using this meta option for LoversLab and using <code>manualURL</code> instead. The same goes for attachment files on LoversLab.</p>
+<p><strong>Warning</strong>:
+This page still uses LoversLab as the example, because the logic is the same as with any supported ISP4 website, but because LoversLab has a tendency to break it's API we <strong>disabled</strong> using this meta option for LoversLab and people have to use <code>manualURL</code> instead. The same goes for attachment files on LoversLab.</p>
 </blockquote>
 <blockquote>
-<p><strong>Note</strong>
-Due to issues related to domain registration for VectorPlexus (URL was moved to www.vectorplexis.com) and unexpected downtimes, we advise modlist authors to use mirrors provided by mod authors instead to ensure maximum uptime for your modlist.</p>
+<p><strong>Note</strong>:
+Due to unexpected downtimes in the past, we advise modlist authors to use mirrors provided by mod authors where possible instead of this implementation to ensure maximum uptime for your modlist.</p>
 </blockquote>
 <h2 id="reference-table"><a class="header" href="#reference-table">Reference Table</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Site</th><th>Requires Login</th><th>Requires Whitelist Entry</th><th>Notes</th></tr></thead><tbody>
-<tr><td><a href="https://www.loverslab.com/">LoversLab</a></td><td>Yes</td><td>No</td><td>IPS4 Site, The API is not reliable so use of <code>manualURL</code> strongly recommended.</td></tr>
-<tr><td><a href="https://vectorplexis.com/">VectorPlexus</a></td><td>Yes</td><td>No</td><td>IPS4 Site, The API isn't unreliable but due to some issues of domain registration and unexpected downtimes we recommend using mirrors provided by the mod authors instead</td></tr>
-<tr><td><a href="https://www.moddb.com/">ModDB</a></td><td>No</td><td>No</td><td>Downloads can be very slow</td></tr>
-<tr><td><a href="https://www.patreon.com/">Patreon</a></td><td>No</td><td>Yes</td><td>Only public downloads, pay-walled downloads cannot be downloaded</td></tr>
-<tr><td><a href="https://github.com/">GitHub</a></td><td>No</td><td>No</td><td></td></tr>
-<tr><td><a href="https://drive.google.com/">Google Drive</a></td><td>No</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://mega.nz/">MEGA</a></td><td>No (Optional)</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://www.mediafire.com/">Mediafire</a></td><td>No</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://www.dropbox.com/">Dropbox</a></td><td>No</td><td>Yes</td><td></td></tr>
-<tr><td><a href="https://disk.yandex.com/">Yandex Disk</a></td><td>No</td><td>Yes</td><td></td></tr>
+<tr><td><a href="https://www.nexusmods.com">Nexusmods</a></td><td>Yes</td><td>No</td><td>See <a href="#introduction">Introduction</a>.</td></tr>
+<tr><td><a href="https://www.loverslab.com/">LoversLab</a></td><td>Yes</td><td>No</td><td>Only <a href="#manualurl">manualURL</a> support.</td></tr>
+<tr><td><a href="https://vectorplexis.com/">VectorPlexus</a></td><td>Yes</td><td>No</td><td><a href="#ips4-sites">IPS4 Site</a> Support (official (mod author made) mirrors recommended)</td></tr>
+<tr><td><a href="https://www.moddb.com/">ModDB</a></td><td>No</td><td>No</td><td><a href="#directurl">directURL</a> Support. Downloads can be very slow.</td></tr>
+<tr><td><a href="https://www.patreon.com/">Patreon</a></td><td>No</td><td>Yes</td><td><a href="#directurl">directURL</a> Support. Only public downloads, pay-walled downloads cannot be downloaded.</td></tr>
+<tr><td><a href="https://github.com/">GitHub</a></td><td>No</td><td>No</td><td><a href="#directurl">directURL</a> Support.</td></tr>
+<tr><td><a href="https://drive.google.com/">Google Drive</a></td><td>No</td><td>Yes</td><td><a href="#directurl">directURL</a> Support.</td></tr>
+<tr><td><a href="https://mega.nz/">MEGA</a></td><td>No (Optional)</td><td>Yes</td><td><a href="#directurl">directURL</a> Support.</td></tr>
+<tr><td><a href="https://www.mediafire.com/">Mediafire</a></td><td>No</td><td>Yes</td><td><a href="#directurl">directURL</a> Support.</td></tr>
+<tr><td><a href="https://www.dropbox.com/">Dropbox</a></td><td>No</td><td>Yes</td><td><a href="#directurl">directURL</a> Support.</td></tr>
+<tr><td><a href="https://disk.yandex.com/">Yandex Disk</a></td><td>No</td><td>Yes</td><td><a href="#directurl">directURL</a> Support.</td></tr>
+<tr><td>Direct file downloads</td><td>No</td><td>Yes</td><td><a href="#directurl">directURL</a> Support.</td></tr>
 </tbody></table>
 </div>
                     </main>
