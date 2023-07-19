@@ -28,6 +28,16 @@ This page is and will always be in development and update over time.
   >
   > Now you should be able to run Wabbajack from the `Wabbajack.exe`
 
+### Wabbajack lists won't install to a folder on my Desktop or My Documents!
+
+> These locations are protected by default on Windows, this also includes folders such as Downloads, My Videos, Pictures, OneDrive or any other folder that is part of a standard Windows install.
+> 
+> This also applies to the root level of a drive, i.e C:\Wabbajack.exe  or installing a modlist directly to C:\ without it being inside any folders.
+> 
+> This also applies to subfolders of such protected folders, so C:\User\User\Desktop\Wabbajack\ wont work either.
+> 
+> This protection will interfere with Wabbajack operation, and therefore it is only allowed to run the Wabbajack.exe from its own new folder youve created, such as C:\Wabbajack\Wabbajack.exe and installing a modlist to its own folder too, such as C:\modlists\mynewmodlist\.
+
 ## Using Wabbajack
 
 ### Wabbajack shows a black screen when trying to X
@@ -94,13 +104,3 @@ This page is and will always be in development and update over time.
 > > 5. Select your created basic user
 > >
 > > Wabbajack is not responsible for any issues arising from attempting to run the application on non-standard Windows installations.
-
-### Wabbajack lists won't install to a folder on my Desktop or My Documents!
-> These locations are protected by default on Windows, this also includes folders such as Downloads, My Videos, Pictures, OneDrive or any other folder that is part of a standard Windows install.
-> 
-> This also applies to the root level of a drive, i.e C:\Wabbajack.exe  or installing a modlist directly to C:\ without it being inside any folders.
-> 
-> This also applies to subfolders of such protected folders, so C:\User\User\Desktop\Wabbajack\ wont work either.
-> 
-> This protection will interfere with Wabbajack operation, and therefore it is only allowed to run the Wabbajack.exe from its own new folder youve created, such as C:\Wabbajack\Wabbajack.exe and installing a modlist to its own folder too, such as C:\modlists\mynewmodlist\.
-> 
