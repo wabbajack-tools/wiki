@@ -64,7 +64,7 @@ This page is and will always be in development and update over time.
 
 > **Conflicting Network Settings/Apps**
 >
-> `Killer Control Centre`/`Killer Intelligence Center`/`Killer Network Service`/`Killer Prioritization Engine` are at least 4 known apps that contain settings that break Wabbajack. This software is known to be likely bundled with Dell/Alienware laptops but also be related to Intel chipsets because it shows up in the Intel Driver Support app. To fix the issues they cause with Wabbajack you need to:
+> `Killer Control Centre`/`Killer Intelligence Center`/`Killer Network Service` are at least 4 known apps that contain settings that break Wabbajack. This software is known to be likely bundled with Dell/Alienware laptops but also be related to Intel chipsets because it shows up in the Intel Driver Support app. To fix the issues they cause with Wabbajack you need to:
 >
 > - disable the Prioritization Engine
 > - possibly need to disable Auto Bandwidth too
