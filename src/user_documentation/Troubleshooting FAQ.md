@@ -4,9 +4,9 @@ This page is and will always be in development and update over time.
 
 ## Wabbajack Setup
 
-### Wabbjack refusing to launch
+### Wabbajack refusing to launch
 
-- If you used Wabbajack before try the following:  
+- If you've used Wabbajack before, try the following:  
   > **Reset Your Wabbajack Installation**
   >
   >To completely reset your Wabbajack settings, start off by closing Wabbajack if it is open. Afterwards, press `Windows + R` on your keyboard and type in `%localappdata%`.
@@ -17,12 +17,12 @@ This page is and will always be in development and update over time.
 
   This will **NOT** affect any already installed lists or downloaded files.
 
-- If have never used Wabbjack before  or the previous instructions didn't work try the following:  
-  > **Manually Install Wabbjack**
+- If have never used Wabbajack before or the previous instructions didn't work, try the following:  
+  > **Manually Install Wabbajack**
   >
   > To manually install Wabbajack go to [the latest release](https://github.com/wabbajack-tools/wabbajack/releases/latest) and download both the `X.X.X.X.zip` (will be the latest version number instead of X.X.X.X) and the `Wabbajack.exe`.
   >
-  > Go to a folder on one of your drives and create a folder called `Wabbajack` if you are using an existing folder make sure you emptied it before. Now copy the previously downloaded files into this folder.
+  > Go to a folder on one of your drives and create a folder called `Wabbajack`. If you are using an existing folder, make sure you empty it before proceeding. Now copy the previously downloaded files into this folder.
   >
   > Extract the `X.X.X.X.zip` in a way that you have a folder called `X.X.X.X` (again the current version number) filled with the contents of the .zip archive.
   >
@@ -30,13 +30,18 @@ This page is and will always be in development and update over time.
 
 ### Wabbajack lists won't install to a folder on my Desktop or My Documents!
 
-> These locations are protected by default on Windows, this also includes folders such as Downloads, My Videos, Pictures, OneDrive or any other folder that is part of a standard Windows install.
+> These locations are called "protected folders" and Windows places extra restrictions on these locations by default. Thus they are not suitable places to run Wabbajack from or install modlists to.
+>
+> Some common protected folders and other folders that are known to causes issues are: Downloads, Desktop, Documents, Videos, Pictures, OneDrive, Program Files, or any other folder that is part of a standard Windows install. This restriction applies to any subfolders of these folders as well.
+>
+> Additionally, the root level of a drive is also protected. Your Wabbajack.exe file should not be located at C:\Wabbajack.exe. 
 > 
-> This also applies to the root level of a drive, i.e C:\Wabbajack.exe  or installing a modlist directly to C:\ without it being inside any folders.
-> 
-> This also applies to subfolders of such protected folders, so C:\User\User\Desktop\Wabbajack\ wont work either.
-> 
-> This protection will interfere with Wabbajack operation, and therefore it is only allowed to run the Wabbajack.exe from its own new folder youve created, such as C:\Wabbajack\Wabbajack.exe and installing a modlist to its own folder too, such as C:\modlists\mynewmodlist\.
+> This protection will interfere with Wabbajack operation. Therefore, it is recommended you create a new folder near the root of your drive and place the Wabbajack.exe file within. For instance, create C:\Wabbajack and place Wabbajack.exe within this folder.
+>
+> These protections apply to modlist installation locations as well. It is recommended you create new folder near the root of your drive and then create new folder for your modlist within that folder. For instance, create C:\modlists, then create C:\modlists\my-new-modlist.
+
+
+
 
 ## Using Wabbajack
 
@@ -53,7 +58,7 @@ This page is and will always be in development and update over time.
 >
 > **Repair your windows installation**
 >
-> Wabbjack is built using various libraries made by Microsoft and some of them require core functions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your windows if you ever have run such a deblaoter software/script.
+> Wabbajack is built using various libraries made by Microsoft and some of them require core functions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your Windows if you ever have run such a debloater software/script.
 
 ### Wabbajack Modlists not loading or downloading
 
@@ -68,7 +73,7 @@ This page is and will always be in development and update over time.
 
 > **Some people are unable to connect to Github**
 >
-> In India and maybe other countries as well Github has been set on block lists for some ISPs, so if people can't even reach www.github.com or any of its subdomains, then their only option for using WJ is a VPN.
+> In India and maybe other countries, Github has been placed on block lists for some ISPs. If you can't even reach www.github.com or any of its subdomains, then your only option for using WJ is a VPN.
 
 ### Wabbajack Extraction Errors
 
@@ -76,24 +81,24 @@ This page is and will always be in development and update over time.
 >
 > `[ERROR] (Wabbajack.InstallerVM) Sanity check error extracting`
 >
-> - If your system locale (language) is set to any langage not using latin-script letters (like english does) set your system language to english or any other latin-script language you can understand and the issue is likely fixed. (It has worked for some people in the past.)
+> - If your system locale (language) is set to any language not using latin-script letters (like English does) set your system language to English or any other latin-script language you can understand and the issue is likely fixed. (It has worked for some people in the past.)
 > - Other possible reasons for this and workarounds or fixes are unknown at the time of writing this.
 
-### BSOD (Bluescreen of Death) / PC Crash
+### BSOD (Blue Screen of Death) / PC Crash
 
 > **SYSTEM_THREAD_EXCEPTION_NOT_HANDLED**
 >
-> - **Overclocking:** If you get this Bluescreen one of your Drivers is acting up, as a gamer most likely due to an unstable overclock. And the reason you are likely "only" crashing when using Wabbajack is because Wabbajack was written to use all your system resources at their most potenital, effectively stresstesting your hardware. And you might say "I am only using a GPU overclock, how would that effect Wabbajack ?" and the answer is, that Wabbajack uses your GPU for processing textures when installing modlists.
-> - **Driver Issues:** If you didn't overclock your system the same principle applies only that one of your Drivers seems to be broken and should be repaired. More details on this can be found [here](https://helpdeskgeek.com/windows-10/how-to-fix-a-system-thread-exception-not-handled-bsod/).
+> - **Overclocking:** If you get this Blue Screen one of your drivers is acting up. As a gamer, this is most likely due to an unstable overclock. The reason you are likely "only" crashing when using Wabbajack is because Wabbajack was written to use all your system resources at their most potential, effectively stresstesting your hardware. Even GPU overclocks may cause this instability as Wabbajack uses your GPU for texture processing during installation.
+> - **Driver Issues:** If you didn't overclock your system the same principle applies only that one of your drivers seems to be broken and should be repaired. More details on this can be found [here](https://helpdeskgeek.com/windows-10/how-to-fix-a-system-thread-exception-not-handled-bsod/).
 
 ### Don't run as Admin!
 
 > **"But I am not running it as Admin"**
 >
-> You might not have choosen to explicitly run Wabbjack with admin priviliges, BUT you either are running Wabbajack with [UAC](https://en.wikipedia.org/wiki/User_Account_Control) disabled which makes it so essentially every program is always executed as admin.  
-> If it is only disabled you can simply enable UAC like this:
+> You might not have explicitly chosen to run Wabbajack with admin privileges, but this error indicates Wabbajack is running as such. If you have disabled [UAC](https://en.wikipedia.org/wiki/User_Account_Control), Windows will run every program as an administrator. 
+> If it is only disabled, you can simply enable UAC like this:
 > ![UAC](https://media.discordapp.net/attachments/666599178788536331/1041355863832678500/image.png?width=1396&height=671)
-> After doing this restart your PC for the change to be active.
+> After doing this, restart your PC for the change to take effect.
 >
 > If you have a customised installation of Windows and cannot access UAC try the following:
 >
@@ -104,3 +109,7 @@ This page is and will always be in development and update over time.
 > > 5. Select your created basic user
 > >
 > > Wabbajack is not responsible for any issues arising from attempting to run the application on non-standard Windows installations.
+
+### Wabbajack says one or more downloaded mods have a hash of "menYUTfbRu8=", which does not match the expected hash. 
+
+> This error usually appears when you do not have enough free disk space on your computer's drive. Be sure you have enough free space for your modlist before installing. Additionally, you should have an extra 40-60GB available or you may encounter other issues.
