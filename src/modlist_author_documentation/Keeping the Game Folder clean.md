@@ -31,7 +31,7 @@ A guide that also features compiling with RootBuilder can be found [here](https:
 
 Do take care your cached folder is ignored by Wabbajack, by flagging the `plugins\data\RootBuilder` folder as shown in the picture below.
 
-![WJ flagging compilation settings](https://raw.githubusercontent.com/The-Animonculory/Modding-Resources/main/Images/Root%20Builder/WJ3CompSets.webp)
+![WJ flagging compilation settings](https://kezyma.github.io/img/rootbuilder/wabbajack_helper.png)
 
 This will allow for your modlist to support both GOG and Steam (and/or other storefront) versions of games and also have a smaller footprint due to no stock game.
 
