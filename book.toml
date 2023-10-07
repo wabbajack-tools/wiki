@@ -15,7 +15,7 @@ default-theme = "rust"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/wabbajack-tools/wiki"
 edit-url-template = "https://github.com/wabbajack-tools/wiki/edit/main/{path}"
-additional-css = ['theme/catppuccin.css', 'theme/catppuccin-highlight.css', '.\theme\catppuccin.css', '.\theme\catppuccin-admonish.css']
+additional-css = ['theme/catppuccin.css', 'theme/catppuccin-highlight.css', 'theme/catppuccin-admonish.css']
 
 [output.html.print]
 enable = false
