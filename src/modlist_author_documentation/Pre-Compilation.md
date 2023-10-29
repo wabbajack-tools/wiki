@@ -23,7 +23,7 @@ For more information on `.meta` files, support sites, and instructions for how t
 
 ## Mod Organizer 2
 
-You now know about `.meta` files and understand that every file _has to come from somewhere_. This implies that you must create `.meta` files for MO2 and files in your game folder. We recommend using the [MO2 GitHub Releases](https://github.com/ModOrganizer2/modorganizer/releases/) instead of the ones you can find on the Nexus.
+You now know about `.meta` files and understand that every file _has to come from somewhere_. This implies that you must create `.meta` files for MO2 and files in your game folder. You need to be using the zipped version of the [MO2 GitHub Releases](https://github.com/ModOrganizer2/modorganizer/releases/) instead of the ones you can find on the Nexus and instead of the installer to avoid issues.
 
 ## Patches
 
