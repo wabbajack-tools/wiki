@@ -51,7 +51,7 @@ This page is and will always be in development and update over time.
 >
 > Use the official WebView2 Installer found [here](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section).
 >
-> ![WebView2 Installer](https://media.discordapp.net/attachments/666599178788536331/1095403884438098001/image.png)
+> ![WebView2 Installer](assets/EdgeWebView2.webp)
 >
 > If the above fails please install/repair WebView2 by following the answer to a similar issue linked here:
 > <https://superuser.com/questions/1751709/how-to-reinstall-microsoft-edge-webview2-runtime>
