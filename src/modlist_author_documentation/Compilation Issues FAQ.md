@@ -40,7 +40,8 @@ This page is and will always be in development and update over time.
 
 ### Failed Compilation : The path is empty. (Parameter 'path')
 
-> You are using a Pseudo Portable instance and need to [convert it to a portable one](#portable-instances).
+> - You are using a Pseudo Portable instance and need to [convert it to a portable one](#portable-instances).
+> - You missed to fill out part of the configuration settings required [here](https://wiki.wabbajack.org/modlist_author_documentation/Compilation%20Settings.html#wabbajack-compilation-configuration-editor).
 
 ### Cannot find source for .meta files
 
