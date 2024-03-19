@@ -37,6 +37,11 @@ This page is and will always be in development and update over time.
 >
 > You are using a Pseudo Portable instance and need to [convert it to a portable one](#portable-instances).
 
+
+### Failed Compilation : The path is empty. (Parameter 'path')
+
+> You are using a Pseudo Portable instance and need to [convert it to a portable one](#portable-instances).
+
 ### Cannot find source for .meta files
 
 > **The sourced downloads folder is inside of MO2.**  
