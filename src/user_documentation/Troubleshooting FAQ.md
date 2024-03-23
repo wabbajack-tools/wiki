@@ -40,7 +40,45 @@ This page is and will always be in development and update over time.
 >
 > These protections apply to modlist installation locations as well. It is recommended you create new folder near the root of your drive and then create new folder for your modlist within that folder. For instance, create C:\modlists, then create C:\modlists\my-new-modlist.
 
+## Downloading Files
 
+### X File Failed to download
+
+> **Check the Log**
+>
+> Inside your Wabbajack folder should be another folder with the version number of the current version of Wabbajack.
+>
+> Navigate to this folder. Inside will be a `logs` folder.
+>
+> Navigate to this folder and find the most recent log (the one where installation failed)
+>
+> At the very end will be a list of web links for files that failed to download. You can download these manually and relocate them to your modlist's downloads folder.
+>
+> **It is important to delete incomplete versions of the failed files from this folder before the attempt.**
+
+### All Nexus Files Failed to Download
+
+> **Logout / Login to Nexus**
+>
+> Click the Gear icon in the upper right of the Wabbajack app.
+>
+> Toggle the `Login` button to `Logout,` and back to `Login.`
+>
+> Follow the normal process for logging into Nexus.
+
+### Many Nexus and/or Other Files Failed to Download
+
+> Visit the Nexus webpage and change the location of your CDN (Content Delivery Network)
+>
+> These are a system of servers spread throughout the world to host mods.
+>
+> The option is under Site Preferences in the menu to the top right. Set it to the location closest to your physical location.
+>
+> For files external to _Nexus_ a free VPN may be necessary, such as _Proton VPN_ or _Cloudflare WARP._
+>
+> These will be slow and inefficient but may prompt proper downloads.
+>
+> (Neither Wabbajack nor its developers or support staff are associated with, promote, or endorse any individual VPN solution.)
 
 
 ## Using Wabbajack
