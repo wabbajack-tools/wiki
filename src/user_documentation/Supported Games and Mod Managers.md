@@ -7,6 +7,7 @@ This is needed, since the EGS has no public database of its game IDs.
 
 | Game                         | Platform                     | Versions                                                   | Notes                          |
 |------------------------------|------------------------------|------------------------------------------------------------|--------------------------------|
+| Baldur's Gate 3              | Steam                        |                                                            | Experimental                   |
 | Cyberpunk 2077               | Steam, GOG                   |                                                            | Experimental                   |
 | Darkest Dungeon              | Steam, GOG, Epic Games Store |                                                            | Experimental                   |
 | Dishonored                   | Steam, GOG                   |                                                            | Experimental                   |
@@ -20,6 +21,7 @@ This is needed, since the EGS has no public database of its game IDs.
 | Fallout 4 VR                 | Steam                        |                                                            |                                |
 | Fallout 3                    | Steam, GOG                   | Normal and GotY                                            | Platform-locked*               |
 | Fallout New Vegas            | Steam, GOG                   | Normal and region locked RU version                        | Platform-locked*               |
+| Final Fantasy 7 Remake       | Steam                        |                                                            | Experimental                   |
 | Karryn's Prison              | Steam                        |                                                            | Experimental                   |
 | Kerbal Space Program         | Steam, GOG                   |                                                            | Experimental                   |
 | Mount & Blade II: Bannerlord | Steam, GOG                   |                                                            | Experimental                   |
@@ -67,7 +69,7 @@ This is a small table explaining the best ways to differentiate between the Vari
 
 ## Anniversary Edition (Update & Upgrade) Guide
 
-| EXE Versions      | Store |
-|-------------------|-------|
-| 1.6.323 - 1.6.640 | Steam |
-| 1.6.659           | GOG   |
+| EXE Versions       | Store |
+|--------------------|-------|
+| 1.6.323 - 1.6.1170 | Steam |
+| 1.6.659            | GOG   |
