@@ -42,6 +42,8 @@ This page is and will always be in development and update over time.
 
 ## Downloading Files
 
+This covers the know download issues and solutions.
+
 ### X File Failed to download
 
 > **Check the Log**
