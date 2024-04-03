@@ -8,7 +8,7 @@ This is needed, since the EGS has no public database of its game IDs.
 | Game                         | Platform                     | Versions                                                   | Notes                          |
 |------------------------------|------------------------------|------------------------------------------------------------|--------------------------------|
 | Baldur's Gate 3              | Steam                        |                                                            | Experimental                   |
-| Cyberpunk 2077               | Steam, GOG                   |                                                            | Experimental                   |
+| Cyberpunk 2077               | Steam, GOG, Epic Games Store |                                                            | Experimental                   |
 | Darkest Dungeon              | Steam, GOG, Epic Games Store |                                                            | Experimental                   |
 | Dishonored                   | Steam, GOG                   |                                                            | Experimental                   |
 | Dragon's Dogma: Dark Arisen  | Steam, GOG                   |                                                            | Experimental                   |
