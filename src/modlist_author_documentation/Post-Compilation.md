@@ -1,10 +1,17 @@
 # Post-Compilation
 
+
+## So what now?
+
 After a successful compilation, Wabbajack has completed its work and you may upload the created `.wabbajack` file to, say, the Nexus, share it with people, or just keep it for yourself as a backup. This section is for people who want to share their modlist with the community.
+
+## Featured modlists
 
 In the Wabbajack community we differentiate between _official_/_featured_ and _unofficial_ modlists. The former are curated modlists that comply with the criteria in [Criteria for 'Featured Mod List' status](../wabbajack_cdn_and_gallery_access/Criteria%20for%20'Featured%20Mod%20List'%20status.md) and have met the standards of the Wabbajack team. Official modlists are available in the main Wabbajack Gallery with no further user action required to find them, whereas unofficial modlists that come from custom repositories and are only visible when enabling the `Show Unofficial Lists` filter.
 
 Official Modlists are required to have their own support Discord and often have 500-2500+ users depending on the game. Do note that these modlists receive regular updates and the authors put in a lot of work to deliver the best possible version of their modlist with each update.
+
+## Readme readability
 
 Managing a modlist can be tricky if you have never done it before. In the early days of Wabbajack we mostly relied on Google Docs READMEs and hosted all accompanying files on Google Drive while managing issues through the support channel on Discord. This system was later almost completely replaced through the valiant efforts of one of our developers: almost all new modlists use GitHub for managing and hosting readmes and other info.
 
@@ -40,3 +47,14 @@ Other modlists opt to host all of their information on a dedicated website:
 -   [MOISE](https://www.fgsmodlists.com/moise)
 -   [Dungeons & Deviousness](https://www.fgsmodlists.com/dd)
 -   [Tales From the Northern Lands](https://eziothedeadpoet.github.io/Tales-from-the-Northern-Lands/)
+
+## Modlist contents report
+
+Do you want to check what's in your compiled WJ file?  
+See our article [Wabbajack CLI](wabbajack_cli\Commands.md) how to access the commandline interface of Wabbajack.  
+  
+Use the command `wabbajack-cli.exe modlist-report -i "C:\modlist.wabbajack"`.
+
+* Change the `"C:\modlist.wabbajack"` to the path location of your Wabbajack modlist compilation.  
+
+A .html file will be generated, which you can then open and you will see what's being downloaded, inlined, and/or delta patched in the compilation file.
