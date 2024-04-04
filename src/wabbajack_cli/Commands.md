@@ -1,6 +1,21 @@
 # Wabbajack CLI
 
+<div class="warning">
+
+Currently Wabbajack's CLI is not working due to a major upgrade of the underlying .NET codebase.
+
+To make use of CLI commands, please download [ Wabbajack version 3.0.5.0](https://github.com/wabbajack-tools/wabbajack/releases/download/3.0.5.0/3.0.5.0.zip).  
+Run the Wabbajack.exe inside the extracted folder.
+
+</div>
+
 Wabbajack offers a command line interface with the following commands. To invoke the CLI, click on the settings cog on the top right of the Wabbajack UI and select "Open Terminal and Close WJ".
+
+<div class="warning">
+
+Some commands may or may not work.
+
+</div>
 
 ```
 Usage:
