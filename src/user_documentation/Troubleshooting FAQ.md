@@ -64,7 +64,11 @@ This covers the know download issues and solutions.
 >
 > Click the Gear icon in the upper right of the Wabbajack app.
 >
+> ![WabbajackSettingsButtonLocationScreenshot](assets/WabbajackSettingsButtonLocation.png)
+>
 > Toggle the `Login` button to `Logout,` and back to `Login.`
+>
+> ![WabbajackSettingsLoginsSectionNexusModsLogoutLoginScreenshot](assets/WabbajackSettingsLoginsSectionNexusModsLogoutLogin.png)
 >
 > Follow the normal process for logging into Nexus.
 
