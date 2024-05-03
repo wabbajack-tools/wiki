@@ -29,3 +29,11 @@ If you fork "Bill's Skyrim" you cannot name your list "Better Bill's Skyrim". Ma
 ### Do *not* opt-in to Donation Points on the nexus for files that are not generic to modding
 
 If a file you put on the Nexus is only usable by Wabbajack (patches, auto-generated files, .wabbajack files, etc.) Do not opt-in to donation points on these files. This is at the request of the Nexus. Collections on Nexus Mods do not get donation points, we should play by the same rules. If a mod is generally useful to modders at large, feel free to opt-in.
+
+## Applying to get featured
+
+When you think your list brings enough quality in the list itself, its documentation and the support provided then you can request a review of your list in the issues of the [Requests & Reports](https://github.com/wabbajack-tools/Requests-Reports/issues) repository by opening a new issue. There you will get open responses if we need any additional data about the list or replies to why the list can't be featured yet. 
+
+## Reporting lists
+
+In the [Requests & Reports](https://github.com/wabbajack-tools/Requests-Reports/issues) repository you can also, as the name implies, report modlists that are breaking the rules or that you think should get re-reviewed. 
