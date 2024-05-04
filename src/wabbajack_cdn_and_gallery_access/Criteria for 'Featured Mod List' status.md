@@ -44,6 +44,10 @@ If you fork "Bill's Skyrim" you cannot name your list "Better Bill's Skyrim". Ma
 
 We will not grant featured status to a wabbajack of a written guide without the original author being a member of the development team. Mere permission is not good enough. Forks can be granted featured status, but they must be separate from the original written guide.
 
+### Continuity of uptime and support
+
+Your modlist must be present, functional, and available on the wabbjack UI as an unofficial list and supported for at least 30 days before it will be considered for featured status. You do not need to reach a specific number of downloads. 
+
 ### Do *not* opt-in to Donation Points on the nexus for files that are not generic to modding
 
 If a file you put on the Nexus is only usable by Wabbajack (patches, auto-generated files, .wabbajack files, etc.) Do not opt-in to donation points on these files. This is at the request of the Nexus. Collections on Nexus Mods do not get donation points, we should play by the same rules. If a mod is generally useful to modders at large, feel free to opt-in.
