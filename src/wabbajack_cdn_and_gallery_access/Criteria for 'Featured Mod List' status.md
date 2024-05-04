@@ -12,6 +12,8 @@ No mods through Wabbajack should ever be paywalled. Free logins to patreon that 
 
 Users must be able to install your list from the latest version from steam (or any other storefront that your list supports). We will not grant featured status to any list that requires users to manually downgrade to install the list. Wabbajack has built-in facilities to auto downgrade via the "Stock Game Folder" take advantage of this.
 
+*If the game updated while an author is busy with IRL obligations then we won't remove the featured status as long as the proper support for people to get the list running is provided or the author forces the list into maintenance mode until tze next update.*
+
 ### Custom patching required
 
 For Bethesda games your list **must** have custom patching as required. Conflicts, issues, and bugs must be resolved as appropriate through patching. Merely running synthesis or any automated patching suite is insufficient.
