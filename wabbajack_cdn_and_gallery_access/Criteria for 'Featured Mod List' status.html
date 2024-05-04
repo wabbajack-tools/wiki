@@ -154,21 +154,33 @@
                         <h1 id="criteria-for-featured-mod-list-status"><a class="header" href="#criteria-for-featured-mod-list-status">Criteria for 'Featured Mod List' status</a></h1>
 <p>The general opinion of the Wabbajack project, post-decentralization, is that any well managed, well curated list should be valid for &quot;featuring in the UI&quot;. This is a rather general and subjective statement, so instead of writing down the minimum requirements for a list to be accepted this is a list of known reasons why a list <em>will</em> be rejected.</p>
 <h2 id="rejection-reasons"><a class="header" href="#rejection-reasons">Rejection Reasons</a></h2>
-<h3 id="manual-downloads-outside-of-wabbajack"><a class="header" href="#manual-downloads-outside-of-wabbajack">Manual downloads outside of Wabbajack</a></h3>
-<p>Wabbajack has a <code>manualURL=</code> .meta directive that will instruct the user to download an install a file via the in-app browser. There should never be a reason for a user to us a browser from outside of Wabbajack. There should never be a step that requires the user to install a mod by hand.</p>
-<p>There is an exception made here for lists that do not enable ENBs by default, but leave that as a manual option by the user. If your list has a optional ENB, it is recommended that you configure WJ to download the ENB files but not install them, and let the user copy them manually.</p>
 <h3 id="pay-walled-mods"><a class="header" href="#pay-walled-mods">Pay-walled mods</a></h3>
-<p>No mods through Wabbajack should ever be paywalled. Free logins to patreon that then download files are allowed. Logins to 3rd party sites that have subscriptions are allowed, but a user should <em>never</em> be required to buy a non-game studio product to install a modlist. Downloadable content for the game is a fine requirement, a 3rd party paywalled mod is not.</p>
-<h3 id="skyrim-should-auto-downgrade"><a class="header" href="#skyrim-should-auto-downgrade">Skyrim should auto-downgrade</a></h3>
-<p>If your list uses Skyrim 1.5.97, it should expect the user to have a unmodified copy of Skyrim. To avoid confusion we will not accept any list that requires the user to downgrade manually. Wabbajack has built-in facilities to auto downgrade via the &quot;Stock Game Folder&quot; take advantage of this.</p>
+<p>No mods through Wabbajack should ever be paywalled. Free logins to patreon that then download files are allowed. Logins to 3rd party sites that have subscriptions are allowed, but a user should <em>never</em> be required to buy a non-game studio product to install a modlist. Downloadable content for the game is a fine requirement, a 3rd party paywalled mod is not. Please refer to the wabbajack monetization policy for more information.</p>
+<h3 id="users-not-required-to-downgrade"><a class="header" href="#users-not-required-to-downgrade">Users not required to downgrade</a></h3>
+<p>Users must be able to install your list from the latest version from steam (or any other storefront that your list supports). We will not grant featured status to any list that requires users to manually downgrade to install the list. Wabbajack has built-in facilities to auto downgrade via the &quot;Stock Game Folder&quot; take advantage of this.</p>
+<h3 id="custom-patching-required"><a class="header" href="#custom-patching-required">Custom patching required</a></h3>
+<p>For Bethesda games your list <strong>must</strong> have custom patching as required. Conflicts, issues, and bugs must be resolved as appropriate through patching. Merely running synthesis or any automated patching suite is insufficient.</p>
+<p>Non-bethesda games are required to patch as appropriate and possible for the modlist. </p>
 <h3 id="modlists-must-have-open-permissions"><a class="header" href="#modlists-must-have-open-permissions">Modlists must have &quot;Open Permissions&quot;</a></h3>
 <p>Your modlist must allow other users to fork, modify and re-upload your modlist as per the Wabbajack <a href="https://github.com/wabbajack-tools/wabbajack/blob/main/LICENSE.txt">License</a>. This does <em>not</em> mean that you have to support such modifications, and the forking user should rename the list.</p>
+<h3 id="user-support-required"><a class="header" href="#user-support-required">User support required</a></h3>
+<p>Featured lists are required to provide technical support to users regarding the modlist without charging or paywalling. The modlist author must provide a place where users can report bugs, issues, and crashes where the user will recieve a reasonably timely response regarding their issue. </p>
+<p>Modlist authors are not required to provide support regarding:</p>
+<ul>
+<li>User specific hardware, software, or basic computer usage problems</li>
+<li>Bugs, crashes, and issues present in the base game</li>
+<li>Gameplay guidance</li>
+<li>User's refusal to read provided instructions</li>
+<li>Users that violate the rules of the modlist author's support server</li>
+</ul>
 <h3 id="if-you-fork-a-list-you-must-not-advertise-via-their-name-unless-given-permission-to-do-so"><a class="header" href="#if-you-fork-a-list-you-must-not-advertise-via-their-name-unless-given-permission-to-do-so">If you fork a list, you must not advertise via their name unless given permission to do so</a></h3>
-<p>If you fork &quot;Bill's Skyrim&quot; you cannot name your list &quot;Better Bill's Skyrim&quot;. Make your own name, make your own community, unless you ask the original author permission first</p>
+<p>If you fork &quot;Bill's Skyrim&quot; you cannot name your list &quot;Better Bill's Skyrim&quot;. Make your own name, make your own community, unless you ask the original author permission first.</p>
+<h3 id="written-guides-require-the-original-authors-participation"><a class="header" href="#written-guides-require-the-original-authors-participation">Written guides require the original author's participation</a></h3>
+<p>We will not grant featured status to a wabbajack of a written guide without the original author being a member of the development team. Mere permission is not good enough. Forks can be granted featured status, but they must be separate from the original written guide.</p>
 <h3 id="do-not-opt-in-to-donation-points-on-the-nexus-for-files-that-are-not-generic-to-modding"><a class="header" href="#do-not-opt-in-to-donation-points-on-the-nexus-for-files-that-are-not-generic-to-modding">Do <em>not</em> opt-in to Donation Points on the nexus for files that are not generic to modding</a></h3>
 <p>If a file you put on the Nexus is only usable by Wabbajack (patches, auto-generated files, .wabbajack files, etc.) Do not opt-in to donation points on these files. This is at the request of the Nexus. Collections on Nexus Mods do not get donation points, we should play by the same rules. If a mod is generally useful to modders at large, feel free to opt-in.</p>
 <h2 id="applying-to-get-featured"><a class="header" href="#applying-to-get-featured">Applying to get featured</a></h2>
-<p>When you think your list brings enough quality in the list itself, its documentation and the support provided then you can request a review of your list in the issues of the <a href="https://github.com/wabbajack-tools/Requests-Reports/issues">Requests &amp; Reports</a> repository by opening a new issue. There you will get open responses if we need any additional data about the list or replies to why the list can't be featured yet. </p>
+<p>When you think your list brings enough quality in the list itself, its documentation and the support provided then you can request a review of your list in the issues of the <a href="https://github.com/wabbajack-tools/Requests-Reports/issues">Requests &amp; Reports</a> repository by opening a new issue. There you will get open responses if we need any additional data about the list or replies to why the list can't be featured yet. We will not review lists for featured that do not request a review.</p>
 <h2 id="reporting-lists"><a class="header" href="#reporting-lists">Reporting lists</a></h2>
 <p>In the <a href="https://github.com/wabbajack-tools/Requests-Reports/issues">Requests &amp; Reports</a> repository you can also, as the name implies, report modlists that are breaking the rules or that you think should get re-reviewed. </p>
 
