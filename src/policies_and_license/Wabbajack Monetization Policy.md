@@ -19,8 +19,8 @@
   - To ensure there is no abuse of this, we require you add Wabbajack admins to view these channels so we can ensure you are not paywalling content or support.
 - You can paywall content creation (e.g. YouTube, private streams) based on your modlist and development of it.
 - You can take paid commissions for modlists or additions to modlists. **YOU MUST** comply with the other rules with commissions. This is at the modlist developers descretion and is directly their responsibility. The Wabbajack team takes no responsibility for any paid for commissions made between a user and a modlist developer.
-  - All commissioned work must be freely available **immediately** (Nexus, GitHub, Publicly on Discord, etc.) Ask if you have an idea and are not sure whether your preferred method of provision complies.
-We have tried to be open and allow for rules that allow modlist developers to make money from their work if they wish, without compromising Wabbajack and what it stands for. Please ask if you are unsure of any of the rules laid out here.
+  - All commissioned work must be freely available **immediately** (Nexus, GitHub, Publicly on Discord, etc.) Ask if you have an idea and are not sure whether your preferred method of provision complies.  
+    We have tried to be open and allow for rules that allow modlist developers to make money from their work if they wish, without compromising Wabbajack and what it stands for. Please ask if you are unsure of any of the rules laid out here.
 - Enable Donation Points on mods & patches you create for the list which are usable outside of the modlist. Nexus considers these mods of general use, thus can have DP enabled on them.
 
 This policy applies to *ALL* modlists compiled with Wabbajack and is not limited to lists with featured status.
