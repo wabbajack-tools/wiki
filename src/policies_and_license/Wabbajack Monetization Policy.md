@@ -2,7 +2,12 @@
 
 ## YOU CANNOT:
 - Have modlists be behind a paywall. This includes access to any form of early release, test build, etc, based on donations or monetary payment.
-- Have paywalled modlist support. This includes exclusive support, 2 tiered support, priority support or any other nomenclature for walling user support either partially or fully behind a paywall.
+- Include mods that are behind a paywall, or paid software (Windows and the game itself excluded) for your list to be installed or run.
+  - Paid software such as Lossless Scaling, or mods such as PureDarks upscaler, follow the same rules. You may not require them for use in your list, but you may suggest their use as a way to generally increase performance. Aggressive promotion of paid software/mods is not allowed.
+  - It's important to note, that your list does not need to have a specific performance target. If a user cannot run your list, that's fine.
+  - Suggesting the list is 'meant to run' or 'designed only for use' with a specific paid mod/software is not permitted.
+- Have paywalled modlist support.
+  - This includes exclusive support, 2 tiered support, priority support or any other nomenclature for walling user support either partially or fully behind a paywall.
 - Use donation based discord roles to avoid the other rules listed here.
 - Enable Donation points on Nexus for the Wabbajack file, or any resources which are only usable within the modlist (Patcher outputs, LODs, etc). This is a Nexus policy.
 
