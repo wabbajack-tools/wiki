@@ -27,10 +27,6 @@ Some modlists that host all their stuff on GitHub:
 
 -   the OG GitHub Modlist: [Lotus](https://github.com/erri120/lotus)
 -   [Keizaal](https://github.com/PierreDespereaux/Keizaal)
--   [Elder Souls](https://github.com/jdsmith2816/eldersouls)
--   [Total Visual Overhaul](https://github.com/NotTotal/Total-Visual-Overhaul)
--   [Serenity](https://github.com/ixanza/serenity)
--   [RGE](https://github.com/jdsmith2816/rge)
 -   [Elysium](https://github.com/TitansBane/Elysium)
 
 Other modlists opt to host all of their information on a dedicated website:
@@ -38,5 +34,4 @@ Other modlists opt to host all of their information on a dedicated website:
 -   [The Phoenix Flavour](https://thephoenixflavour.com)
 -   [Living Skyrim](https://www.fgsmodlists.com/living-skyrim)
 -   [MOISE](https://www.fgsmodlists.com/moise)
--   [Dungeons & Deviousness](https://www.fgsmodlists.com/dd)
 -   [Tales From the Northern Lands](https://eziothedeadpoet.github.io/Tales-from-the-Northern-Lands/)
