@@ -89,6 +89,15 @@ This covers the know download issues and solutions.
 
 ## Using Wabbajack
 
+### Can I use Wabbajack with Gamepass / Microsoft Store / Xbox Games?
+> Short answer - NO.
+> 
+> Long answer - Script extenders (such as SKSE) are currently not compatible with Gamepass versions of Bethesda games. Without these, it is not possible to run complex mods commonly found in Wabbajack modlists.
+> 
+> For example, SKSE will support the latest version of Skyrim available on Steam, and only this version . It is extremely unlikely that any future non-SE Skyrim updates will be released. SKSE cannot support any potential Windows Store release of Skyrim.
+
+> Windows Store applications are locked down similarly to consoles and do not allow the APIs necessary for script extenders to work. - https://skse.silverlock.org/
+
 ### Wabbajack shows a black screen when trying to X
 
 > **Install/Repair WebView2**
