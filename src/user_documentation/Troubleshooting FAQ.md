@@ -89,6 +89,15 @@ This covers the know download issues and solutions.
 
 ## Using Wabbajack
 
+### Can I use Wabbajack with Gamepass / Microsoft Store / Xbox Games?
+> Short answer - NO.
+> 
+> Long answer - Script extenders (such as SKSE) are currently not compatible with Gamepass versions of Bethesda games. Without these, it is not possible to run complex mods commonly found in Wabbajack modlists.
+> 
+> For example, SKSE will support the latest version of Skyrim available on Steam, and only this version . It is extremely unlikely that any future non-SE Skyrim updates will be released. SKSE cannot support any potential Windows Store release of Skyrim.
+
+> Windows Store applications are locked down similarly to consoles and do not allow the APIs necessary for script extenders to work. - https://skse.silverlock.org/
+
 ### Wabbajack shows a black screen when trying to X
 
 > **Install/Repair WebView2**
@@ -157,3 +166,22 @@ This covers the know download issues and solutions.
 ### Wabbajack says one or more downloaded mods have a hash of "menYUTfbRu8=", which does not match the expected hash. 
 
 > This error usually appears when you do not have enough free disk space on your computer's drive. Be sure you have enough free space for your modlist before installing. Additionally, you should have an extra 40-60GB available or you may encounter other issues.
+
+## Miscellaneous
+
+### Some modlists require a higher pagefile?
+
+> Some modlists require a higher than default RAM setting. Windows can increase your RAM by allocating an amount of disk space but generally only up to 8 GB.
+>
+> **Never disable the pagefile - this may lead to various issues on your system, such as BSOD crashes.
+>
+> You can increase this virtual allocation by going into your Page File settings. 
+> > 1. Press WinKey + R to open your Run panel.
+> > 2. Type or copy paste the following command `sysdm.cpl ,3`.
+> > 3. Under the Performance section, press 'Settings'.
+> > 4. Go to the Advanced tab at the top, and at the Virtual memory section press 'Change...'.
+> > 5. Disable 'Automatically manage paging file size for all drives'
+> > 6. If you have more than one drive, try enabling it for at least one more drive as a backup (make sure it has a decent bit of free space, like 15GB).
+> > 7. Set the size to 'System managed size'. Otherwise, set a custom size for the drive it's currently on and increase the maximum size to be at least 20GB.
+>
+> It's recommended to only enable it on SSDs, as enabling Page File on HDDs might cause stutters.
