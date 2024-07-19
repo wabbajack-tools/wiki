@@ -33,6 +33,21 @@ directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
 installed=true
 ```
 
+#### How to get persistent Github URLs
+
+- If there are releases, use them.
+- If you need to "clone"/download the whole repository as a ZIP file do the following:
+  - Click on the commit history:  
+    ![image](https://github.com/user-attachments/assets/93676860-b399-4f09-953f-fc910f23ff18)  
+  - Click on the button to browse the latest commit:
+    ![image](https://github.com/user-attachments/assets/cb4cb9bc-9dda-4e9f-86dd-16d1c7153b68)
+  - Make sure that you are browsing a commit by having "random" numbers and letters where normally a branch name would be and copy the download link (and download it):  
+    (You can rename the zip & meta file to have the name you want BUT make sure to get the proper URL for the correct file first.)
+    ![image](https://github.com/user-attachments/assets/f103de31-6f31-410c-b70e-d50f7835a280)
+
+
+
+
 ### manualURL
 
 `.meta` files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads.
