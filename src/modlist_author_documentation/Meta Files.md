@@ -98,17 +98,17 @@ ips4File=WABBAJACK_TEST_FILE.zip
 
 ## Reference Table
 
-| Site                                      | Requires Login | Requires Whitelist Entry | Notes                                                                                              |
-|-------------------------------------------|----------------|--------------------------|----------------------------------------------------------------------------------------------------|
-| [Nexusmods](https://www.nexusmods.com)    | Yes            | No                       | See [Introduction](#introduction).                                                                 |
-| [LoversLab](https://www.loverslab.com/)   | Yes            | No                       | Only [manualURL](#manualurl) support.                                                              |
-| [VectorPlexus](https://vectorplexis.com/) | Yes            | No                       | [IPS4 Site](#ips4-sites) Support (official (mod author made) mirrors recommended)                  |
-| [ModDB](https://www.moddb.com/)           | No             | No                       | [directURL](#directurl) Support. Downloads can be very slow.                                       |
-| [Patreon](https://www.patreon.com/)       | No             | Yes                      | [directURL](#directurl) Support. Only public downloads, pay-walled downloads cannot be downloaded. |
-| [GitHub](https://github.com/)             | No             | No                       | [directURL](#directurl) Support.                                                                   |
-| [Google Drive](https://drive.google.com/) | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
-| [MEGA](https://mega.nz/)                  | No (Optional)  | Yes                      | [directURL](#directurl) Support.                                                                   |
-| [Mediafire](https://www.mediafire.com/)   | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
-| [Dropbox](https://www.dropbox.com/)       | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
-| [Yandex Disk](https://disk.yandex.com/)   | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
-| Direct file downloads                     | No             | Yes                      | [directURL](#directurl) Support.                                                                   |
+| Site                                      | Requires Login | Requires Whitelist Entry | Notes                                                                                                                        |
+|-------------------------------------------|----------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| [Nexusmods](https://www.nexusmods.com)    | Yes            | No                       | See [Introduction](#introduction).                                                                                           |
+| [LoversLab](https://www.loverslab.com/)   | Yes            | No                       | Only [manualURL](#manualurl) support.                                                                                        |
+| [VectorPlexus](https://vectorplexis.com/) | Yes            | No                       | [IPS4 Site](#ips4-sites) Support (official (mod author made) mirrors recommended)                                            |
+| [ModDB](https://www.moddb.com/)           | No             | No                       | [directURL](#directurl) Support. Downloads can be very slow.                                                                 |
+| [Patreon](https://www.patreon.com/)       | No             | Yes                      | [directURL](#directurl) Support. Only public downloads, pay-walled downloads cannot be downloaded.                           |
+| [GitHub](https://github.com/)             | No             | No                       | [directURL](#directurl) Support. \*Please read [this](#how-to-get-persistent-github-urls) for repositories without releases  |
+| [Google Drive](https://drive.google.com/) | No             | Yes                      | [directURL](#directurl) Support.                                                                                             |
+| [MEGA](https://mega.nz/)                  | No (Optional)  | Yes                      | [directURL](#directurl) Support.                                                                                             |
+| [Mediafire](https://www.mediafire.com/)   | No             | Yes                      | [directURL](#directurl) Support.                                                                                             |
+| [Dropbox](https://www.dropbox.com/)       | No             | Yes                      | [directURL](#directurl) Support.                                                                                             |
+| [Yandex Disk](https://disk.yandex.com/)   | No             | Yes                      | [directURL](#directurl) Support.                                                                                             |
+| Direct file downloads                     | No             | Yes                      | [directURL](#directurl) Support.                                                                                             |
