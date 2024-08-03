@@ -26,7 +26,8 @@ This is needed, since the EGS has no public database of its game IDs.
 | Kerbal Space Program         | Steam, GOG                   |                                                            | Experimental                   |
 | Mount & Blade II: Bannerlord | Steam, GOG                   |                                                            | Experimental                   |
 | Sims 4                       | Steam                        |                                                            | Experimental                   |
-| Stardew Valley               | Steam, GOG                   |                                                            | Experimental, Platform-locked* |
+| Stardew Valley               | Steam, GOG                   |                                                            | Experimental                   |
+| Starfield                    | Steam                        |                                                            | Experimental, Platform-locked* |
 | Terraria                     | Steam                        | tModloader                                                 | Experimental                   |
 | TES Morrowind                | Steam, GOG                   |                                                            |                                |
 | TES Oblivion                 | Steam, GOG                   | Normal and GotY                                            | Platform-locked*               |
@@ -51,7 +52,7 @@ require slightly more manual steps after Wabbajack is done compared to most modl
 Games marked as platform-locked have differences in core game files between different platforms, making modlists "locked" to the version they are built for.
 For clear per modlist compatibility information please consult the readmes and other documentation provided by the authors of those lists. (Some will work with multiple platforms, BUT that is NOT the default.) Please keep in mind, that for some games we might not know yet if they will cause issues so only the ones we 100% know have issues are marked as such.
 
-## Supported Mod Mangers
+## Supported Mod Managers
 
 As of the time this is being written the only officially supported mod manager is [Mod Organizer 2](https://github.com/ModOrganizer2/modorganizer/releases).
 
