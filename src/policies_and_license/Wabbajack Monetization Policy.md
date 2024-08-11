@@ -5,6 +5,8 @@
 - Have paywalled modlist support. This includes exclusive support, 2 tiered support, priority support or any other nomenclature for walling user support either partially or fully behind a paywall.
 - Use donation based discord roles to avoid the other rules listed here.
 - Enable Donation points on Nexus for the Wabbajack file, or any resources which are only usable within the modlist (Patcher outputs, LODs, etc). This is a Nexus policy.
+- Upload the outputs of tools such as "vramr" or "parallaxgen" to Nexusmods , for the use of the modlist, as these outputs are essentially other modders works, just changed slightly.
+- Upload copyrighted material or mods from nexusmods or other sites, that you do not have permission to reupload, to the CDN, or to Nexusmods, or to file-hosting services, for the purpose of the modlist. Mods or materials without permissive licenses, or without a license at all, are presumed to be nonpermissive and are not allowed to be reuploaded.
 
 ## YOU CAN: 
 -  You can use donation systems. Patreon, Discord, Ko-Fi, etc. You **MUST** follow all other paywall rules mentioned here. 
