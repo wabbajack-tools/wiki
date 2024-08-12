@@ -86,6 +86,30 @@ This covers the know download issues and solutions.
 >
 > (Neither Wabbajack nor its developers or support staff are associated with, promote, or endorse any individual VPN solution.)
 
+### Some Nexus files Failed to download but are unavailable to manually download
+
+> If you have an error as per following; 
+>
+> `00:00:27.152 [FATAL] (Wabbajack.Installer.StandardInstaller) Unable to download 0.01k - Textures - 1.1-51939-1-1-1642454392.7z (NexusDownloader+State|SkyrimSpecialEdition|51939|257556)`
+>
+> The file is not available anymore due to either being archived, under moderation, or deleted.  
+> To check, you need to retrieve the following data,  
+> `(NexusDownloader+State|game|mod_id|file_id)`
+> and construct the download url from that, like so;
+> `https://www.nexusmods.com/<game>/mods/<mod_id>?tab=files&file_id=<file_id>`
+> 
+> For example, if you have a log entry like above,  
+> The game name is `SkyrimSpecialEdition`,  
+> the mod_id is `51939`,  
+> and the file_id is `257556`.  
+> then you'll get the following link, which you can use for a direct manual download;
+> `https://www.nexusmods.com/skyrimspecialedition/mods/51939?tab=files&file_id=257556`
+>
+> ![WabbajackSettingsLoginsSectionNexusModsLogoutLoginScreenshot](assets/manual-download-nexusmods.png)
+>
+> If however you get an error "file is not found" or "page not found", then this means the file or mod got removed from NexusMods and is unavailable.  
+> This also means the modlist is unavailable to install, until the modlist author recompiles the modlist without the unavailable mod.
+
 
 ## Using Wabbajack
 
