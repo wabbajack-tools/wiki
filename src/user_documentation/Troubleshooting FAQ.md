@@ -161,6 +161,17 @@ This covers the know download issues and solutions.
 > - If your system locale (language) is set to any language not using latin-script letters (like English does) set your system language to English or any other latin-script language you can understand and the issue is likely fixed. (It has worked for some people in the past.)
 > - Other possible reasons for this and workarounds or fixes are unknown at the time of writing this.
 
+### texconv Error
+
+> This error means that you are missing one (or more) pre-requirements for wabbajack.
+> 
+> Please download and make sure you have installed `Microsoft Windows Desktop Runtime .NET 8` from the following url;  
+> https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.4-windows-x64-installer
+> And `Microsoft Visual C++ 2019 Runtime` from the following url;
+> https://aka.ms/vs/16/release/vc_redist.x64.exe
+> 
+> Then reboot your PC, and try installing the modlist again.
+
 ### BSOD (Blue Screen of Death) / PC Crash
 
 > **SYSTEM_THREAD_EXCEPTION_NOT_HANDLED**
