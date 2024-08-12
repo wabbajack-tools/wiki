@@ -166,9 +166,9 @@ This covers the know download issues and solutions.
 > This error means that you are missing one (or more) pre-requirements for wabbajack.
 > 
 > Please download and make sure you have installed `Microsoft Windows Desktop Runtime .NET 8` from the following url;  
-> https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.4-windows-x64-installer
+> <https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.4-windows-x64-installer>
 > And `Microsoft Visual C++ 2019 Runtime` from the following url;
-> https://aka.ms/vs/16/release/vc_redist.x64.exe
+> <https://aka.ms/vs/16/release/vc_redist.x64.exe>
 > 
 > Then reboot your PC, and try installing the modlist again.
 
