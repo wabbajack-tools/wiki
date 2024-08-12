@@ -214,6 +214,25 @@
 <p>These will be slow and inefficient but may prompt proper downloads.</p>
 <p>(Neither Wabbajack nor its developers or support staff are associated with, promote, or endorse any individual VPN solution.)</p>
 </blockquote>
+<h3 id="some-nexus-files-failed-to-download-but-are-unavailable-to-manually-download"><a class="header" href="#some-nexus-files-failed-to-download-but-are-unavailable-to-manually-download">Some Nexus files Failed to download but are unavailable to manually download</a></h3>
+<blockquote>
+<p>If you have an error as per following; </p>
+<p><code>00:00:27.152 [FATAL] (Wabbajack.Installer.StandardInstaller) Unable to download 0.01k - Textures - 1.1-51939-1-1-1642454392.7z (NexusDownloader+State|SkyrimSpecialEdition|51939|257556)</code></p>
+<p>The file is not available anymore due to either being archived, under moderation, or deleted.<br />
+To check, you need to retrieve the following data,<br />
+<code>(NexusDownloader+State|game|mod_id|file_id)</code>
+and construct the download url from that, like so;
+<code>https://www.nexusmods.com/&lt;game&gt;/mods/&lt;mod_id&gt;?tab=files&amp;file_id=&lt;file_id&gt;</code></p>
+<p>For example, if you have a log entry like above,<br />
+The game name is <code>SkyrimSpecialEdition</code>,<br />
+the mod_id is <code>51939</code>,<br />
+and the file_id is <code>257556</code>.<br />
+then you'll get the following link, which you can use for a direct manual download;
+<code>https://www.nexusmods.com/skyrimspecialedition/mods/51939?tab=files&amp;file_id=257556</code></p>
+<p><img src="assets/manual-download-nexusmods.png" alt="WabbajackSettingsLoginsSectionNexusModsLogoutLoginScreenshot" /></p>
+<p>If however you get an error &quot;file is not found&quot; or &quot;page not found&quot;, then this means the file or mod got removed from NexusMods and is unavailable.<br />
+This also means the modlist is unavailable to install, until the modlist author recompiles the modlist without the unavailable mod.</p>
+</blockquote>
 <h2 id="using-wabbajack"><a class="header" href="#using-wabbajack">Using Wabbajack</a></h2>
 <h3 id="can-i-use-wabbajack-with-gamepass--microsoft-store--xbox-games"><a class="header" href="#can-i-use-wabbajack-with-gamepass--microsoft-store--xbox-games">Can I use Wabbajack with Gamepass / Microsoft Store / Xbox Games?</a></h3>
 <blockquote>
