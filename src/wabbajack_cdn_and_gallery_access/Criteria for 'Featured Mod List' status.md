@@ -26,7 +26,7 @@ Your modlist must allow other users to fork, modify and re-upload your modlist a
 
 ### User support required
 
-Featured lists are required to provide technical support to users regarding the modlist without charging or paywalling. The modlist author must provide a place where users can report bugs, issues, and crashes where the user will recieve a reasonably timely response regarding their issue. 
+Featured lists are required to provide technical support to users regarding the modlist without charging or paywalling. The modlist author must provide a place where users can report bugs, issues, and crashes where the user will recieve a reasonably timely response regarding their issue. Discord, or any other form of "live support," is not a requirement to be featured.
 
 Modlist authors are not required to provide support regarding:
 
