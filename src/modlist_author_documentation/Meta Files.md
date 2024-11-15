@@ -102,7 +102,7 @@ ips4File=WABBAJACK_TEST_FILE.zip
 |-------------------------------------------|----------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | [Nexusmods](https://www.nexusmods.com)    | Yes            | No                       | See [Introduction](#introduction).                                                                                           |
 | [LoversLab](https://www.loverslab.com/)   | Yes            | No                       | Only [manualURL](#manualurl) support.                                                                                        |
-| [VectorPlexus](https://vectorplexis.com/) | Yes            | No                       | [IPS4 Site](#ips4-sites) Support (official (mod author made) mirrors recommended)                                            |
+| [VectorPlexus](https://vectorplexis.com/) | Yes            | No                       | [manualURL](#manualurl) support. (Official (mod author made) mirrors **strongly** recommended.)                              |
 | [ModDB](https://www.moddb.com/)           | No             | No                       | [directURL](#directurl) Support. Downloads can be very slow.                                                                 |
 | [Patreon](https://www.patreon.com/)       | No             | Yes                      | [directURL](#directurl) Support. Only public downloads, pay-walled downloads cannot be downloaded.                           |
 | [GitHub](https://github.com/)             | No             | No                       | [directURL](#directurl) Support. \*Please read [this](#how-to-get-persistent-github-urls) for repositories without releases  |
