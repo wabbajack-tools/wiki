@@ -199,6 +199,10 @@ prompt=Please download the second file on this page
 Using <code>manualURL</code> makes it impossible for the WJ list validator to check files with this tag in regards to their uptime, so it falls to you to listen to user reports and verify regularly that the correct file still exists at the source you have linked.</p>
 </blockquote>
 <h3 id="ips4-sites"><a class="header" href="#ips4-sites">IPS4 sites</a></h3>
+<blockquote>
+<p><strong>Note</strong>
+The support for this type of meta is currently not actively supported. And might be fully removed. </p>
+</blockquote>
 <p>In order to configure a <code>.meta</code> file for a IPS4 site, use the following format:</p>
 <p>Let's say we're making a meta for a file found at <code>https://www.loverslab.com/files/file/11116-test-file-for-wabbajack-integration</code></p>
 <p>Start by downloading the file and noting its name once it's downloaded. If you've downloaded the file more than once, Windows may include <code>(1)</code> at the end of the filename, so you'll need to remove that part from the filename.</p>
@@ -209,7 +213,7 @@ ips4Mod=&lt;modID&gt;
 ips4File=&lt;filename&gt;
 </code></pre>
 <ul>
-<li><code>ips4Site</code> - the site name for this download, currently this can only be <code>Vector Plexus</code> <del>or <code>Lovers Lab</code></del></li>
+<li><code>ips4Site</code> - the site name for this download, currently this can only be <del><code>Vector Plexus</code> or <code>Lovers Lab</code></del></li>
 <li><code>ips4Mod</code> - the number part of the URL, which in this case is <code>11116</code></li>
 <li><code>ips4File</code> - the name of the file after is has finished downloading (removing any extra text added by windows)</li>
 </ul>
