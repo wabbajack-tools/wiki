@@ -62,6 +62,9 @@ prompt=Please download the second file on this page
 
 ### IPS4 sites
 
+> **Note**
+> The support for this type of meta is currently not actively supported. And might be fully removed. 
+
 In order to configure a `.meta` file for a IPS4 site, use the following format:
 
 Let's say we're making a meta for a file found at `https://www.loverslab.com/files/file/11116-test-file-for-wabbajack-integration`
@@ -77,7 +80,7 @@ ips4Mod=<modID>
 ips4File=<filename>
 ```
 
-- `ips4Site` - the site name for this download, currently this can only be `Vector Plexus` ~~or `Lovers Lab`~~
+- `ips4Site` - the site name for this download, currently this can only be ~~`Vector Plexus` or `Lovers Lab`~~
 - `ips4Mod` - the number part of the URL, which in this case is `11116`
 - `ips4File` - the name of the file after is has finished downloading (removing any extra text added by windows)
 
