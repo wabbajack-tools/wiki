@@ -14,6 +14,13 @@ Users must be able to install your list from the latest version from steam (or a
 
 *If the game updated while an author is busy with IRL obligations then we won't remove the featured status as long as the proper support for people to get the list running is provided or the author forces the list into maintenance mode until the next update.*
 
+### Users shouldn't modify anything in their base game installation
+
+On the note of downgrading, users should be able to install your list, regardless of any other modlist they have installed before or after your list.
+This is primarily because people are more likely than not to end up running multiple modlists, and possibly their own modded setup on these games, so keeping the game directory clean is important to avoid issues.
+
+On non-Bethesda games, it may not be possible to get them to function with MO2's VFS for game folder changes, so while it is still recommended, it is not required.
+
 ### Custom patching required
 
 For Bethesda games your list **must** have custom patching as required. Conflicts, issues, and bugs must be resolved as appropriate through patching. Merely running synthesis or any automated patching suite is insufficient.
