@@ -19,7 +19,12 @@ Users must be able to install your list from the latest version from steam (or a
 On the note of downgrading, users should be able to install your list, regardless of any other modlist they have installed before or after your list.
 This is primarily because people are more likely than not to end up running multiple modlists, and possibly their own modded setup on these games, so keeping the game directory clean is important to avoid issues.
 
-On non-Bethesda games, it may not be possible to get them to function with MO2's VFS for game folder changes, so while it is still recommended, it is not required.
+This is a strict requirement for the following games;
+- Skyrim Special Edition
+- Fallout 4
+- Starfield  
+
+For other and/or non-Bethesda games, it may not be possible to get them to function with MO2's VFS for game folder changes, so while it is still recommended, it is not required.
 
 ### Custom patching required
 
