@@ -58,6 +58,59 @@ This covers the know download issues and solutions.
 >
 > **It is important to delete incomplete versions of the failed files from this folder before the attempt.**
 
+### Anniversary DLC/Creation Club Content
+
+> If Your chosen modlist requires the purchasable Anniversary Edition DLC.
+> 
+> Please make sure you've bought it for the same storefront version as your Skyrim Special Edition.
+> 
+> Steam or GOG. If using steam the account currently logged in MUST own it themselves, it will not work with family sharing as the content is downloaded from bethesda's server's not steam's and the AE Upgrade is only linked to the steam account which purchased it.
+>
+>If you have already bought AE and your log says you are missing creation club content ( `Data_ccvsvsse003-necroarts.esl`, `Data_ccbgssse069-contest.esl`, etc...) then you need to download the content from within the game.
+
+> 1. Launch Skyrim from Steam
+> 2. Select Creations from the main menu
+> 3. Select Options at the bottom
+> 4. Select Download all owned Creation Club Creations
+> 4. Exit the game
+> 6. Re-run Wabbajack
+>
+> **DO NOT** Alt+Tab; you must leave the game window active or the download will stop.
+>
+> **If Wabbajack still reports missing AE files**
+> 
+> If "download all" doesn't work and some files are still missing, check your Wabbajack log for the missing DLC files, match them with the relevant Creation Club mod from this list and download each one manually from the in-game Creation Club menu.
+>
+> 
+### Unable to download 'Curios' files
+
+> If your manual helper file or log file shows references to 'Curios' files failing to download, i.e. `Unable to download Data_ccbgssse037-curios`
+> 
+> Follow these steps:
+>
+> Navigate to your Steam's Skyrim Special Editon's Data folder.
+> 
+> Within the data folder, locate the 2 curios files `ccbgssse037-curios.bsa` and `ccbgssse037-curios.esl`. and make note of whether the file name is `ccbgssse037-curios` or `ccbgssse037-Curios`.  Pay attention to the case of the `c` in curios.
+> 
+> Delete the two files.
+> 
+> If the file was called `ccbgssse037-curios.bsa` with a lower case curios
+> 1. Open Steam.
+> 2. Right click on Skyrim. Select Properties.  Select Installed Files.  Click on the Verify Itegrity button.
+> 3. Once the files have been verified go back to your Skyrim\data folder and confirm that you now have two new files that start with an upper case C.
+> 4. Rerun the Wabbajack installation.
+> 
+> If the file was called `ccbgssse037-Curios.bsa` with an upper case Curios
+> 1. Launch Skyrim Special Edition from Steam.
+> 1. Select Creations from the main menu.
+> 1. Select Search at the bottom.
+> 1. Enter Rare Curios in the search box
+> 1. Download Rare Curios.
+> 1. DO NOT Alt+Tab; you must leave the game window active or the download will stop.
+> 1. Exit the game.  DO NOT perform a verify in Steam.
+> 1. Go back to your Skyrim\data folder and verify that you now have two new files that start with a lower case c.
+> 1. Rerun the Wabbajack installation.
+
 ### All Nexus Files Failed to Download
 
 > **Logout / Login to Nexus**
