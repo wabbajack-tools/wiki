@@ -27,11 +27,25 @@ Mods can also be hosted somewhere else, e.g., other modding sites like LoversLab
 
 `.meta` files for sites that don't require logins are handled via the `directURL=link` tag. Archives with such `.meta` files will be automatically downloaded.
 
+Example:
 ```ini
 [General]
 directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
 installed=true
 ```
+
+#### Using directURL with Google Drive
+
+`.meta` files pointing to Google Drive links should be using the following URL to be recognized properly: `https://drive.google.com/uc?id=<ID>&export=download`, where `<ID>` is replaced with the Google Drive ID.
+
+Example:
+```ini
+[General]
+installed = true
+directURL = https://drive.google.com/uc?id=1RQl8ki73fgLnzBZn6EWjneuW4Dk8TUO_&export=download
+```
+
+
 
 #### How to get persistent Github URLs
 
@@ -50,7 +64,7 @@ installed=true
 
 ### manualURL
 
-`.meta` files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads.
+`.meta` files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads. Optionally, a prompt can be specified that will be shown to the user in the Wabbajack UI.
 
 ```ini
 manualURL=https://foo.bar.bz/someFile.zip
