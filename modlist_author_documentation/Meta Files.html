@@ -170,9 +170,17 @@ fileID=1000172397
 </ul>
 <h3 id="directurl"><a class="header" href="#directurl">directURL</a></h3>
 <p><code>.meta</code> files for sites that don't require logins are handled via the <code>directURL=link</code> tag. Archives with such <code>.meta</code> files will be automatically downloaded.</p>
+<p>Example:</p>
 <pre><code class="language-ini">[General]
 directURL=https://skse.silverlock.org/beta/skse64_2_00_20.7z
 installed=true
+</code></pre>
+<h4 id="using-directurl-with-google-drive"><a class="header" href="#using-directurl-with-google-drive">Using directURL with Google Drive</a></h4>
+<p><code>.meta</code> files pointing to Google Drive links should be using the following URL to be recognized properly: <code>https://drive.google.com/uc?id=&lt;ID&gt;&amp;export=download</code>, where <code>&lt;ID&gt;</code> is replaced with the Google Drive ID.</p>
+<p>Example:</p>
+<pre><code class="language-ini">[General]
+installed = true
+directURL = https://drive.google.com/uc?id=1RQl8ki73fgLnzBZn6EWjneuW4Dk8TUO_&amp;export=download
 </code></pre>
 <h4 id="how-to-get-persistent-github-urls"><a class="header" href="#how-to-get-persistent-github-urls">How to get persistent Github URLs</a></h4>
 <ul>
@@ -190,7 +198,7 @@ installed=true
 </li>
 </ul>
 <h3 id="manualurl"><a class="header" href="#manualurl">manualURL</a></h3>
-<p><code>.meta</code> files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads.</p>
+<p><code>.meta</code> files for sites that require the user to manually navigate and download the file and, in some cases, log in, are handled in the following way. This option is recommended for LoversLab due to frequent outages and other issues with their automated API downloads. Optionally, a prompt can be specified that will be shown to the user in the Wabbajack UI.</p>
 <pre><code class="language-ini">manualURL=https://foo.bar.bz/someFile.zip
 prompt=Please download the second file on this page
 </code></pre>
