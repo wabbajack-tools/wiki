@@ -19,7 +19,7 @@ We have tried to be open and allow for rules that allow modlist developers to ma
 
 ## YOU MUST:
 
-- Follow the NexusMods [Donation Points System Rules](https://help.nexusmods.com/article/68-donation-points-system-terms-of-service)
+- Follow the [NexusMods Donation Points System Rules](https://help.nexusmods.com/article/68-donation-points-system-terms-of-service)
   - The most relevant but not the only important rule quoted in its state from the `05.03.2025 (DD.MM.YYYY)`:
     > Eligibility - Modlists
     >
