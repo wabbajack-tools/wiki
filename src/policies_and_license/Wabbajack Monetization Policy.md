@@ -29,7 +29,7 @@ We have tried to be open and allow for rules that allow modlist developers to ma
     > - Mods that authors create for their modlist that are not usable outside of the modlist must be hosted on this one mod page and not split across multiple pages.
     > - Mod pages that only include 3rd party modlist installers are the equivalent of a Collection page and thus are not eligible of Donation Points.
     > - This does not include mods made for a list which are both usable outside of the list and presented to be used as such.
-  - Or explained a bit differently, and in a different order:
+  - Or explained a bit differently referencing Wabbajack terminology:
     1. If only the `.wabbajack` file is hosted on NexusMods
        - **>** can't enable DP.
     2. If tool-outputs and/or patches are hosted on a single page (even with included `.wabbajack` file)
