@@ -39,7 +39,11 @@ We have tried to be open and allow for rules that allow modlist developers to ma
     4. If other list specific files are not hosted on the same page and opted in to DP then the rules 1 and 2 is considered violated.
        - **>** in such cases the user can get their ability to earn DP disabled.
 
-    For point 3. this is up to "common sense", and if moderated probably a case by case basis. But essentially if it is a mod that can stand on it's own with no reference to the modlist and has a proper mod page with instructions and explanations it is very likely that it isn't going to be considered a modlist specific file.
+    For point 3. some nice recommended rules for self checking (for your own piece of mind):
+
+    - is it a mod that can stand on it's own ?
+    - does it only work in reference to the modlist ?
+    - do I have a proper mod page with instructions and explanations ?
 
 ---
 
