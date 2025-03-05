@@ -30,14 +30,16 @@ We have tried to be open and allow for rules that allow modlist developers to ma
     > - Mod pages that only include 3rd party modlist installers are the equivalent of a Collection page and thus are not eligible of Donation Points.
     > - This does not include mods made for a list which are both usable outside of the list and presented to be used as such.
   - Or explained a bit differently, and in a different order:
-    1. If only the `.wabbajack` file is hosted
+    1. If only the `.wabbajack` file is hosted on NexusMods
        - **>** can't enable DP.
-    2. If outputs are hosted on a single page (even with included `.wabbajack` file)
+    2. If tool-outputs and/or patches are hosted on a single page (even with included `.wabbajack` file)
        - **>** can enable DP.
-    3. If "bigger" mods (aka not simple patches) were developed for a list (because the list author/or someone else wanted to make a mod that fits their/the modlist but it is genrally just a mod that works "anywhere")s
+    3. If "bigger" mods (aka not simple patches) were developed for a list (because the list author/or someone else wanted to make a mod that fits their/the modlist but it is genrally just a mod that works "anywhere")
        - **>** can enable DP.
-    4. If other list specific files are not hosted on the same page and opted in to DP then the rules 1 and 3 is considered violated.
+    4. If other list specific files are not hosted on the same page and opted in to DP then the rules 1 and 2 is considered violated.
        - **>** in such cases the user can get their ability to earn DP disabled.
+
+    For point 3. this is up to "common sense", and if moderated probably a case by case basis. But essentially if it is a mod that can stand on it's own with no reference to the modlist and has a proper mod page with instructions and explanations it is very likely that it isn't going to be considered a modlist specific file.
 
 ---
 
