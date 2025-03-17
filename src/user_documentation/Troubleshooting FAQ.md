@@ -138,6 +138,22 @@ This covers the know download issues and solutions.
 > These will be slow and inefficient but may prompt proper downloads.
 >
 > (Neither Wabbajack nor its developers or support staff are associated with, promote, or endorse any individual VPN solution.)
+>
+> Another possibility is that you have too many downloads going at once, and/or you have a slow connection.
+>
+> You can lower the amount of simultaneous downloads by lowering the amount of download threads Wabbajack will use.
+>
+> 1. Click the Gear icon in the upper right of the Wabbajack app.
+>
+> ![WabbajackSettingsButtonLocationScreenshot](assets/WabbajackSettingsButtonLocation.png)
+>
+> 2. Click on **Edit Resource Usage**.
+> 
+> ![WabbajackEditResourceUsageScreenshot](assets/WabbajackEditResourceUsage.png)
+>
+> 3. Edit the value of **Max Threads** under **Downloads** to a lower amount, like 2 or 1.
+>
+> ![WabbajackResourceUsageSettingsScreenshot](assets/WabbajackResourceUsageSettings.webp)
 
 ### Some Nexus files Failed to download but are unavailable to manually download
 
