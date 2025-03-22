@@ -192,8 +192,9 @@ This covers the know download issues and solutions.
 > Windows Store applications are locked down similarly to consoles and do not allow the APIs necessary for script extenders to work. - https://skse.silverlock.org/
 
 ### Wabbajack shows a blank screen when trying to log into Nexus 
-When you encounter blank screens within the application - for example when trying to log into the Nexus or when attempting to view the readme in-app - this is most likely happening because Wabbajacks internal browser (WebView) failed to initialize.
-This is most commonly seen on Windows installation where core system components have been removed, usually by debloater scripts or when using third-party Windows installations. Another reason you might be encountering this is because you're on Linux using Wabbajack via WINE. In this case you can skip past the Install/Repair WebView2 step and check out Omni's unofficial [Wabbajack on Linux guide](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton).
+> When you encounter blank screens within the application - for example when trying to log into the Nexus or when attempting to view the readme in-app - this is most likely happening because Wabbajacks internal browser (WebView) failed to initialize.
+> This is most commonly seen on Windows installation where core system components have been removed, usually by debloater scripts or when using third-party Windows installations.
+> Another reason you might be encountering this is because you're on Linux using > Wabbajack via WINE. In this case you can skip past the Install/Repair WebView2 step and check out Omni's unofficial [Wabbajack on Linux guide](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton).
 
 > **Install/Repair WebView2**
 >
