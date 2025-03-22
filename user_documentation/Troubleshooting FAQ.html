@@ -304,15 +304,14 @@ This also means the modlist is unavailable to install, until the modlist author 
 <blockquote>
 <p>Windows Store applications are locked down similarly to consoles and do not allow the APIs necessary for script extenders to work. - https://skse.silverlock.org/</p>
 </blockquote>
-<h3 id="wabbajack-shows-a-black-screen-when-trying-to-x"><a class="header" href="#wabbajack-shows-a-black-screen-when-trying-to-x">Wabbajack shows a black screen when trying to X</a></h3>
+<h3 id="wabbajack-shows-a-blank-screen-when-trying-to-log-into-nexus"><a class="header" href="#wabbajack-shows-a-blank-screen-when-trying-to-log-into-nexus">Wabbajack shows a blank screen when trying to log into Nexus</a></h3>
+<p>When you encounter blank screens within the application - for example when trying to log into the Nexus or when attempting to view the readme in-app - this is most likely happening because Wabbajacks internal browser (WebView) failed to initialize.
+This is most commonly seen on Windows installation where core system components have been removed, usually by debloater scripts or when using third-party Windows installations. Another reason you might be encountering this is because you're on Linux using Wabbajack via WINE. In this case you can skip past the Install/Repair WebView2 step and check out Omni's unofficial <a href="https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton">Wabbajack on Linux guide</a>.</p>
 <blockquote>
 <p><strong>Install/Repair WebView2</strong></p>
 <p>Use the official WebView2 Installer found <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section">here</a>.</p>
 <p><img src="assets/EdgeWebView2.webp" alt="WebView2 Installer" /></p>
-<p>If the above fails please install/repair WebView2 by following the answer to a similar issue linked here:
-<a href="https://superuser.com/questions/1751709/how-to-reinstall-microsoft-edge-webview2-runtime">https://superuser.com/questions/1751709/how-to-reinstall-microsoft-edge-webview2-runtime</a></p>
-<p><strong>Repair your windows installation</strong></p>
-<p>Wabbajack is built using various libraries made by Microsoft and some of them require core functions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your Windows if you ever have run such a debloater software/script.</p>
+<p>If the above fails, please completely remove and reinstall WebView2 by following <a href="https://superuser.com/questions/1751709/how-to-reinstall-microsoft-edge-webview2-runtime">this guide</a>.</p>
 </blockquote>
 <h3 id="wabbajack-modlists-not-loading-or-downloading"><a class="header" href="#wabbajack-modlists-not-loading-or-downloading">Wabbajack Modlists not loading or downloading</a></h3>
 <blockquote>
