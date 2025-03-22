@@ -191,7 +191,9 @@ This covers the know download issues and solutions.
 
 > Windows Store applications are locked down similarly to consoles and do not allow the APIs necessary for script extenders to work. - https://skse.silverlock.org/
 
-### Wabbajack shows a black screen when trying to X
+### Wabbajack shows a blank screen when trying to log into Nexus 
+When you encounter blank screens within the application - for example when trying to log into the Nexus or when attempting to view the readme in-app - this is most likely happening because Wabbajacks internal browser (WebView) failed to initialize.
+This is most commonly seen on Windows installation where core system components have been removed, usually by debloater scripts or when using third-party Windows installations. Another reason you might be encountering this is because you're on Linux using Wabbajack via WINE. In this case you can skip past the Install/Repair WebView2 step and check out Omni's unofficial [Wabbajack on Linux guide](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton).
 
 > **Install/Repair WebView2**
 >
@@ -199,12 +201,8 @@ This covers the know download issues and solutions.
 >
 > ![WebView2 Installer](assets/EdgeWebView2.webp)
 >
-> If the above fails please install/repair WebView2 by following the answer to a similar issue linked here:
-> <https://superuser.com/questions/1751709/how-to-reinstall-microsoft-edge-webview2-runtime>
->
-> **Repair your windows installation**
->
-> Wabbajack is built using various libraries made by Microsoft and some of them require core functions of Microsoft Windows to be present that might get removed when people use debloaters or custom Windows 10/11 ISOs to install Windows. So please repair your Windows if you ever have run such a debloater software/script.
+> If the above fails, please completely remove and reinstall WebView2 by following [this guide](https://superuser.com/questions/1751709/how-to-reinstall-microsoft-edge-webview2-runtime).
+
 
 ### Wabbajack Modlists not loading or downloading
 
