@@ -25,6 +25,10 @@ For more information on `.meta` files, support sites, and instructions for how t
 
 You now know about `.meta` files and understand that every file _has to come from somewhere_. This implies that you must create `.meta` files for MO2 and files in your game folder. You need to be using the zipped version of the [MO2 GitHub Releases](https://github.com/ModOrganizer2/modorganizer/releases/) instead of the ones you can find on the Nexus and instead of the installer to avoid issues.
 
+## Utility Outputs
+
+Outputs from utility's from VRAMR or ParallaxGen are **strictly** forbidden from being uploaded on both Nexus and the Wabbajack CDN. If you want to include such outputs, you must include the original mods downloads in your download folder with appropriate meta files. Wabbajack will then create patches during the compilation process to turn the original mod files into the outputs. 
+
 ## Patches
 
 Having read the preceding sections, you may be wondering if Wabbajack is able to detect modified files and, if so, how it deals with them. Wabbajack cannot inline modified files, so instead we just include the difference between the original and modified version.
