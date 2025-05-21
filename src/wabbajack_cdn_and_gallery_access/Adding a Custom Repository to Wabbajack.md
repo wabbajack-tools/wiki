@@ -27,6 +27,7 @@ Below is a template for modlists.json, and an overview of all the fields that sh
 ### Title
 
 The name of your modlist.
+
 Example: *John's Skyrim Makeover*
 
 ### Description
@@ -59,6 +60,7 @@ You can use any tags that are on the allowed list [found here](https://github.co
 Example: *SFW*, *Steam*, *Vanilla+*
 
 ### NSFW
+
 You need to set this to true if your modlist contains explicit sexual content added by mods (sex frameworks). If your list just contains nudity, there is no need to set this to true.
 
 ### Image Contains Title
