@@ -17,35 +17,137 @@ On the next page, click `Add file`
 
 ![Step3](https://user-images.githubusercontent.com/654621/161399676-0ce978c3-cb46-4bae-ad56-7fc97f5850a1.png)
 
-Set the name of the file to `modlists.json`. It can be named anything, but it's nice to have some uniformity.
+Set the name of the file to `modlists.json`.
 
-Now fill out all the various fields for your modlist, you can use this text as a template:
+Next you'll need to fill out all the fields for your modlist.
+
+## Filling out the fields of modlists.json
+Below is a template for modlists.json, and an overview of all the fields that should be filled in accordingly.
+
+### Title
+
+The name of your modlist.
+Example: *John's Skyrim Makeover*
+
+### Description
+
+A brief summary of what your modlist has on offer.
+
+Example: *A lightweight visual makeover of Skyrim that sticks to the original look!*
+
+### Author
+Your (nick)name.
+
+Example: *JohnDoe*
+
+### Maintainers
+
+This should include your GitHub name and any additional contributors that will be publishing your modlist. Needs to be prefixed with "github/".
+
+Example: *github/JohnDoe*
+
+### Game
+
+The name of the game you're targeting with this modlist. Using a game that's not on the gallery yet? Wabbajack first needs to support it. You can find the list of game names Wabbajack supports [by clicking here](https://github.com/wabbajack-tools/wabbajack/blob/main/Wabbajack.DTOs/Game/Game.cs).
+
+Example: *skyrimspecialedition*
+
+### Tags
+
+You can use any tags that are on the allowed list [found here](https://github.com/wabbajack-tools/mod-lists/blob/master/allowed_tags.json). Other tags will not show up on the Wabbajack gallery.
+
+Example: *SFW*, *Steam*, *Vanilla+*
+
+### NSFW
+You need to set this to true if your modlist contains explicit sexual content added by mods (sex frameworks). If your list just contains nudity, there is no need to set this to true.
+
+### Image Contains Title
+
+This determines whether your list name is shown without any mouse hover in the gallery. You can use this if your modlist image does not contain the name of your modlist, but we encourage you to put it in the image instead of using this.
+
+### Force Down
+
+If you want to disable your list from being downloadable in the gallery, setting this to true will force the modlist to be 'under maintenance' in the gallery.
+
+### Links
+
+#### Image
+
+A raw link to an image hosted on GitHub, but with the 'refs/heads' part in the URL removed since this has additional caching on it.
+
+The image should meet the following criteria:
+* 16:9 format - for example a resolution of 1600x900 or 1920x1080
+* At or below 1MB in size
+* Supported formats: WebP (preferred), PNG, JPG
+
+Example: *https://raw.githubusercontent.com/Dylan-Perry/dp-modlists/main/wj_thumbnail-web.webp*
+
+#### Readme
+
+A link to the readme of your modlist containing documentation on how to install the modlist.
+
+It's fairly easy to make a GitHub readme in Markdown format, but custom websites are fine too.
+
+#### Download
+
+A link where the Wabbajack file of your modlist can be downloaded. It should be uploaded to the Wabbajack CDN, instructions on how to set this up are in the Getting CDN Access portion of this website.
+
+Example: *https://authored-files.wabbajack.org/Halgaris Helper.wabbajack_29d245c9-5f7f-4394-b600-a22e43427337*
+
+#### Machine URL
+
+The modlist name as a unique identifier. No special characters allowed (except underscore `_`).
+
+This name MUST be unique to this repository.
+
+Use PascalCase - the name of your modlist without spaces, with capital letters for each word. So "John's Skyrim Makeover" becomes 'JohnsSkyrimMakeover'.
+
+Example: *JohnsSkyrimMakeover*
+
+#### Discord URL
+
+A link to a support server or forum where users can contact you or find others using your modlist.
+
+Example: *https://discord.gg/wabbajack*
+
+### Download Metadata
+
+You should copy the contents of the metadata Wabbajack puts out in the `.wabbajack.meta.json` file next to the .wabbajack file after compilation here.
+
+### Version
+
+The version in [semantic format](https://semver.org/). Other formats are not allowed!
+
+Example: *1.0.0*
+
+### Full template (adjust accordingly)
 
 ```json
 [
   {
     "$type": "ModListMetadata, Wabbajack.Lib",
-    "title": "My Modlist",
-    "description": "Best thing since sliced bread",
-    "author": "<any name you want to show up in the UI>",
+    "title": "Johns Skyrim Makeover",
+    "description": "A complete visual makeover of Skyrim while sticking to the original system requirements!",
+    "author": "JohnDoe",
     "maintainers": [
-      "github/<your github name>"
+      "github/JohnDoe"
     ],
     "game": "skyrimspecialedition",
     "tags": [
-      "testing",
-      "<any tags you want in the UI, each in its own string"
+      "SFW",
+      "Steam",
+      "Vanilla+"
     ],
     "nsfw": false,
     "image_contains_title": false,
     "force_down": false,
     "links": {
       "$type": "Links, Wabbajack.Lib",
-      "image": "<link to an image to show in the UI>",
-      "readme": "<link to your readme for your modlist>",
+      "image": "https://raw.githubusercontent.com/Dylan-Perry/dp-modlists/main/wj_thumbnail-web.webp",
+      "readme": "https://keizaal.github.io/Keizaal/",
       "download": "https://authored-files.wabbajack.org/Halgaris Helper.wabbajack_29d245c9-5f7f-4394-b600-a22e43427337",
-      "machineURL": "machineURL",
-      "discordURL": "<your discord link here>"
+      "machineURL": "JohnsSkyrimMakeover",
+      "discordURL": "https://discord.gg/wabbajack"
     },
     "download_metadata": {
       "$type": "DownloadMetadata, Wabbajack.Lib",
@@ -56,22 +158,13 @@ Now fill out all the various fields for your modlist, you can use this text as a
       "NumberOfInstalledFiles": 1311,
       "SizeOfInstalledFiles": 336453775
     },
-    "version": "1.0"
+    "version": "1.0.0"
   }
 ]
 
 ```
 
-**Notes on the metadata above:**
-
-* Download Metadata - The contents of `download_metadata` can be found in the `.wabbajack.meta.json` file that's created by Wabbajack after you create compile your list.
-* MachineURL - no strings, punctuation or special characters allowed (except underscore `_`). This name must be unique to this repository
-* `image_contains_title` - set to `true` if your gallery image contains the modlist title
-    *  _Note:  Image URL MUST be in the following format:_ `https://raw.githubusercontent.com/user/repository/main/nameofimagefile.png`  _Obtainlable by clicking the 'Download' button next to the image._
-* `force_down` - something broken in your list? Set this to true to disable it in the UI
-* `nsfw` - you *must* set this to true if your modlist contains explicit sexual acts. If your list just contains nudity, then you don't have to set this to true.
-
-Once you're satisfied with the contents of the metadata, [validate your json](https://jsonlint.com/) and click `Commit new file` afterwards.
+Once you're done with the contents here, [validate your JSON](https://jsonlint.com/) and click `Commit new file` afterwards.
 
 ![Step5](https://user-images.githubusercontent.com/654621/161399933-2012365b-0891-45f3-a21d-14a72dca1247.png)
 
@@ -85,9 +178,9 @@ Now navigate to this file: <https://github.com/wabbajack-tools/mod-lists/blob/ma
 
 ![Step8](https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png)
 
-Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above.
+Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above. We suggest using your username instead of the modlist name itself, since you'll need to put any additional modlists of your own on the same repository.
 
-_Note:  URL MUST be in the following format:  https://raw.githubusercontent.com/user/repository/main/modlists.json.  Obtainlable by opening the modlists.json file clicking the 'Raw' button.  Copy the URL on the page that opens._
+_Note:  URL MUST be in the following format:  https://raw.githubusercontent.com/<user>/<repository>/main/modlists.json. Obtainable by opening the modlists.json file clicking the 'Raw' button, but make sure to remove the /refs/heads part out of it that GitHub adds here. Copy the URL on the page that opens._
 
 ![Step9](https://user-images.githubusercontent.com/654621/161400507-40238db1-4ec3-4599-8082-ba961ac79b1b.png)
 
@@ -99,7 +192,7 @@ On the next page, click "Create Pull Request".
 
 ![Step10](https://user-images.githubusercontent.com/654621/161400531-0cae7ffd-4039-4f95-9f16-ce6e1b3b9e3d.png)
 
-Probably best at this point to put a link to the Pull Request you just created in the [Wabbajack Discord](https://discord.gg/wabbajack) but otherwise we'll probably see it soon and take a look. One the PR is merged, your modlist should show up in the Wabbajack UI.
+We regularly check pull requests, but feel free to give us an extra heads up in the [Wabbajack Discord](https://www.wabbajack.org/discord). Once the PR is merged, your modlist should show up in the Wabbajack UI.
 
 ## Common Errors
 
@@ -111,7 +204,7 @@ If you get this error, chances are the list's definition does not include your *
 
 ### Namespaced list required
 
-Lists names provided in the UI should be namespaced with the repo name. The format in of the `machineURL` entry in Wabbajack is `<repo>/<list-name>`. So if you have a repo named `JohnsLists` and your list that you are updating is `JohnsSkyrimMakeover` then the machineURL field in WJ's compiler UI should be set to `JohnsLists/JohnsSkyrimMakeover`.
+Lists names provided in the UI should be namespaced with the repo name. The format in of the `machineURL` entry in Wabbajack is `<repo>/<list-name>`. So if you have a repo named `JohnsLists` and your list that you are updating is `JohnsSkyrimMakeover` then the machineURL field in WJ's compiler UI should be set to `JohnsLists/JohnsSkyrimMakeover`. This only needs to be done within Wabbajack itself - the machineURL entry of the modlists within your GitHub repository does not need the repository itself as a prefix.
 
 ### 404 Error when updating a `wj-featured/` list
 
