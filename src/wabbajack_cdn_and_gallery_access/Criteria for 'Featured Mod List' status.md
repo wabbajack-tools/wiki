@@ -62,10 +62,13 @@ Your modlist must be present, functional, and available on the wabbjack UI as an
 
 ### Nexus modpage Donation Points
 
-- Modlists (Collections, Wabbajack, Nolvus, etc) are allowed one mod page for modlist specific files (tool outputs, list specific patches). This page is eligible for Donation Points.
-- Mods that authors create for their modlist that are not usable outside of the modlist must be hosted on this one mod page and not split across multiple pages.
-- Mod pages that only include 3rd party modlist installers are the equivalent of a Collection page and thus are not eligible of Donation Points.
-- This does not include mods made for a list which are both usable outside of the list and presented to be used as such.
+* Modlists (Collections, Wabbajack, Nolvus, etc) are allowed one mod page for modlist specific files (tool outputs, list specific patches). This page is eligible for Donation Points.
+
+* Mods that authors create for their modlist that are not usable outside of the modlist must be hosted on this one mod page and not split across multiple pages.
+
+* Mod pages that only include 3rd party modlist installers are the equivalent of a Collection page and thus are not eligible of Donation Points.
+
+* This does not include mods made for a list which are both usable outside of the list and presented to be used as such.
 
 ## Applying to get featured
 
