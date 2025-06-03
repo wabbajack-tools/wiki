@@ -60,6 +60,30 @@ We will not grant featured status to a wabbajack of a written guide without the 
 
 Your modlist must be present, functional, and available on the wabbjack UI as an unofficial list and supported for at least 30 days before it will be considered for featured status. You do not need to reach a specific number of downloads. 
 
+### Allowed uploads and inlines
+
+Your modlist cannot rely on files uploaded to the CDN that you do not have permission to rehost, this also applies to Nexusmods' policy on what is allowed to be uploaded on their platform. This also applies to inlining ( including files directly in the Wabbajack file ), as that is a form of rehosting.
+
+Examples of outputs that are allowed to be uploaded to the Wabbajack CDN:
+- Dyndolod Output
+- Xlodgen Output
+- Texgen Output
+- Grasscache
+- Bodyslide Output
+- Nemesis/Pandora Output
+
+Examples of outouts that are *not* allowed to be uploaded to the Wabbajack CDN:
+- Parallaxgen Output
+- VRAMR Output
+
+These two tools provide modified textures of existing mods, therefore they are not substantially transformative, and would be considered rehosting of other authors work.
+
+For those types of outputs that are not allowed to be uploaded, you will need to use Wabbajack's automatic delta-patching functionality.
+
+This list is not exhaustive, when in doubt refer to Nexusmods' policy on what is allowed to be uploaded to their platform, as that will be mirrored in Wabbajacks CDN in most cases.
+
+If you have specific permission to include or reupload a mod authors work or specific other content, then please provide proof that you have permission to do so from the creator.
+
 ### Do *not* opt-in to Donation Points on the nexus for files that are not generic to modding
 
 If a file you put on the Nexus is only usable by Wabbajack (patches, auto-generated files, .wabbajack files, etc.) Do not opt-in to donation points on these files. This is at the request of the Nexus. Collections on Nexus Mods do not get donation points, we should play by the same rules. If a mod is generally useful to modders at large, feel free to opt-in.
