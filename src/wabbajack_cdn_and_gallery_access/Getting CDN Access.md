@@ -12,11 +12,11 @@ On the next screen, find `Developer Settings`
 
 ![Step2](https://user-images.githubusercontent.com/654621/161365547-03428256-5e49-40b7-a21b-06335dbc8417.png)
 
-Now select `Personal access tokens`
+Now select `Personal access tokens` and `Tokens (classic)`
 
 ![Step3](https://user-images.githubusercontent.com/654621/161365587-ad0a0589-6765-4b66-983d-1e80f27165dc.png)
 
-Click `Generate new token`
+Click `Generate new token` then `Generate new token (classic)`
 
 ![Step4](https://user-images.githubusercontent.com/654621/161365616-0cf0b484-fe00-4a6f-a210-45e3e68d6ced.png)
 
