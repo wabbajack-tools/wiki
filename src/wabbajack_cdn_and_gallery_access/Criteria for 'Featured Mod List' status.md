@@ -84,9 +84,15 @@ This list is not exhaustive, when in doubt refer to Nexusmods' policy on what is
 
 If you have specific permission to include or reupload a mod authors work or specific other content, then please provide proof that you have permission to do so from the creator.
 
-### Do *not* opt-in to Donation Points on the nexus for files that are not generic to modding
+### Nexus modpage Donation Points
 
-If a file you put on the Nexus is only usable by Wabbajack (patches, auto-generated files, .wabbajack files, etc.) Do not opt-in to donation points on these files. This is at the request of the Nexus. Collections on Nexus Mods do not get donation points, we should play by the same rules. If a mod is generally useful to modders at large, feel free to opt-in.
+- Modlists (Collections, Wabbajack, Nolvus, etc) are allowed one mod page for modlist specific files (tool outputs, list specific patches). This page is eligible for Donation Points.
+
+- Mods that authors create for their modlist that are not usable outside of the modlist must be hosted on this one mod page and not split across multiple pages.
+
+- Mod pages that only include 3rd party modlist installers are the equivalent of a Collection page and thus are not eligible of Donation Points.
+
+- This does not include mods made for a list which are both usable outside of the list and presented to be used as such.
 
 ## Applying to get featured
 
