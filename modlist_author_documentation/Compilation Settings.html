@@ -187,6 +187,19 @@
 <tr><td>Always Enabled Mods</td><td>Adds mod folders to a list of mods that will be included in your list no matter if they are enabled (active in game) or not</td><td>Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included</td></tr>
 </tbody></table>
 </div>
+<h2 id="other-games"><a class="header" href="#other-games">Other Games</a></h2>
+<p>Some modlists may want to make use of files from other, related games. </p>
+<p>An example being - Fallout 4 VR may want to use the DLC from Fallout 4, and the same for Skyrim VR and Skyrim AE DLC.</p>
+<p>If you open up the <modlistname>.compiler_settings file in your modlist directory, with a text editor, you will see a field called &quot;OtherGames&quot;
+now check the Wabbajack code for which games can source from other games (here)[https://github.com/wabbajack-tools/wabbajack/blob/main/Wabbajack.DTOs/Game/GameRegistry.cs] </p>
+<p>For example,  in that code you will see that SkyrimVR has a field for &quot;cansourcefrom&quot; which points to &quot;SkyrimSpecialEdition&quot;. </p>
+<p>If you were to put &quot;SkyrimSpecialEdition&quot; or &quot;Fallout4&quot; in your SkyrimVR or Fallout4 VR compiler_settings file in the &quot;OtherGames&quot; field , then Wabbajack will be able to scan that directory for required files, both in compilation and on the user install side of things.</p>
+<p>like so :</p>
+<pre><code>&quot;OtherGames&quot;: [
+    &quot;SkyrimSpecialEdition&quot;
+  ],
+</code></pre>
+<p>If you want to add a &quot;cansourcefrom&quot; to any of the games Wabbajack supports, please propose that on the Wabbajack Github <a href="https://github.com/wabbajack-tools/wabbajack">here</a></p>
 <h2 id="compilation-errors"><a class="header" href="#compilation-errors">Compilation Errors</a></h2>
 <p>You will likely get a ton of errors during your first compilation, which is to be expected. We highly recommend you join our <a href="https://discord.gg/wabbajack">Discord server</a> and go to the <code>#modlist-development-help</code> channel for help.</p>
 
