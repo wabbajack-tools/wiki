@@ -17,12 +17,14 @@ Users must be able to install your list from the latest version from steam (or a
 ### Users shouldn't modify anything in their base game installation
 
 On the note of downgrading, users should be able to install your list, regardless of any other modlist they have installed before or after your list.
-This is primarily because people are more likely than not to end up running multiple modlists, and possibly their own modded setup on these games, so keeping the game directory clean is important to avoid issues.
+This is primarily because people are more likely than not to end up running multiple modlists, and possibly their own modded setup on these games, so keeping the game directory clean is important to avoid issues. 
 
 This is a strict requirement for the following games;
 - Skyrim Special Edition
 - Fallout 4
-- Starfield  
+- Starfield
+
+Note: For Skyrim lists, due to the difference between 'Rare Curios' sourced from steam and from the creation club store in game. It is required for ease of wabbajack support (and users) that featured lists use the in game "lower case" curios file.
 
 For other and/or non-Bethesda games, it may not be possible to get them to function with MO2's VFS for game folder changes, so while it is still recommended, it is not required.
 
