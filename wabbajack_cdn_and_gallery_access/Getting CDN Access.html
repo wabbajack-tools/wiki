@@ -159,9 +159,9 @@
 <p>On the next screen, find <code>Developer Settings</code></p>
 <p><img src="https://user-images.githubusercontent.com/654621/161365547-03428256-5e49-40b7-a21b-06335dbc8417.png" alt="Step2" /></p>
 <p>Now select <code>Personal access tokens</code> and <code>Tokens (classic)</code></p>
-<p><img src="https://user-images.githubusercontent.com/654621/161365587-ad0a0589-6765-4b66-983d-1e80f27165dc.png" alt="Step3" /></p>
+<p><img src="https://github.com/user-attachments/assets/69f6a3be-b6f4-41b4-b9c2-aea6b7971b49" alt="Step3" /></p>
 <p>Click <code>Generate new token</code> then <code>Generate new token (classic)</code></p>
-<p><img src="https://user-images.githubusercontent.com/654621/161365616-0cf0b484-fe00-4a6f-a210-45e3e68d6ced.png" alt="Step4" /></p>
+<p><img src="https://github.com/user-attachments/assets/34b40b0b-eec1-4dc6-bab5-94aa44e3d865" alt="Step4" /></p>
 <p>You may be asked to enter your password for security reasons. On the next page, select a name for the token (the name doesn't matter). And an expiry date. Github will warn you if you don't set the token to expire, but if you <em>do</em> set it to expire you will need to go through these steps again once the token's expire date has passed. It's up to you what to decide what to time length to use here.</p>
 <p>Leave all the permissions at the default, except for the ones shown in this image. Wabbajack will need these permissions to see and update your <code>modlist.json</code> on your behalf.</p>
 <p><img src="https://user-images.githubusercontent.com/654621/161394552-61c02f18-6622-47b9-8d98-0955dfbf8c42.png" alt="Step10" /></p>
@@ -174,12 +174,12 @@
 <p><img src="https://user-images.githubusercontent.com/654621/161365868-b66b646e-28cb-4178-a55c-d7f97260e02e.png" alt="Step8" /></p>
 <p>Open the file, paste your token into it, save the file, and exit your text editor</p>
 <h2 id="using-the-cdn"><a class="header" href="#using-the-cdn">Using the CDN</a></h2>
-<p>Having this file in your <code>Wabbajack</code> folder will enable the CDN upload service. So open Wabbajack and click the <code>Settings</code> button, you should see a panel named <code>File Uploader</code>:</p>
-<p><img src="https://user-images.githubusercontent.com/654621/161365931-ef977ad2-2b53-462b-b70e-562cf7de1eb4.png" alt="Step9" /></p>
-<p>Click <code>Select</code> to select a file to upload, and <code>Upload</code> to upload it. After a successful upload you will be able to see your files at <a href="https://build.wabbajack.org/authored_files">https://build.wabbajack.org/authored_files</a></p>
-<p>Clicking the <code>Manage Files</code> button will take you to a screen that will allow you to see your files and delete any file you no longer need. Space is limited on the CDN, so please delete any files you no longer need, but feel free to upload generated LOD files, .wabbajack files or whatever else you need. </p>
+<p>Having this file in your <code>Wabbajack</code> folder will enable the CDN upload service. So open Wabbajack and click the <code>Settings</code> button, you should see a panel named <code>Wabbajack CDN</code>:</p>
+<p><img src="https://github.com/user-attachments/assets/8bf33c8b-959c-47fd-ba71-a5bdc22c1305" alt="Step9" /></p>
+<p>Click <code>Upload file</code> to upload a file.
+Click <code>Browse uploads</code> will take you to a screen that will allow you to see your files and delete any file you no longer need. Space is limited on the CDN, so please delete any files you no longer need, but feel free to upload generated LOD files, .wabbajack files or whatever else you need. </p>
 <h2 id="using-cdn-files"><a class="header" href="#using-cdn-files">Using CDN files</a></h2>
-<p>After you have uploaded a file, you can get a link to it from the <a href="https://build.wabbajack.org/authored_files">authored files page</a>. <strong>Note:</strong> do not use the slow links on that page, these links are used for troubleshooting and when users cannot otherwise download a file. They are quite heavy on the server so please use main file link. Right-click on the file link on that page, then click <code>copy link</code>.</p>
+<p>After you have uploaded a file, you can get a link to it from the <a href="https://build.wabbajack.org/authored_files">authored files page</a>. <strong>Note:</strong> Download links on that page, are to be used only for troubleshooting and when users cannot otherwise download a file. They are quite heavy on the server so please use the <code>CDN</code> url. Right-click on the <code>CDN</code> Button on that page, then click <code>copy link</code>.</p>
 <p>After you have a link to a file, go to your Mod Organizer 2 folder, and edit the <code>.meta</code> file for the file you uploaded. You need only this text in the <code>.meta</code> for Wabbajack to be able to source from it:</p>
 <pre><code class="language-ini">[General]
 directURL=&lt;link you copied goes here&gt;
