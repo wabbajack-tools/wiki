@@ -35,3 +35,20 @@ Other modlists opt to host all of their information on a dedicated website:
 -   [Living Skyrim](https://www.fgsmodlists.com/living-skyrim)
 -   [MOISE](https://www.fgsmodlists.com/moise)
 -   [Tales From the Northern Lands](https://eziothedeadpoet.github.io/Tales-from-the-Northern-Lands/)
+
+# Publishing as a quasi-collection on Nexusmods
+
+There is now the ability to publish your Wabbajack modlist as a special page on nexusmods, sitting alongside their Collections, that are intended for Vortex
+detailed in this news post here : [https://www.nexusmods.com/news/15476](https://www.nexusmods.com/news/15476)
+
+What this means in effect is that a Wabbajack list can be showcased on Nexusmods website, in the same manner as Collections, and users can now click the "Add to Wabbajack" button on that web-page, and it will automatically open your modlist inside the Wabbajack client.
+
+To achieve this:
+- You must already have a modlist with a working machineurl that you have used to publish to Wabbajack before, see [Adding a Custom Repository to Wabbajack](../wabbajack_cdn_and_gallery_access/Adding%20a%20Custom%20Repository%20to%20Wabbajack.md)
+- In the post-compilation screen you will now have a 2nd button that says "Create Collection page on Nexusmods".
+- Pressing this button will create a Collections page on Nexusmods, prefilled with the list of mods, the modlist name, and size etc.
+- You will still need to type up the description and details here, or effectively just copy paste in your existing Readme contents.
+- The Collection page will default to an unpublished draft, you can publish it here if you want.
+- The collection page info will be stored in your modlist.json automatically alongside the other list information.
+- Subsequent modlist compiles will then be able to be published as normal, and/or you can push the new compile to that collection page as a new revision, and it will update that page automatically.
+
