@@ -56,8 +56,8 @@ For clear per modlist compatibility information please consult the readmes and o
 
 As of the time this is being written the only officially supported mod manager is [Mod Organizer 2](https://github.com/ModOrganizer2/modorganizer/releases).
 
-There is however the option for creating a wabbajack installer that simply recreates a whole folder by linking individual files to their originally sourced downloads.  
-Modlists created with this option will require more manual instructions for where users will be required to copy/move those files, but it is a way to allow modlists for games like Dishonored, the small demo for that system or Mechwarrior 5 that don't have Mod Organizer 2 support. You can learn about this option [here](nat), for more info and guidance join the [Discord](https://discord.gg/wabbajack).
+There is however the option for creating a wabbajack installer that simply recreates a whole folder by linking individual files to their originally sourced downloads.
+Modlists created with this option will require more manual instructions for where users will be required to copy/move those files, but it is a way to allow modlists for games like Dishonored, the small demo for that system or Mechwarrior 5 that don't have Mod Organizer 2 support. You can learn about this option [here](../modlist_author_documentation/Native-Game-Installer%20-%20(Installers%20not%20using%20MO2).md), for more info and guidance join the [Discord](https://discord.gg/wabbajack).
 
 ## Skyrim Special Edition Versions Explained
 
