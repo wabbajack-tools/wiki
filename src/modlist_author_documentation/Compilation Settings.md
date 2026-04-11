@@ -39,6 +39,28 @@ In Wabbajack, select _Create a Modlist_ to navigate to the configuration screen.
 | Other Profiles      | Adds profile folders to a list for other MO2 profiles you want to include in the final installation                         | Useful for performance, or content profiles                                                                                                                                                                                                                                                             |
 | Always Enabled Mods | Adds mod folders to a list of mods that will be included in your list no matter if they are enabled (active in game) or not | Wabbajack will normally ignore all mods you disabled in MO2 but there are some cases where you might want to give some choice to the end user and want to have the mod included                                                                                                                         |
 
+## Other Games
+Some modlists may want to make use of files from other, related games. 
+
+An example being - Fallout 4 VR may want to use the DLC from Fallout 4, and the same for Skyrim VR and Skyrim AE DLC.
+
+If you open up the <modlistname>.compiler_settings file in your modlist directory, with a text editor, you will see a field called "OtherGames"
+now check the Wabbajack code for which games can source from other games (here)[https://github.com/wabbajack-tools/wabbajack/blob/main/Wabbajack.DTOs/Game/GameRegistry.cs] 
+
+For example,  in that code you will see that SkyrimVR has a field for "cansourcefrom" which points to "SkyrimSpecialEdition". 
+
+If you were to put "SkyrimSpecialEdition" or "Fallout4" in your SkyrimVR or Fallout4 VR compiler_settings file in the "OtherGames" field , then Wabbajack will be able to scan that directory for required files, both in compilation and on the user install side of things.
+
+like so :
+
+```
+"OtherGames": [
+    "SkyrimSpecialEdition"
+  ],
+```
+
+If you want to add a "cansourcefrom" to any of the games Wabbajack supports, please propose that on the Wabbajack Github [here](https://github.com/wabbajack-tools/wabbajack)
+
 ## Compilation Errors
 
 You will likely get a ton of errors during your first compilation, which is to be expected. We highly recommend you join our [Discord server](https://discord.gg/wabbajack) and go to the `#modlist-development-help` channel for help.
