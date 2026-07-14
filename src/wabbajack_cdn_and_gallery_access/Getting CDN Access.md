@@ -51,6 +51,34 @@ Having this file in your `Wabbajack` folder will enable the CDN upload service. 
 Click `Upload file` to upload a file.
 Click `Browse uploads` will take you to a screen that will allow you to see your files and delete any file you no longer need. Space is limited on the CDN, so please delete any files you no longer need, but feel free to upload generated LOD files, .wabbajack files or whatever else you need. 
 
+## File restrictions
+Your modlist cannot rely on files uploaded to the CDN that you do not have permission to rehost, this also applies to Nexusmods' policy on what is allowed to be uploaded on their platform. This also applies to inlining ( including files directly in the Wabbajack file ), as that is a form of rehosting.
+
+This list is not exhaustive, when in doubt refer to Nexusmods' policy on what is allowed to be uploaded to their platform, as that will be mirrored in Wabbajacks CDN in most cases.
+
+If you have specific permission to include or reupload a mod authors work or specific other content, then please provide proof that you have permission to do so from the creator.
+
+### Examples of outputs that are allowed to be uploaded to the Wabbajack CDN:
+
+1. Dyndolod Output
+1. Xlodgen Output
+1. Texgen Output
+1. Grasscache
+1. Bodyslide Output
+1. Nemesis/Pandora Output
+
+### Examples of outouts that are not allowed to be uploaded to the Wabbajack CDN:
+
+1. Parallaxgen Output (Pg Patcher)
+1. VRAMR Output
+2. Files you do not have permissions to reditribute.
+3. Files which arent used in a modlist
+
+#### Why cant we upload Parallaxgen/Vramr? 
+These two tools provide modified textures of existing mods, therefore they are not substantially transformative, and would be considered rehosting of other authors work.
+
+For those types of outputs that are not allowed to be uploaded, you will need to use Wabbajack's automatic delta-patching functionality.
+
 ## Using CDN files
 
 After you have uploaded a file, you can get a link to it from the [authored files page](https://build.wabbajack.org/authored_files). **Note:** Download links on that page, are to be used only for troubleshooting and when users cannot otherwise download a file. They are quite heavy on the server so please use the `CDN` url. Right-click on the `CDN` Button on that page, then click `copy link`.
