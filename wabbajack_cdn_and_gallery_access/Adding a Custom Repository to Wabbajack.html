@@ -263,17 +263,14 @@ This guide requires you to have already completed <a href="Getting%20CDN%20Acces
 <p><img src="https://user-images.githubusercontent.com/654621/161399933-2012365b-0891-45f3-a21d-14a72dca1247.png" alt="Step5" /></p>
 <h2 id="adding-your-repository"><a class="header" href="#adding-your-repository">Adding your repository</a></h2>
 <p>Now you need to add your repository to the Wabbajack master repository list. View your <code>modlists.json</code> file in GitHub, click on the <code>Raw</code> button and copy the URL on the page that opens.</p>
-<p><img src="https://user-images.githubusercontent.com/654621/161399961-bc0cdb28-74d8-4c69-8cb0-11863083bee1.png" alt="Step6" /></p>
-<p>Now navigate to this file: <a href="https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json">https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json</a> and select the <code>Edit</code> button.</p>
-<p><img src="https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png" alt="Step8" /></p>
-<p>Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above. We suggest using your username instead of the modlist name itself, since you'll need to put any additional modlists of your own on the same repository.</p>
-<p><em>Note:  URL MUST be in the following format:  https://raw.githubusercontent.com/<user>/<repository>/main/modlists.json. Obtainable by opening the modlists.json file clicking the 'Raw' button, but make sure to remove the /refs/heads part out of it that GitHub adds here. Copy the URL on the page that opens.</em></p>
-<p><img src="https://user-images.githubusercontent.com/654621/161400507-40238db1-4ec3-4599-8082-ba961ac79b1b.png" alt="Step9" /></p>
-<p>Click &quot;Create a new Branch...&quot; and &quot;Propose Changes&quot;.</p>
-<p><img src="https://user-images.githubusercontent.com/654621/161400527-669820df-7147-419d-b903-4eff6eeddb9c.png" alt="Step10" /></p>
-<p>On the next page, click &quot;Create Pull Request&quot;.</p>
-<p><img src="https://user-images.githubusercontent.com/654621/161400531-0cae7ffd-4039-4f95-9f16-ce6e1b3b9e3d.png" alt="Step10" /></p>
-<p>We regularly check pull requests, but feel free to give us an extra heads up in the <a href="https://www.wabbajack.org/discord">Wabbajack Discord</a>. Once the PR is merged, your modlist should show up in the Wabbajack UI.</p>
+<p>Then go to <a href="https://github.com/wabbajack-tools/mod-lists/issues">The Wabbajack mod-lists issues page</a> and click New Issue, where you will see this popup:</p>
+<p><img src="https://github.com/user-attachments/assets/a6c9f5da-240b-41d8-a1fd-3ba17daae569" alt="Step6" /></p>
+<p>Click &quot;Submit a new Modlist Repository&quot;</p>
+<p>Follow the instructions on the page that pops up</p>
+<p>You will now see this page :</p>
+<p><img src="https://github.com/user-attachments/assets/bd076d7a-c711-4fed-aee3-be725b266e2a" alt="Step7" /></p>
+<p>The bot will reply to your created &quot;issue&quot; with any problems it encountered in your modlist.json, as per the image, if you fix the issue it highlighted, then comment &quot;fixed&quot; in a reply, it will check again.</p>
+<p>This will continue until there are no problems, then it will highlight it for a maintainer to merge the request.</p>
 <h2 id="common-errors"><a class="header" href="#common-errors">Common Errors</a></h2>
 <p>When uploading a new list to your repository, there are several errors that you may encounter.</p>
 <h3 id="you-do-not-have-access-to-this-list"><a class="header" href="#you-do-not-have-access-to-this-list">You do not have access to this list</a></h3>
