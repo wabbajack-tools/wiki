@@ -174,27 +174,22 @@ Once you're done with the contents here, [validate your JSON](https://jsonlint.c
 
 Now you need to add your repository to the Wabbajack master repository list. View your `modlists.json` file in GitHub, click on the `Raw` button and copy the URL on the page that opens.
 
-![Step6](https://user-images.githubusercontent.com/654621/161399961-bc0cdb28-74d8-4c69-8cb0-11863083bee1.png)
+Then go to [The Wabbajack mod-lists issues page](https://github.com/wabbajack-tools/mod-lists/issues) and click New Issue, where you will see this popup:
 
-Now navigate to this file: <https://github.com/wabbajack-tools/mod-lists/blob/master/repositories.json> and select the `Edit` button.
+![Step6](https://github.com/user-attachments/assets/a6c9f5da-240b-41d8-a1fd-3ba17daae569)
 
-![Step8](https://user-images.githubusercontent.com/654621/161399990-d3d1a66a-ac50-4a6d-9af5-4420eaea4cc3.png)
+Click "Submit a new Modlist Repository"
 
-Add a new line (don't forget the comma after the last line) and give your repository a unique name, and paste in the link you copied above. We suggest using your username instead of the modlist name itself, since you'll need to put any additional modlists of your own on the same repository.
+Follow the instructions on the page that pops up
 
-_Note:  URL MUST be in the following format:  https://raw.githubusercontent.com/<user>/<repository>/main/modlists.json. Obtainable by opening the modlists.json file clicking the 'Raw' button, but make sure to remove the /refs/heads part out of it that GitHub adds here. Copy the URL on the page that opens._
+You will now see this page :
 
-![Step9](https://user-images.githubusercontent.com/654621/161400507-40238db1-4ec3-4599-8082-ba961ac79b1b.png)
+![Step7](https://github.com/user-attachments/assets/bd076d7a-c711-4fed-aee3-be725b266e2a)
 
-Click "Create a new Branch..." and "Propose Changes".
+The bot will reply to your created "issue" with any problems it encountered in your modlist.json, as per the image, if you fix the issue it highlighted, then comment "fixed" in a reply, it will check again.
 
-![Step10](https://user-images.githubusercontent.com/654621/161400527-669820df-7147-419d-b903-4eff6eeddb9c.png)
+This will continue until there are no problems, then it will highlight it for a maintainer to merge the request.
 
-On the next page, click "Create Pull Request".
-
-![Step10](https://user-images.githubusercontent.com/654621/161400531-0cae7ffd-4039-4f95-9f16-ce6e1b3b9e3d.png)
-
-We regularly check pull requests, but feel free to give us an extra heads up in the [Wabbajack Discord](https://www.wabbajack.org/discord). Once the PR is merged, your modlist should show up in the Wabbajack UI.
 
 ## Common Errors
 
